@@ -116,7 +116,7 @@ local function IndentFunc(self)
 end
 
 local function TabbedFile(hFile, style, numSpaces)
-	numSpaces = numSpaces or 2
+	numSpaces = numSpaces or 4
 	
 	local proxy =
 	{

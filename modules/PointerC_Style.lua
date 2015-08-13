@@ -25,22 +25,42 @@ end
 -- Header file construction
 
 function my_style.header.GetFilename(basename, options)
-	return basename .. ".h"
+	return basename .. ".hpp"
 end
 
 local function GetIncludeGuard(hFile, spec, options)
-	local str = "POINTER_C_GENERATED_HEADER_" ..
-		spec.GetIncludeGuardString() .. "_H"
+	local str = string.upper("GLLoader") .. "_HPP"
 
-	if(#options.prefix > 0) then
-		return options.prefix:upper() .. "_" .. str
-	end
-	
-	return str
+	return "SFML_" .. str
 end
 
 function my_style.header.WriteBlockBeginIncludeGuard(hFile, spec, options)
 	local inclGuard = GetIncludeGuard(hFile, spec, options)
+	
+	hFile:write("////////////////////////////////////////////////////////////\n")
+	hFile:write("//\n")
+	hFile:write("// SFML - Simple and Fast Multimedia Library\n")
+	hFile:write("// Copyright (C) 2007-2015 Laurent Gomila (laurent@sfml-dev.org)\n")
+	hFile:write("//\n")
+	hFile:write("// This software is provided 'as-is', without any express or implied warranty.\n")
+	hFile:write("// In no event will the authors be held liable for any damages arising from the use of this software.\n")
+	hFile:write("//\n")
+	hFile:write("// Permission is granted to anyone to use this software for any purpose,\n")
+	hFile:write("// including commercial applications, and to alter it and redistribute it freely,\n")
+	hFile:write("// subject to the following restrictions:\n")
+	hFile:write("//\n")
+	hFile:write("// 1. The origin of this software must not be misrepresented;\n")
+	hFile:write("//    you must not claim that you wrote the original software.\n")
+	hFile:write("//    If you use this software in a product, an acknowledgment\n")
+	hFile:write("//    in the product documentation would be appreciated but is not required.\n")
+	hFile:write("//\n")
+	hFile:write("// 2. Altered source versions must be plainly marked as such,\n")
+	hFile:write("//    and must not be misrepresented as being the original software.\n")
+	hFile:write("//\n")
+	hFile:write("// 3. This notice may not be removed or altered from any source distribution.\n")
+	hFile:write("//\n")
+	hFile:write("////////////////////////////////////////////////////////////\n")
+	hFile:write("\n")
 	
 	hFile:fmt("#ifndef %s\n", inclGuard)
 	hFile:fmt("#define %s\n", inclGuard)
@@ -49,7 +69,7 @@ end
 function my_style.header.WriteBlockEndIncludeGuard(hFile, spec, options)
 	local inclGuard = GetIncludeGuard(hFile, spec, options)
 	
-	hFile:fmt("#endif /*%s*/\n", inclGuard)
+	hFile:fmt("#endif // %s\n", inclGuard)
 end
 
 function my_style.header.WriteInit(hFile, spec, options)
@@ -61,7 +81,6 @@ function my_style.header.WriteStdTypedefs(hFile, specData, options)
 	
 	--Use include-guards for the typedefs, since they're common among
 	--headers in this style.
-	
 	hFile:write("#ifndef GL_LOAD_GEN_BASIC_OPENGL_TYPEDEFS\n")
 	hFile:write("#define GL_LOAD_GEN_BASIC_OPENGL_TYPEDEFS\n")
 	hFile:write("\n")
@@ -111,7 +130,7 @@ end
 
 function my_style.header.WriteEnumDecl(hFile, enum, enumTable, spec, options, enumSeen)
 	if(enumSeen[enum.name]) then
-		hFile:fmt("/*Copied %s%s From: %s*/\n",
+		hFile:fmt("// Copied %s%s From: %s\n",
 			spec.EnumNamePrefix(),
 			enum.name,
 			enumSeen[enum.name])
@@ -141,7 +160,14 @@ local function GetFuncPtrDef(hFile, func, spec, options)
 		common.GetFuncReturnType(func),
 		spec.GetCodegenPtrType(),
 		GetFuncPtrName(func, spec, options),
-		common.GetFuncParamList(func, true))
+		common.GetFuncParamList(func, false))
+end
+
+local function GetCoreFuncPtrDef(hFile, func, spec, options)
+	return string.format("%s APIENTRY %s(%s)",
+		common.GetFuncReturnType(func),
+		common.GetOpenGLFuncName(func, spec),
+		common.GetFuncParamList(func, false))
 end
 
 function my_style.header.WriteFuncDecl(hFile, func, spec, options)
@@ -156,6 +182,13 @@ function my_style.header.WriteFuncDecl(hFile, func, spec, options)
 		GetFuncPtrName(func, spec, options))
 end
 
+function my_style.header.WriteCoreFuncDecl(hFile, func, spec, options)
+	--Declare the function pointer.
+	hFile:write("GLAPI ",
+		GetCoreFuncPtrDef(hFile, func, spec, options),
+		";\n")
+end
+
 function my_style.header.WriteBlockEndFuncDecl(hFile, specData, options)
 end
 
@@ -167,7 +200,7 @@ end
 
 function my_style.header.WriteBlockEndExtFuncDecl(hFile, extName,
 	spec, options)
-	hFile:fmt("#endif /*%s*/ \n", spec.ExtNamePrefix() .. extName)
+	hFile:fmt("#endif // %s\n", spec.ExtNamePrefix() .. extName)
 end
 
 function my_style.header.WriteBlockBeginSysDecl(hFile, spec, options)
@@ -189,7 +222,7 @@ function my_style.header.WriteUtilityDecls(hFile, spec, options)
 	hFile:write("{\n")
 	hFile:inc()
 		hFile:write(GetStatusCodeName("LOAD_FAILED", spec, options), " = 0,\n")
-		hFile:write(GetStatusCodeName("LOAD_SUCCEEDED", spec, options), " = 1,\n")
+		hFile:write(GetStatusCodeName("LOAD_SUCCEEDED", spec, options), " = 1\n")
 	hFile:dec()
 	hFile:write("};\n")
 end
@@ -203,7 +236,7 @@ local function GetLoaderFuncName(spec, options)
 end
 
 function my_style.header.WriteMainLoaderFuncDecl(hFile, spec, options)
-	hFile:fmt("int %s(%s);\n",
+	hFile:fmt("void %s(%s);\n",
 		GetLoaderFuncName(spec, options),
 		spec.GetLoaderParams())
 end
@@ -228,17 +261,43 @@ end
 -- Source file construction functions.
 
 function my_style.source.GetFilename(basename, options)
-	return basename .. ".c"
+	return basename .. ".cpp"
 end
 
 function my_style.source.WriteIncludes(hFile, basename, spec, options)
-	hFile:writeblock([[
-#include <stdlib.h>
-#include <string.h>
-#include <stddef.h>
-]])
-	local base = util.ParsePath(my_style.header.GetFilename(basename, options))
-	hFile:fmt('#include "%s"\n', base)
+	hFile:write("////////////////////////////////////////////////////////////\n")
+	hFile:write("//\n")
+	hFile:write("// SFML - Simple and Fast Multimedia Library\n")
+	hFile:write("// Copyright (C) 2007-2015 Laurent Gomila (laurent@sfml-dev.org)\n")
+	hFile:write("//\n")
+	hFile:write("// This software is provided 'as-is', without any express or implied warranty.\n")
+	hFile:write("// In no event will the authors be held liable for any damages arising from the use of this software.\n")
+	hFile:write("//\n")
+	hFile:write("// Permission is granted to anyone to use this software for any purpose,\n")
+	hFile:write("// including commercial applications, and to alter it and redistribute it freely,\n")
+	hFile:write("// subject to the following restrictions:\n")
+	hFile:write("//\n")
+	hFile:write("// 1. The origin of this software must not be misrepresented;\n")
+	hFile:write("//    you must not claim that you wrote the original software.\n")
+	hFile:write("//    If you use this software in a product, an acknowledgment\n")
+	hFile:write("//    in the product documentation would be appreciated but is not required.\n")
+	hFile:write("//\n")
+	hFile:write("// 2. Altered source versions must be plainly marked as such,\n")
+	hFile:write("//    and must not be misrepresented as being the original software.\n")
+	hFile:write("//\n")
+	hFile:write("// 3. This notice may not be removed or altered from any source distribution.\n")
+	hFile:write("//\n")
+	hFile:write("////////////////////////////////////////////////////////////\n")
+	hFile:write("\n")
+
+	hFile:write("////////////////////////////////////////////////////////////\n")
+	hFile:write("// Headers\n")
+	hFile:write("////////////////////////////////////////////////////////////\n")
+	hFile:write("#include <SFML/Graphics/GLLoader.hpp>\n")
+	hFile:write("#include <SFML/Window/Context.hpp>\n")
+
+	--local base = util.ParsePath(my_style.header.GetFilename(basename, options))
+	--hFile:fmt('#include "%s"\n', base)
 end
 
 function my_style.source.WriteLoaderData(hFile, spec, options)
@@ -278,10 +337,11 @@ local function GetExtLoaderFuncName(extName, spec, options)
 end
 
 function my_style.source.WriteBlockBeginExtLoader(hFile, extName, spec, options)
-	hFile:fmt("static int %s(void)\n", GetExtLoaderFuncName(extName, spec, options))
+	hFile:fmt("static int %s()\n", GetExtLoaderFuncName(extName, spec, options))
 	hFile:write("{\n")
 	hFile:inc()
 	hFile:write("int numFailed = 0;\n")
+	hFile:rawfmt("\n")
 end
 
 function my_style.source.WriteBlockEndExtLoader(hFile, extName, spec, options)
@@ -291,12 +351,16 @@ function my_style.source.WriteBlockEndExtLoader(hFile, extName, spec, options)
 end
 
 function my_style.source.WriteExtFuncLoader(hFile, func, spec, options)
-	hFile:fmt('%s = (%s)%s("%s%s");\n',
+	hFile:fmt('%s = reinterpret_cast<%s>(%s("%s%s"));\n',
 		GetFuncPtrName(func, spec, options),
 		GetFuncPtrType(hFile, func, spec, options),
 		common.GetProcAddressName(spec),
 		spec.FuncNamePrefix(), func.name)
-	hFile:fmt('if(!%s) numFailed++;\n', GetFuncPtrName(func, spec, options))
+	hFile:fmt('if(!%s)\n', GetFuncPtrName(func, spec, options))
+	hFile:inc()
+	hFile:write('numFailed++;\n')
+	hFile:dec()
+	hFile:rawfmt("\n")
 end
 
 function my_style.source.WriteBlockBeginCoreFuncDef(hFile, spec, options)
@@ -389,9 +453,9 @@ function my_style.source.WriteUtilityDefs(hFile, specData, spec, options)
 	hFile:write "\n"
 	
 	--Write function to find map entry by name.
-	common.WriteCFindExtEntryFunc(hFile, specData, spec, options,
-		GetMapTableStructName(spec, options),
-		GetMapTableVarName())
+	--common.WriteCFindExtEntryFunc(hFile, specData, spec, options,
+	--	GetMapTableStructName(spec, options),
+	--	GetMapTableVarName())
 	hFile:write "\n"
 
 	--Write the function to clear the extension variables.
@@ -415,7 +479,7 @@ local function WriteAncillaryFuncs(hFile, specData, spec, options)
 			hFile, specData, spec, options,
 			indexed, GetFuncPtrName, GetEnumName))
 	else
-		hFile:writeblock(common.GetProcessExtsFromStringFunc("LoadExtByName(%s)"))
+		hFile:writeblock(common.GetProcessExtsFromStringFunc("LoadExtension(%s)"))
 	end
 	
 	hFile:write "\n"
@@ -436,72 +500,81 @@ end
 
 
 function my_style.source.WriteMainLoaderFunc(hFile, specData, spec, options)
-	local indexed = WriteAncillaryFuncs(hFile, specData, spec, options)
+	local indexed = false;--WriteAncillaryFuncs(hFile, specData, spec, options)
 
 	--Write the function that calls the extension and core loaders.
-	hFile:fmt("int %s(%s)\n",
+	hFile:fmt("void %s(%s)\n",
 		GetLoaderFuncName(spec, options),
 		spec.GetLoaderParams())
 	hFile:write("{\n")
 	hFile:inc()
 
-	if(options.version) then
-		hFile:write("int numFailed = 0;\n")
-	end
+	--if(options.version) then
+	--	hFile:write("int numFailed = 0;\n")
+	--end
 
 	hFile:write("ClearExtensionVars();\n")
+	hFile:dec()
 	hFile:write("\n")
+	hFile:inc()
 
 	--Load the extension, using runtime-facilities to tell what is available.
-	if(indexed) then
-		WriteInMainFuncLoader(hFile, indexed[1], spec, options)
-		WriteInMainFuncLoader(hFile, indexed[3], spec, options)
-		hFile:write("\n")
-		hFile:write("ProcExtsFromExtList();\n")
-	else
-		local extListName, needLoad = spec.GetExtStringFuncName()
-		if(needLoad) then
-			for _, func in ipairs(specData.funcData.functions) do
-				if(extListName == func.name) then
-					extListName = func
-				end
-			end
-			
-			WriteInMainFuncLoader(hFile, extListName, spec, options)
-			
-			extListName = GetFuncPtrName(extListName, spec, options);
-		end
+	--if(indexed) then
+	--	WriteInMainFuncLoader(hFile, indexed[1], spec, options)
+	--	WriteInMainFuncLoader(hFile, indexed[3], spec, options)
+	--	hFile:write("\n")
+	--	hFile:write("ProcExtsFromExtList();\n")
+	--else
+	--	local extListName, needLoad = spec.GetExtStringFuncName()
+	--	if(needLoad) then
+	--		for _, func in ipairs(specData.funcData.functions) do
+	--			if(extListName == func.name) then
+	--				extListName = func
+	--			end
+	--		end
+	--		
+	--		WriteInMainFuncLoader(hFile, extListName, spec, options)
+	--		
+	--		extListName = GetFuncPtrName(extListName, spec, options);
+	--	end
 
-		local function EnumResolve(enumName)
-			return GetEnumName(specData.enumtable[enumName], spec, options)
-		end
+	--	local function EnumResolve(enumName)
+	--		return GetEnumName(specData.enumtable[enumName], spec, options)
+	--	end
 		
-		hFile:write "\n"
-		hFile:fmt("ProcExtsFromExtString((const char *)%s(%s));\n",
-			extListName,
-			spec.GetExtStringParamList(EnumResolve))
-	end
+	--	hFile:write "\n"
+	--	hFile:fmt("ProcExtsFromExtString((const char *)%s(%s));\n",
+	--		extListName,
+	--		spec.GetExtStringParamList(EnumResolve))
+	--end
 	
-	if(options.version) then
-		hFile:fmt("numFailed = %s();\n",
-			GetCoreLoaderFuncName(spec, options))
-		hFile:write "\n"
+	--if(options.version) then
+		--hFile:fmt("numFailed = %s();\n",
+		--	GetCoreLoaderFuncName(spec, options))
+		--hFile:write "\n"
 		
-		hFile:fmtblock([[
-if(numFailed == 0)
-	return %s;
-else
-	return %s + numFailed;
-]],
-			GetStatusCodeName("LOAD_SUCCEEDED", spec, options),
-			GetStatusCodeName("LOAD_SUCCEEDED", spec, options))
-	else
-		hFile:fmt("return %s;\n",
-			GetStatusCodeName("LOAD_SUCCEEDED", spec, options))
-	end
+		--hFile:fmtblock([[
+--if(numFailed == 0)
+--	return %s;
+--else
+--	return %s + numFailed;
+--]],
+	--		GetStatusCodeName("LOAD_SUCCEEDED", spec, options),
+	--		GetStatusCodeName("LOAD_SUCCEEDED", spec, options))
+	--else
+	--	hFile:fmt("return %s;\n",
+	--		GetStatusCodeName("LOAD_SUCCEEDED", spec, options))
+	--end
+	hFile:fmtblock([[
+for (int i = 0; i < g_extensionMapSize; ++i)
+{
+    if (sf::Context::isExtensionAvailable(ExtensionMap[i].extensionName))
+        LoadExtension(ExtensionMap[i]);
+}
+]])
 	
 	hFile:dec()
-	hFile:write("}\n")
+	hFile:write("}")
 end
 
 function my_style.source.WriteVersioningFuncs(hFile, specData, spec, options)

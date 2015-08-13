@@ -88,7 +88,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[drawable]==],
@@ -100,15 +100,15 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[ust]==],
-						["ctype"] = [==[int64_t *]==],
+						["ctype"] = [==[int64_t*]==],
 					},
 					{
 						["name"] = [==[msc]==],
-						["ctype"] = [==[int64_t *]==],
+						["ctype"] = [==[int64_t*]==],
 					},
 					{
 						["name"] = [==[sbc]==],
-						["ctype"] = [==[int64_t *]==],
+						["ctype"] = [==[int64_t*]==],
 					},
 				},
 				["name"] = [==[WaitForSbcOML]==],
@@ -121,7 +121,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[drawable]==],
@@ -129,15 +129,15 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[ust]==],
-						["ctype"] = [==[int64_t *]==],
+						["ctype"] = [==[int64_t*]==],
 					},
 					{
 						["name"] = [==[msc]==],
-						["ctype"] = [==[int64_t *]==],
+						["ctype"] = [==[int64_t*]==],
 					},
 					{
 						["name"] = [==[sbc]==],
-						["ctype"] = [==[int64_t *]==],
+						["ctype"] = [==[int64_t*]==],
 					},
 				},
 				["name"] = [==[GetSyncValuesOML]==],
@@ -150,7 +150,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[context]==],
@@ -167,7 +167,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[drawable]==],
@@ -188,7 +188,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[pbuf]==],
@@ -200,7 +200,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[unsigned int *]==],
+						["ctype"] = [==[unsigned int*]==],
 					},
 				},
 				["name"] = [==[QueryGLXPbufferSGIX]==],
@@ -213,7 +213,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[drawable]==],
@@ -225,7 +225,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[attrib_list]==],
-						["ctype"] = [==[const int *]==],
+						["ctype"] = [==[const int*]==],
 					},
 				},
 				["name"] = [==[BindTexImageEXT]==],
@@ -238,7 +238,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[procName]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[GetProcAddressARB]==],
@@ -251,7 +251,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[hpId]==],
@@ -259,11 +259,11 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[npipes]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 				},
 				["name"] = [==[QueryHyperpipeConfigSGIX]==],
-				["return_ctype"] = [==[GLXHyperpipeConfigSGIX *]==],
+				["return_ctype"] = [==[GLXHyperpipeConfigSGIX*]==],
 			},
 			{
 				["extensions"] = {
@@ -272,7 +272,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[drawable]==],
@@ -280,11 +280,11 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[group]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 					{
 						["name"] = [==[barrier]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[QuerySwapGroupNV]==],
@@ -297,7 +297,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[hpId]==],
@@ -314,7 +314,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[display]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -326,19 +326,19 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[dx]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 					{
 						["name"] = [==[dy]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 					{
 						["name"] = [==[dw]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 					{
 						["name"] = [==[dh]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 				},
 				["name"] = [==[QueryChannelRectSGIX]==],
@@ -360,7 +360,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[drawable]==],
@@ -381,7 +381,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[window]==],
@@ -402,7 +402,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[video_capture_slot]==],
@@ -423,7 +423,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[srcCtx]==],
@@ -517,7 +517,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[device]==],
@@ -529,7 +529,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 				},
 				["name"] = [==[QueryVideoCaptureDeviceNV]==],
@@ -542,7 +542,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[GetAGPOffsetMESA]==],
@@ -555,7 +555,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[video_slot]==],
@@ -567,7 +567,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[attrib_list]==],
-						["ctype"] = [==[const int *]==],
+						["ctype"] = [==[const int*]==],
 					},
 				},
 				["name"] = [==[BindVideoDeviceNV]==],
@@ -584,7 +584,7 @@ typedef unsigned __int64 uint64_t;
 					},
 				},
 				["name"] = [==[QueryCurrentRendererStringMESA]==],
-				["return_ctype"] = [==[const char *]==],
+				["return_ctype"] = [==[const char*]==],
 			},
 			{
 				["extensions"] = {
@@ -593,7 +593,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -601,7 +601,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[count]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[QueryFrameCountNV]==],
@@ -614,7 +614,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -630,7 +630,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[unsigned int *]==],
+						["ctype"] = [==[unsigned int*]==],
 					},
 				},
 				["name"] = [==[QueryRendererIntegerMESA]==],
@@ -722,7 +722,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[draw]==],
@@ -764,7 +764,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[drawable]==],
@@ -793,7 +793,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[drawable]==],
@@ -801,7 +801,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[mask]==],
-						["ctype"] = [==[unsigned long *]==],
+						["ctype"] = [==[unsigned long*]==],
 					},
 				},
 				["name"] = [==[GetSelectedEventSGIX]==],
@@ -814,7 +814,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -835,7 +835,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[config]==],
@@ -851,7 +851,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[attrib_list]==],
-						["ctype"] = [==[const int *]==],
+						["ctype"] = [==[const int*]==],
 					},
 				},
 				["name"] = [==[CreateContextAttribsARB]==],
@@ -864,7 +864,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 				},
 				["name"] = [==[GetCurrentDisplayEXT]==],
-				["return_ctype"] = [==[Display *]==],
+				["return_ctype"] = [==[Display*]==],
 			},
 			{
 				["extensions"] = {
@@ -873,7 +873,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[pbuf]==],
@@ -890,11 +890,11 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[visual]==],
-						["ctype"] = [==[XVisualInfo *]==],
+						["ctype"] = [==[XVisualInfo*]==],
 					},
 					{
 						["name"] = [==[pixmap]==],
@@ -915,7 +915,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -927,7 +927,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[pVideoDevice]==],
-						["ctype"] = [==[GLXVideoDeviceNV *]==],
+						["ctype"] = [==[GLXVideoDeviceNV*]==],
 					},
 				},
 				["name"] = [==[GetVideoDeviceNV]==],
@@ -940,7 +940,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -948,11 +948,11 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[nelements]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 				},
 				["name"] = [==[EnumerateVideoCaptureDevicesNV]==],
-				["return_ctype"] = [==[GLXVideoCaptureDeviceNV *]==],
+				["return_ctype"] = [==[GLXVideoCaptureDeviceNV*]==],
 			},
 			{
 				["extensions"] = {
@@ -961,7 +961,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[drawable]==],
@@ -969,11 +969,11 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[numerator]==],
-						["ctype"] = [==[int32_t *]==],
+						["ctype"] = [==[int32_t*]==],
 					},
 					{
 						["name"] = [==[denominator]==],
-						["ctype"] = [==[int32_t *]==],
+						["ctype"] = [==[int32_t*]==],
 					},
 				},
 				["name"] = [==[GetMscRateOML]==],
@@ -986,7 +986,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[drawable]==],
@@ -1007,7 +1007,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[group]==],
@@ -1028,7 +1028,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[display]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -1061,7 +1061,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[drawable]==],
@@ -1102,7 +1102,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[count]==],
-						["ctype"] = [==[unsigned int *]==],
+						["ctype"] = [==[unsigned int*]==],
 					},
 				},
 				["name"] = [==[WaitVideoSyncSGI]==],
@@ -1115,7 +1115,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[display]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -1140,7 +1140,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[drawable]==],
@@ -1161,7 +1161,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[networkId]==],
@@ -1173,11 +1173,11 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[cfg]==],
-						["ctype"] = [==[GLXHyperpipeConfigSGIX *]==],
+						["ctype"] = [==[GLXHyperpipeConfigSGIX*]==],
 					},
 					{
 						["name"] = [==[hpId]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 				},
 				["name"] = [==[HyperpipeConfigSGIX]==],
@@ -1190,7 +1190,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[drawable]==],
@@ -1211,7 +1211,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[display]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -1223,19 +1223,19 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[x]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 					{
 						["name"] = [==[y]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 					{
 						["name"] = [==[w]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 					{
 						["name"] = [==[h]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 				},
 				["name"] = [==[QueryChannelDeltasSGIX]==],
@@ -1248,7 +1248,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[display]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -1285,7 +1285,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[display]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -1310,7 +1310,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[context]==],
@@ -1322,7 +1322,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 				},
 				["name"] = [==[QueryContextInfoEXT]==],
@@ -1335,7 +1335,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[config]==],
@@ -1343,7 +1343,7 @@ typedef unsigned __int64 uint64_t;
 					},
 				},
 				["name"] = [==[GetVisualFromFBConfigSGIX]==],
-				["return_ctype"] = [==[XVisualInfo *]==],
+				["return_ctype"] = [==[XVisualInfo*]==],
 			},
 			{
 				["extensions"] = {
@@ -1352,7 +1352,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -1360,15 +1360,15 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[attrib_list]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 					{
 						["name"] = [==[nelements]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 				},
 				["name"] = [==[ChooseFBConfigSGIX]==],
-				["return_ctype"] = [==[GLXFBConfigSGIX *]==],
+				["return_ctype"] = [==[GLXFBConfigSGIX*]==],
 			},
 			{
 				["extensions"] = {
@@ -1377,7 +1377,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -1385,11 +1385,11 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[nelements]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 				},
 				["name"] = [==[EnumerateVideoDevicesNV]==],
-				["return_ctype"] = [==[unsigned int *]==],
+				["return_ctype"] = [==[unsigned int*]==],
 			},
 			{
 				["extensions"] = {
@@ -1398,7 +1398,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -1406,7 +1406,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[max]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 				},
 				["name"] = [==[QueryMaxSwapBarriersSGIX]==],
@@ -1419,7 +1419,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[config]==],
@@ -1448,7 +1448,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[readCtx]==],
@@ -1489,7 +1489,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[config]==],
@@ -1505,7 +1505,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[attrib_list]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 				},
 				["name"] = [==[CreateGLXPbufferSGIX]==],
@@ -1518,7 +1518,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[timeSlice]==],
@@ -1534,7 +1534,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[returnAttribList]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[QueryHyperpipeAttribSGIX]==],
@@ -1547,7 +1547,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[timeSlice]==],
@@ -1563,7 +1563,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[attribList]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[HyperpipeAttribSGIX]==],
@@ -1585,7 +1585,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -1593,11 +1593,11 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[maxGroups]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 					{
 						["name"] = [==[maxBarriers]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[QueryMaxSwapGroupsNV]==],
@@ -1614,7 +1614,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[unsigned int *]==],
+						["ctype"] = [==[unsigned int*]==],
 					},
 				},
 				["name"] = [==[QueryCurrentRendererIntegerMESA]==],
@@ -1627,7 +1627,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -1639,11 +1639,11 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[pulCounterOutputPbuffer]==],
-						["ctype"] = [==[unsigned long *]==],
+						["ctype"] = [==[unsigned long*]==],
 					},
 					{
 						["name"] = [==[pulCounterOutputVideo]==],
-						["ctype"] = [==[unsigned long *]==],
+						["ctype"] = [==[unsigned long*]==],
 					},
 				},
 				["name"] = [==[GetVideoInfoNV]==],
@@ -1656,7 +1656,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[hpId]==],
@@ -1673,15 +1673,15 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[npipes]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 				},
 				["name"] = [==[QueryHyperpipeNetworkSGIX]==],
-				["return_ctype"] = [==[GLXHyperpipeNetworkSGIX *]==],
+				["return_ctype"] = [==[GLXHyperpipeNetworkSGIX*]==],
 			},
 			{
 				["extensions"] = {
@@ -1690,11 +1690,11 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[vis]==],
-						["ctype"] = [==[XVisualInfo *]==],
+						["ctype"] = [==[XVisualInfo*]==],
 					},
 				},
 				["name"] = [==[GetFBConfigFromVisualSGIX]==],
@@ -1707,7 +1707,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[count]==],
-						["ctype"] = [==[unsigned int *]==],
+						["ctype"] = [==[unsigned int*]==],
 					},
 				},
 				["name"] = [==[GetVideoSyncSGI]==],
@@ -1720,7 +1720,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[contextID]==],
@@ -1737,7 +1737,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[drawable]==],
@@ -1758,7 +1758,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -1774,7 +1774,7 @@ typedef unsigned __int64 uint64_t;
 					},
 				},
 				["name"] = [==[QueryRendererStringMESA]==],
-				["return_ctype"] = [==[const char *]==],
+				["return_ctype"] = [==[const char*]==],
 			},
 			{
 				["extensions"] = {
@@ -1783,7 +1783,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[drawable]==],
@@ -1804,7 +1804,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[config]==],
@@ -1816,7 +1816,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[int *]==],
+						["ctype"] = [==[int*]==],
 					},
 				},
 				["name"] = [==[GetFBConfigAttribSGIX]==],
@@ -1829,7 +1829,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[pbuffer]==],
@@ -1837,7 +1837,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[DMparams *]==],
+						["ctype"] = [==[DMparams*]==],
 					},
 					{
 						["name"] = [==[dmbuffer]==],
@@ -1883,7 +1883,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetGPUInfoAMD]==],
@@ -1896,7 +1896,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[VideoDevice]==],
@@ -1921,7 +1921,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[device]==],
@@ -1938,7 +1938,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[screen]==],
@@ -1955,7 +1955,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[readCtx]==],
@@ -1996,7 +1996,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[device]==],
@@ -2017,7 +2017,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[unsigned int *]==],
+						["ctype"] = [==[unsigned int*]==],
 					},
 				},
 				["name"] = [==[GetGPUIDsAMD]==],
@@ -2030,7 +2030,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[drawable]==],
@@ -2060,7 +2060,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[pbuf]==],
@@ -2072,7 +2072,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[pulCounterPbuffer]==],
-						["ctype"] = [==[unsigned long *]==],
+						["ctype"] = [==[unsigned long*]==],
 					},
 					{
 						["name"] = [==[bBlock]==],
@@ -2089,7 +2089,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[config]==],
@@ -2118,7 +2118,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[attribList]==],
-						["ctype"] = [==[const int *]==],
+						["ctype"] = [==[const int*]==],
 					},
 				},
 				["name"] = [==[CreateAssociatedContextAttribsAMD]==],
@@ -2131,7 +2131,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[drawable]==],
@@ -2151,15 +2151,15 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[ust]==],
-						["ctype"] = [==[int64_t *]==],
+						["ctype"] = [==[int64_t*]==],
 					},
 					{
 						["name"] = [==[msc]==],
-						["ctype"] = [==[int64_t *]==],
+						["ctype"] = [==[int64_t*]==],
 					},
 					{
 						["name"] = [==[sbc]==],
-						["ctype"] = [==[int64_t *]==],
+						["ctype"] = [==[int64_t*]==],
 					},
 				},
 				["name"] = [==[WaitForMscOML]==],
@@ -2172,7 +2172,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[glxvideosource]==],
@@ -2189,7 +2189,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[pbuf]==],
@@ -2206,7 +2206,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[timeSlice]==],
@@ -2222,11 +2222,11 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[attribList]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 					{
 						["name"] = [==[returnAttribList]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[QueryHyperpipeBestAttribSGIX]==],
@@ -2239,7 +2239,7 @@ typedef unsigned __int64 uint64_t;
 				["parameters"] = {
 					{
 						["name"] = [==[dpy]==],
-						["ctype"] = [==[Display *]==],
+						["ctype"] = [==[Display*]==],
 					},
 					{
 						["name"] = [==[overlay]==],
@@ -2251,7 +2251,7 @@ typedef unsigned __int64 uint64_t;
 					},
 					{
 						["name"] = [==[pTransparentIndex]==],
-						["ctype"] = [==[long *]==],
+						["ctype"] = [==[long*]==],
 					},
 				},
 				["name"] = [==[GetTransparentIndexSUN]==],

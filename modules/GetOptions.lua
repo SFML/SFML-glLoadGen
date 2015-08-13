@@ -48,8 +48,7 @@ parseOpts:value(
 	"version",
 	"version",
 	{"OpenGL version to export.", "Only use this with the 'gl' spec."},
-	nil,
-	true)
+	"1.1")
 parseOpts:enum(
 	"profile",
 	"profile",
@@ -68,13 +67,13 @@ parseOpts:enum(
 	"indent",
 	{"Indentation style."},
 	{"tab", "space"},
-	1)
+	2)
 parseOpts:enum(
 	"lineends",
 	"lineends",
 	{"Line ending styles.","'plat' means the platform-specific one, while 'unix' means '\\n'."},
 	{"plat", "unix"},
-	1)
+	2)
 parseOpts:array(
 	"exts",
 	"extensions",
@@ -86,12 +85,6 @@ parseOpts:array_single(
 	"extensions",
 	{"A single extension name to export."},
 	FixupExtensionName,
-	true)
-parseOpts:array_single(
-	"extfile",
-	"extfiles",
-	{"A file to load extensions from.", "Files are always relative to the current directory."},
-	nil,
 	true)
 parseOpts:array_single(
 	"stdext",
@@ -112,16 +105,18 @@ parseOpts:value(
 		"String to prefix to various globals. Set this to ",
 		"prevent interference with multiple loaders."
 	},
-	"")
+	"sf")
 parseOpts:pos_opt(
 	1,
 	"outname",
 	"Base filename (sans extension)",
-	"outname")
+	"outname",
+	"GLLoader")
 
 local extFileLines;
 
 local function LoadExtFile(extensions, extfilename, baseDir)
+	extfilename = "GLExtensions.txt"
 	if(baseDir) then
 		extfilename = baseDir .. extfilename
 	end
@@ -263,7 +258,7 @@ function optTbl.GetOptions(cmd_line)
 	
 	--Load and collate the extensions.
 	options.extensions = options.extensions or {}
-	options.extfiles = options.extfiles or {}
+	options.extfiles = { "GLExtensions.txt" }
 	options.stdexts = options.stdexts or {}
 	
 	for _, file in ipairs(options.extfiles) do

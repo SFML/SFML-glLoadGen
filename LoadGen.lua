@@ -49,16 +49,16 @@ if(#badExts > 0) then
 end
 
 --Extract the path and base-filename from the filename.
-local simplename, dir = util.ParsePath(options.outname)
+local simplename, dir = util.ParsePath("GLLoader")
 dir = dir or "./"
 
 assert(simplename,
-	"There is no filename in the path '" .. options.outname .. "'")
+	"There is no filename in the path 'GLLoader'")
 
 local style, structure = Styles.GetStyle(options.style)
 
 --Compute the filename, minus style-specific suffix.
-local basename = dir .. spec:FilePrefix() .. simplename
+local basename = dir .. simplename
 
 structure.Proc(basename, style, specData, spec, options)
 

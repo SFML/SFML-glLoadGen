@@ -27,38 +27,38 @@ return [[
 #define __gl_ATI_h_
 
 #ifndef APIENTRY
-	#if defined(__MINGW32__)
-		#ifndef WIN32_LEAN_AND_MEAN
-			#define WIN32_LEAN_AND_MEAN 1
-		#endif
-		#ifndef NOMINMAX
-			#define NOMINMAX
-		#endif
-		#include <windows.h>
-	#elif (_MSC_VER >= 800) || defined(_STDCALL_SUPPORTED) || defined(__BORLANDC__)
-		#ifndef WIN32_LEAN_AND_MEAN
-			#define WIN32_LEAN_AND_MEAN 1
-		#endif
-		#ifndef NOMINMAX
-			#define NOMINMAX
-		#endif
-		#include <windows.h>
-	#else
-		#define APIENTRY
-	#endif
-#endif /*APIENTRY*/
+    #if defined(__MINGW32__)
+        #ifndef WIN32_LEAN_AND_MEAN
+            #define WIN32_LEAN_AND_MEAN 1
+        #endif
+        #ifndef NOMINMAX
+            #define NOMINMAX
+        #endif
+        #include <windows.h>
+    #elif (_MSC_VER >= 800) || defined(_STDCALL_SUPPORTED) || defined(__BORLANDC__)
+        #ifndef WIN32_LEAN_AND_MEAN
+            #define WIN32_LEAN_AND_MEAN 1
+        #endif
+        #ifndef NOMINMAX
+            #define NOMINMAX
+        #endif
+        #include <windows.h>
+    #else
+        #define APIENTRY
+    #endif
+#endif // APIENTRY
 
-#ifndef CODEGEN_FUNCPTR
-	#define CODEGEN_REMOVE_FUNCPTR
-	#if defined(_WIN32)
-		#define CODEGEN_FUNCPTR APIENTRY
-	#else
-		#define CODEGEN_FUNCPTR
-	#endif
-#endif /*CODEGEN_FUNCPTR*/
+#ifndef GL_FUNCPTR
+    #define GL_REMOVE_FUNCPTR
+    #if defined(_WIN32)
+        #define GL_FUNCPTR APIENTRY
+    #else
+        #define GL_FUNCPTR
+    #endif
+#endif // GL_FUNCPTR
 
 #ifndef GLAPI
-	#define GLAPI extern
+    #define GLAPI extern
 #endif
 
 ]]

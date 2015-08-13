@@ -3,10 +3,10 @@ return {
 		["passthru"] = {
 			[==[#include <stddef.h>]==],
 			[==[#ifndef GLEXT_64_TYPES_DEFINED
-/* This code block is duplicated in glxext.h, so must be protected */
+// This code block is duplicated in glxext.h, so must be protected
 #define GLEXT_64_TYPES_DEFINED
-/* Define int32_t, int64_t, and uint64_t types for UST/MSC */
-/* (as used in the GL_EXT_timer_query extension). */
+// Define int32_t, int64_t, and uint64_t types for UST/MSC
+// (as used in the GL_EXT_timer_query extension).
 #if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
 #include <inttypes.h>
 #elif defined(__sun__) || defined(__digital__)
@@ -18,8 +18,8 @@ typedef unsigned long int uint64_t;
 #else
 typedef long long int int64_t;
 typedef unsigned long long int uint64_t;
-#endif /* __arch64__ */
-#endif /* __STDC__ */
+#endif // __arch64__
+#endif // __STDC__
 #elif defined( __VMS ) || defined(__sgi)
 #include <inttypes.h>
 #elif defined(__SCO__) || defined(__USLC__)
@@ -35,7 +35,7 @@ typedef __int32 int32_t;
 typedef __int64 int64_t;
 typedef unsigned __int64 uint64_t;
 #else
-/* Fallback if nothing above works */
+// Fallback if nothing above works
 #include <inttypes.h>
 #endif
 #endif]==],
@@ -93,7 +93,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[usage]==],
@@ -160,7 +160,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void **]==],
+						["ctype"] = [==[const void**]==],
 					},
 				},
 				["name"] = [==[ReplacementCodePointerSUN]==],
@@ -180,7 +180,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[count]==],
-						["ctype"] = [==[const GLsizei *]==],
+						["ctype"] = [==[const GLsizei*]==],
 					},
 					{
 						["name"] = [==[type]==],
@@ -429,7 +429,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint64EXT *]==],
+						["ctype"] = [==[const GLint64EXT*]==],
 					},
 				},
 				["name"] = [==[Uniform3i64vNV]==],
@@ -454,7 +454,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -523,7 +523,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint64EXT *]==],
+						["ctype"] = [==[GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribLui64vNV]==],
@@ -540,7 +540,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[ElementPointerAPPLE]==],
@@ -568,7 +568,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[InterleavedArrays]==],
@@ -589,7 +589,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint64EXT *]==],
+						["ctype"] = [==[GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribLui64vARB]==],
@@ -662,19 +662,19 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[size]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[type]==],
-						["ctype"] = [==[GLenum *]==],
+						["ctype"] = [==[GLenum*]==],
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["name"] = [==[GetTransformFeedbackVarying]==],
@@ -694,7 +694,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI4uiv]==],
@@ -715,7 +715,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[paths]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[pathBase]==],
@@ -731,7 +731,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[transformValues]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[CoverFillPathInstancedNV]==],
@@ -826,7 +826,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[UniformMatrix2x4fv]==],
@@ -844,7 +844,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLushort *]==],
+						["ctype"] = [==[const GLushort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4NusvARB]==],
@@ -893,7 +893,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bits]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedMultiTexSubImage2DEXT]==],
@@ -948,7 +948,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[SecondaryColor3fvEXT]==],
@@ -1044,11 +1044,11 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[queryName]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 					{
 						["name"] = [==[queryId]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetPerfQueryIdByNameINTEL]==],
@@ -1061,7 +1061,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[Vertex4xvOES]==],
@@ -1143,7 +1143,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[Color4ubv]==],
@@ -1212,7 +1212,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[message]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -1238,7 +1238,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[void **]==],
+						["ctype"] = [==[void**]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribPointerv]==],
@@ -1293,7 +1293,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[PixelMapx]==],
@@ -1314,7 +1314,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[result]==],
-						["ctype"] = [==[GLuint64EXT *]==],
+						["ctype"] = [==[GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[GetIntegerui64i_vNV]==],
@@ -1356,7 +1356,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[TexParameteriv]==],
@@ -1377,7 +1377,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[TexParameterIivEXT]==],
@@ -1401,7 +1401,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetPixelMapfv]==],
@@ -1418,7 +1418,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib1dvNV]==],
@@ -1501,7 +1501,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[TextureParameterIuivEXT]==],
@@ -1525,11 +1525,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[source]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["name"] = [==[GetShaderSource]==],
@@ -1574,7 +1574,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint64EXT *]==],
+						["ctype"] = [==[GLint64EXT*]==],
 					},
 				},
 				["name"] = [==[GetUniformi64vNV]==],
@@ -1591,7 +1591,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MatrixMultTransposedEXT]==],
@@ -1611,7 +1611,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI4sv]==],
@@ -1628,7 +1628,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[fences]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GenFencesNV]==],
@@ -1657,7 +1657,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -1676,11 +1676,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[first]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 					{
 						["name"] = [==[count]==],
-						["ctype"] = [==[const GLsizei *]==],
+						["ctype"] = [==[const GLsizei*]==],
 					},
 					{
 						["name"] = [==[primcount]==],
@@ -1734,7 +1734,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["extensions"] = {
@@ -1753,7 +1753,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indirect]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[drawCount]==],
@@ -1807,7 +1807,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[nextQueryId]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetNextPerfQueryIdINTEL]==],
@@ -1875,7 +1875,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTexImage3D]==],
@@ -1895,7 +1895,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib3fv]==],
@@ -1915,7 +1915,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4uiv]==],
@@ -1967,7 +1967,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TexEnvfv]==],
@@ -1980,7 +1980,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[WindowPos3fvMESA]==],
@@ -1998,7 +1998,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4NsvARB]==],
@@ -2071,7 +2071,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetColorTableParameterfv]==],
@@ -2148,7 +2148,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[samplers]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -2319,7 +2319,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TextureImage2DEXT]==],
@@ -2340,7 +2340,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void **]==],
+						["ctype"] = [==[const void**]==],
 					},
 				},
 				["name"] = [==[TexCoordPointervINTEL]==],
@@ -2360,7 +2360,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[RasterPos3fv]==],
@@ -2381,7 +2381,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetObjectBufferivATI]==],
@@ -2398,7 +2398,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[DeleteTransformFeedbacksNV]==],
@@ -2426,7 +2426,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Lightfv]==],
@@ -2477,7 +2477,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetVideoivNV]==],
@@ -2532,7 +2532,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -2555,7 +2555,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetListParameterivSGIX]==],
@@ -2636,7 +2636,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[img]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetnCompressedTexImageARB]==],
@@ -2661,7 +2661,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MultiTexGendvEXT]==],
@@ -2681,7 +2681,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI2uiv]==],
@@ -2719,7 +2719,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bufs]==],
-						["ctype"] = [==[const GLenum *]==],
+						["ctype"] = [==[const GLenum*]==],
 					},
 				},
 				["extensions"] = {
@@ -2738,7 +2738,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MatrixMult3x3fNV]==],
@@ -2755,7 +2755,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLcharARB *]==],
+						["ctype"] = [==[const GLcharARB*]==],
 					},
 				},
 				["name"] = [==[GetUniformLocationARB]==],
@@ -2809,7 +2809,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -2856,7 +2856,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord3dv]==],
@@ -2917,7 +2917,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribdv]==],
@@ -2930,19 +2930,19 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[rc]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[tc]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[n]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN]==],
@@ -2998,7 +2998,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[Map2d]==],
@@ -3162,7 +3162,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[FogCoordPointer]==],
@@ -3226,7 +3226,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[LoadMatrixd]==],
@@ -3243,7 +3243,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[FlushVertexArrayRangeAPPLE]==],
@@ -3289,7 +3289,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform3fvEXT]==],
@@ -3322,7 +3322,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[props]==],
-						["ctype"] = [==[const GLenum *]==],
+						["ctype"] = [==[const GLenum*]==],
 					},
 					{
 						["name"] = [==[bufSize]==],
@@ -3330,11 +3330,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -3396,7 +3396,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -3420,7 +3420,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetIntegerIndexedvEXT]==],
@@ -3511,7 +3511,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -3530,7 +3530,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[weights]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[WeightfvARB]==],
@@ -3559,7 +3559,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[TexCoord1hvNV]==],
@@ -3596,7 +3596,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[PointParameterfv]==],
@@ -3646,7 +3646,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[void **]==],
+						["ctype"] = [==[void**]==],
 					},
 				},
 				["name"] = [==[GetPointervEXT]==],
@@ -3687,7 +3687,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetTexGendv]==],
@@ -3724,7 +3724,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTexSubImage1DARB]==],
@@ -3776,7 +3776,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLboolean *]==],
+						["ctype"] = [==[GLboolean*]==],
 					},
 				},
 				["name"] = [==[GetVariantBooleanvEXT]==],
@@ -3845,11 +3845,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[row]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[column]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[SeparableFilter2DEXT]==],
@@ -3870,7 +3870,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[userParam]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["extensions"] = {
@@ -3901,7 +3901,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -3969,7 +3969,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetPathTexGenfvNV]==],
@@ -3989,7 +3989,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[TexCoord3dv]==],
@@ -4023,7 +4023,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[GLushort *]==],
+						["ctype"] = [==[GLushort*]==],
 					},
 				},
 				["name"] = [==[GetnPixelMapusvARB]==],
@@ -4057,7 +4057,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[WindowPos3fvARB]==],
@@ -4074,7 +4074,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord4hvNV]==],
@@ -4099,7 +4099,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramParameters4fvNV]==],
@@ -4116,7 +4116,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[addr]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VariantivEXT]==],
@@ -4181,7 +4181,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[void **]==],
+						["ctype"] = [==[void**]==],
 					},
 				},
 				["name"] = [==[GetVertexArrayPointeri_vEXT]==],
@@ -4198,7 +4198,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[SpriteParameterfvSGIX]==],
@@ -4219,7 +4219,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetnPixelMapfvARB]==],
@@ -4248,7 +4248,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -4332,7 +4332,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[val]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[SetMultisamplefvAMD]==],
@@ -4366,7 +4366,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[VertexArrayRangeAPPLE]==],
@@ -4475,7 +4475,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[DeformationMap3dSGIX]==],
@@ -4495,7 +4495,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4sv]==],
@@ -4548,7 +4548,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[PathParameterfvNV]==],
@@ -4573,7 +4573,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[UniformMatrix4fvARB]==],
@@ -4586,7 +4586,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[TexCoord1xvOES]==],
@@ -4631,7 +4631,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[attribs]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 					{
 						["name"] = [==[nbuffers]==],
@@ -4639,7 +4639,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bufstreams]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 					{
 						["name"] = [==[bufferMode]==],
@@ -4727,7 +4727,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTexSubImage1D]==],
@@ -4755,7 +4755,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetLightfv]==],
@@ -4775,7 +4775,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[RasterPos2fv]==],
@@ -4800,7 +4800,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[UniformMatrix2fvARB]==],
@@ -4827,7 +4827,7 @@ typedef unsigned int GLhandleARB;
 				["extensions"] = {
 					[==[ARB_direct_state_access]==],
 				},
-				["return_ctype"] = [==[void *]==],
+				["return_ctype"] = [==[void*]==],
 			},
 			{
 				["extensions"] = {
@@ -4874,7 +4874,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLboolean *]==],
+						["ctype"] = [==[GLboolean*]==],
 					},
 				},
 				["name"] = [==[GetLocalConstantBooleanvEXT]==],
@@ -4927,7 +4927,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetMapParameterfvNV]==],
@@ -4980,7 +4980,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 					{
 						["name"] = [==[x]==],
@@ -5025,7 +5025,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[enabled]==],
@@ -5054,7 +5054,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -5073,7 +5073,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MatrixMultdEXT]==],
@@ -5095,7 +5095,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramLocalParameter4fvARB]==],
@@ -5112,7 +5112,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[weights]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[WeightubvARB]==],
@@ -5153,7 +5153,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[fontData]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[faceIndex]==],
@@ -5193,7 +5193,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[Vertex3dv]==],
@@ -5280,7 +5280,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -5415,7 +5415,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -5456,7 +5456,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetProgramLocalParameterfvARB]==],
@@ -5494,7 +5494,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetNamedFramebufferAttachmentParameterivEXT]==],
@@ -5588,7 +5588,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI1iv]==],
@@ -5647,7 +5647,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[ptr]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[length]==],
@@ -5655,7 +5655,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[label]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -5706,7 +5706,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TextureSubImage2DEXT]==],
@@ -5768,7 +5768,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord1dv]==],
@@ -5809,7 +5809,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MultMatrixd]==],
@@ -5826,7 +5826,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indices]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[MatrixIndexubvARB]==],
@@ -6126,7 +6126,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetMultiTexParameterIuivEXT]==],
@@ -6155,7 +6155,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -6241,7 +6241,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[lists]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CallLists]==],
@@ -6347,7 +6347,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[Uniform3uiv]==],
@@ -6364,7 +6364,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[weights]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[WeightuivARB]==],
@@ -6382,7 +6382,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLushort *]==],
+						["ctype"] = [==[const GLushort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4usvARB]==],
@@ -6403,7 +6403,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Uniform3ivARB]==],
@@ -6433,7 +6433,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[Vertex4hvNV]==],
@@ -6453,7 +6453,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4ubv]==],
@@ -6478,7 +6478,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[MatrixIndexPointerARB]==],
@@ -6495,7 +6495,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord3dvARB]==],
@@ -6512,7 +6512,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[fences]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GenFencesAPPLE]==],
@@ -6560,7 +6560,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetQueryivARB]==],
@@ -6625,7 +6625,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform4ivEXT]==],
@@ -6669,7 +6669,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[buf]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[DebugMessageInsertAMD]==],
@@ -6723,7 +6723,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetnMinmaxARB]==],
@@ -6776,7 +6776,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[BinormalPointerEXT]==],
@@ -6797,7 +6797,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribIivEXT]==],
@@ -6822,11 +6822,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[range]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 					{
 						["name"] = [==[precision]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -6869,7 +6869,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["extensions"] = {
@@ -6912,7 +6912,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bits]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTextureImage1DEXT]==],
@@ -6952,7 +6952,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLushort *]==],
+						["ctype"] = [==[const GLushort*]==],
 					},
 				},
 				["name"] = [==[SecondaryColor3usv]==],
@@ -7006,7 +7006,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[ProgramLocalParametersI4uivNV]==],
@@ -7039,7 +7039,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["extensions"] = {
@@ -7078,7 +7078,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GenQueries]==],
@@ -7103,7 +7103,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[weights]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TexFilterFuncSGIS]==],
@@ -7120,7 +7120,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[arrays]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GenVertexArraysAPPLE]==],
@@ -7162,7 +7162,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MatrixLoad3x2fNV]==],
@@ -7204,7 +7204,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MatrixLoadTransposedEXT]==],
@@ -7229,7 +7229,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -7298,7 +7298,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint64EXT *]==],
+						["ctype"] = [==[const GLint64EXT*]==],
 					},
 				},
 				["name"] = [==[Uniform2i64vNV]==],
@@ -7338,7 +7338,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord3sv]==],
@@ -7351,11 +7351,11 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[tc]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TexCoord4fVertex4fvSUN]==],
@@ -7389,7 +7389,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetnMapfvARB]==],
@@ -7414,7 +7414,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[VertexWeightPointerEXT]==],
@@ -7439,7 +7439,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetNamedProgramLocalParameterfvEXT]==],
@@ -7474,7 +7474,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribivARB]==],
@@ -7544,7 +7544,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[framebuffers]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -7571,15 +7571,15 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[row]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 					{
 						["name"] = [==[column]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 					{
 						["name"] = [==[span]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetSeparableFilter]==],
@@ -7608,7 +7608,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -7635,7 +7635,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform2ivEXT]==],
@@ -7691,7 +7691,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TexSubImage3D]==],
@@ -7732,7 +7732,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[const GLuint64 *]==],
+						["ctype"] = [==[const GLuint64*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformHandleui64vARB]==],
@@ -7752,7 +7752,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4fv]==],
@@ -7777,7 +7777,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indices]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -7825,7 +7825,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttribs2svNV]==],
@@ -7842,7 +7842,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[equation]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ClipPlanefOES]==],
@@ -7871,7 +7871,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indices]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[instancecount]==],
@@ -7899,7 +7899,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4uivARB]==],
@@ -7920,7 +7920,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indirect]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[drawCount]==],
@@ -7981,7 +7981,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[BufferSubData]==],
@@ -8049,7 +8049,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Vertex3iv]==],
@@ -8078,7 +8078,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -8143,7 +8143,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coord]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[FogCoorddv]==],
@@ -8183,7 +8183,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[label]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[LabelObjectEXT]==],
@@ -8203,7 +8203,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[TexCoord3iv]==],
@@ -8253,7 +8253,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[renderbuffers]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -8283,19 +8283,19 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[size]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 					{
 						["name"] = [==[type]==],
-						["ctype"] = [==[GLenum *]==],
+						["ctype"] = [==[GLenum*]==],
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["name"] = [==[GetActiveUniform]==],
@@ -8320,7 +8320,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetTextureParameterivEXT]==],
@@ -8345,11 +8345,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[label]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["name"] = [==[GetObjectLabelEXT]==],
@@ -8373,7 +8373,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetnPixelMapuiv]==],
@@ -8450,7 +8450,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Color4iv]==],
@@ -8495,7 +8495,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[UniformMatrix4x3fv]==],
@@ -8515,7 +8515,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4Nsv]==],
@@ -8555,7 +8555,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[paths]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[pathBase]==],
@@ -8571,7 +8571,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[transformValues]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[CoverStrokePathInstancedNV]==],
@@ -8609,7 +8609,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[GLfixed *]==],
+						["ctype"] = [==[GLfixed*]==],
 					},
 				},
 				["name"] = [==[GetMapxvOES]==],
@@ -8626,7 +8626,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[CombinerParameterfvNV]==],
@@ -8651,7 +8651,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[img]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetCompressedTextureImageEXT]==],
@@ -8689,7 +8689,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetnMapivARB]==],
@@ -8709,7 +8709,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[WindowPos3dv]==],
@@ -8789,7 +8789,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI2iv]==],
@@ -8837,7 +8837,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI4bv]==],
@@ -8857,7 +8857,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[buffers]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[DeleteBuffers]==],
@@ -8882,11 +8882,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLvoid *]==],
+						["ctype"] = [==[GLvoid*]==],
 					},
 					{
 						["name"] = [==[bytesWritten]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetPerfQueryDataINTEL]==],
@@ -8937,7 +8937,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetTexEnviv]==],
@@ -8986,7 +8986,7 @@ typedef unsigned int GLhandleARB;
 					},
 				},
 				["name"] = [==[GetStringi]==],
-				["return_ctype"] = [==[const GLubyte *]==],
+				["return_ctype"] = [==[const GLubyte*]==],
 			},
 			{
 				["core"] = {
@@ -9007,7 +9007,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint64 *]==],
+						["ctype"] = [==[GLint64*]==],
 					},
 				},
 				["extensions"] = {
@@ -9083,7 +9083,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord3hvNV]==],
@@ -9096,19 +9096,19 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[tc]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[c]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[n]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TexCoord2fColor4fNormal3fVertex3fvSUN]==],
@@ -9137,7 +9137,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -9168,7 +9168,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix3dvEXT]==],
@@ -9185,7 +9185,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[arrays]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[DeleteVertexArraysAPPLE]==],
@@ -9263,7 +9263,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetnUniformuivARB]==],
@@ -9359,7 +9359,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetnUniformdvARB]==],
@@ -9409,7 +9409,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MapVertexAttrib1fAPPLE]==],
@@ -9459,7 +9459,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI2uivEXT]==],
@@ -9480,7 +9480,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void **]==],
+						["ctype"] = [==[const void**]==],
 					},
 					{
 						["name"] = [==[ptrstride]==],
@@ -9505,11 +9505,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetProgramNamedParameterdvNV]==],
@@ -9537,7 +9537,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[UniformMatrix4fv]==],
@@ -9567,7 +9567,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[PixelTransformParameterfvEXT]==],
@@ -9588,7 +9588,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[framebuffers]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -9607,7 +9607,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[FragmentLightModelivSGIX]==],
@@ -9703,7 +9703,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[SecondaryColor3iv]==],
@@ -9724,7 +9724,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[count]==],
-						["ctype"] = [==[const GLsizei *]==],
+						["ctype"] = [==[const GLsizei*]==],
 					},
 					{
 						["name"] = [==[type]==],
@@ -9740,7 +9740,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[basevertex]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -9771,7 +9771,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -9815,7 +9815,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix3x4dvEXT]==],
@@ -9903,7 +9903,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetUniformiv]==],
@@ -9983,7 +9983,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -10023,7 +10023,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -10129,7 +10129,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetMapControlPointsNV]==],
@@ -10162,7 +10162,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint64 *]==],
+						["ctype"] = [==[GLint64*]==],
 					},
 				},
 				["extensions"] = {
@@ -10185,7 +10185,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetVariantArrayObjectivATI]==],
@@ -10265,7 +10265,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetPixelTransformParameterivEXT]==],
@@ -10378,7 +10378,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetVideoCaptureivNV]==],
@@ -10411,7 +10411,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[Color3bv]==],
@@ -10447,7 +10447,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetnTexImage]==],
@@ -10488,7 +10488,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint64 *]==],
+						["ctype"] = [==[GLint64*]==],
 					},
 				},
 				["name"] = [==[GetBufferParameteri64v]==],
@@ -10501,7 +10501,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coord]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[FogCoorddvEXT]==],
@@ -10548,7 +10548,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[WindowPos2fv]==],
@@ -10637,7 +10637,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[PixelTransformParameterivEXT]==],
@@ -10714,7 +10714,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetMinmax]==],
@@ -10743,7 +10743,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetTextureLevelParameterivEXT]==],
@@ -10876,7 +10876,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib1fv]==],
@@ -10897,7 +10897,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetArrayObjectfvATI]==],
@@ -10930,7 +10930,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -10984,7 +10984,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord2dvARB]==],
@@ -11014,7 +11014,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexStream4fvATI]==],
@@ -11077,11 +11077,11 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[c]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Color4ubVertex2fvSUN]==],
@@ -11106,7 +11106,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[attachments]==],
-						["ctype"] = [==[const GLenum *]==],
+						["ctype"] = [==[const GLenum*]==],
 					},
 					{
 						["name"] = [==[x]==],
@@ -11177,7 +11177,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetInternalformatSampleivNV]==],
@@ -11206,7 +11206,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -11261,7 +11261,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[string]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetNamedProgramStringEXT]==],
@@ -11305,7 +11305,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bitmap]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[Bitmap]==],
@@ -11341,7 +11341,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[DrawPixels]==],
@@ -11362,7 +11362,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetConvolutionParameterfv]==],
@@ -11391,7 +11391,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -11602,7 +11602,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord1iv]==],
@@ -11622,7 +11622,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI1uiv]==],
@@ -11676,7 +11676,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["extensions"] = {
@@ -11731,7 +11731,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[metrics]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetPathMetricRangeNV]==],
@@ -11777,7 +11777,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetDoubleIndexedvEXT]==],
@@ -11802,11 +11802,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 					{
 						["name"] = [==[bytesWritten]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetPerfMonitorCounterDataAMD]==],
@@ -11827,7 +11827,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ColorTableParameteriv]==],
@@ -12029,7 +12029,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -12052,11 +12052,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[infoLog]==],
-						["ctype"] = [==[GLcharARB *]==],
+						["ctype"] = [==[GLcharARB*]==],
 					},
 				},
 				["name"] = [==[GetInfoLogARB]==],
@@ -12081,7 +12081,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -12107,7 +12107,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord3iv]==],
@@ -12188,7 +12188,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetProgramParameterfvNV]==],
@@ -12209,7 +12209,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttribs2dvNV]==],
@@ -12251,7 +12251,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -12311,7 +12311,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[void **]==],
+						["ctype"] = [==[void**]==],
 					},
 				},
 				["name"] = [==[GetBufferPointervARB]==],
@@ -12357,7 +12357,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -12463,7 +12463,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Uniform1fvARB]==],
@@ -12484,7 +12484,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetMinmaxParameterivEXT]==],
@@ -12505,7 +12505,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[Uniform3uivEXT]==],
@@ -12534,7 +12534,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -12589,7 +12589,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TexImage4DSGIS]==],
@@ -12696,7 +12696,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord4fvARB]==],
@@ -12721,7 +12721,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[uniformIndices]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[pname]==],
@@ -12729,7 +12729,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -12756,7 +12756,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -12790,7 +12790,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetTexImage]==],
@@ -12846,15 +12846,15 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[buffers]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[offsets]==],
-						["ctype"] = [==[const GLintptr *]==],
+						["ctype"] = [==[const GLintptr*]==],
 					},
 					{
 						["name"] = [==[sizes]==],
-						["ctype"] = [==[const GLsizeiptr *]==],
+						["ctype"] = [==[const GLsizeiptr*]==],
 					},
 				},
 				["extensions"] = {
@@ -12907,7 +12907,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[void **]==],
+						["ctype"] = [==[void**]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribPointervARB]==],
@@ -12927,7 +12927,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[Normal3sv]==],
@@ -13010,19 +13010,19 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[tc]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[c]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[n]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TexCoord4fColor4fNormal3fVertex4fvSUN]==],
@@ -13040,7 +13040,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib1fvARB]==],
@@ -13089,7 +13089,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint64EXT *]==],
+						["ctype"] = [==[const GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[VertexAttribL1ui64vNV]==],
@@ -13168,7 +13168,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetMinmaxParameteriv]==],
@@ -13185,7 +13185,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetCoverageModulationTableNV]==],
@@ -13355,7 +13355,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TexSubImage4DSGIS]==],
@@ -13384,7 +13384,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -13424,7 +13424,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[WindowPos3ivARB]==],
@@ -13469,7 +13469,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["extensions"] = {
@@ -13578,7 +13578,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Uniform4fv]==],
@@ -13602,7 +13602,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetShaderiv]==],
@@ -13656,7 +13656,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[void **]==],
+						["ctype"] = [==[void**]==],
 					},
 				},
 				["extensions"] = {
@@ -13714,7 +13714,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Map2f]==],
@@ -13742,7 +13742,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetMaterialfv]==],
@@ -13835,7 +13835,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetMultiTexParameterfvEXT]==],
@@ -13855,7 +13855,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLboolean *]==],
+						["ctype"] = [==[GLboolean*]==],
 					},
 				},
 				["name"] = [==[GetBooleanv]==],
@@ -13888,7 +13888,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[SecondaryColor3fv]==],
@@ -13964,7 +13964,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TextureImage1DEXT]==],
@@ -14012,7 +14012,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetLightiv]==],
@@ -14050,27 +14050,27 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[sources]==],
-						["ctype"] = [==[GLenum *]==],
+						["ctype"] = [==[GLenum*]==],
 					},
 					{
 						["name"] = [==[types]==],
-						["ctype"] = [==[GLenum *]==],
+						["ctype"] = [==[GLenum*]==],
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 					{
 						["name"] = [==[severities]==],
-						["ctype"] = [==[GLenum *]==],
+						["ctype"] = [==[GLenum*]==],
 					},
 					{
 						["name"] = [==[lengths]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[messageLog]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -14113,7 +14113,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bits]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedMultiTexImage1DEXT]==],
@@ -14130,7 +14130,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint64EXT *]==],
+						["ctype"] = [==[const GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[VertexAttribL3ui64vNV]==],
@@ -14151,7 +14151,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetFloati_vEXT]==],
@@ -14205,7 +14205,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -14265,7 +14265,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLboolean *]==],
+						["ctype"] = [==[GLboolean*]==],
 					},
 				},
 				["name"] = [==[GetBooleani_v]==],
@@ -14282,7 +14282,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VertexStream3ivATI]==],
@@ -14299,7 +14299,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[surfaces]==],
-						["ctype"] = [==[const GLvdpauSurfaceNV *]==],
+						["ctype"] = [==[const GLvdpauSurfaceNV*]==],
 					},
 				},
 				["name"] = [==[VDPAUUnmapSurfacesNV]==],
@@ -14385,7 +14385,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["extensions"] = {
@@ -14463,7 +14463,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribIiv]==],
@@ -14570,7 +14570,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -14597,7 +14597,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[CompileShaderIncludeARB]==],
@@ -14610,7 +14610,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[Binormal3bvEXT]==],
@@ -14698,11 +14698,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[first]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 					{
 						["name"] = [==[count]==],
-						["ctype"] = [==[const GLsizei *]==],
+						["ctype"] = [==[const GLsizei*]==],
 					},
 					{
 						["name"] = [==[primcount]==],
@@ -14731,7 +14731,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MultiTexEnvfvEXT]==],
@@ -14789,7 +14789,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetDoublei_vEXT]==],
@@ -14809,11 +14809,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[first]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 					{
 						["name"] = [==[count]==],
-						["ctype"] = [==[const GLsizei *]==],
+						["ctype"] = [==[const GLsizei*]==],
 					},
 					{
 						["name"] = [==[drawcount]==],
@@ -14938,7 +14938,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib3dvNV]==],
@@ -15014,7 +15014,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -15097,7 +15097,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -15119,7 +15119,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[textures]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GenTextures]==],
@@ -15148,7 +15148,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix4x3dvEXT]==],
@@ -15209,7 +15209,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib2dvNV]==],
@@ -15266,7 +15266,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bits]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTextureSubImage3DEXT]==],
@@ -15303,7 +15303,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetObjectBufferfvATI]==],
@@ -15320,7 +15320,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VertexStream2ivATI]==],
@@ -15357,7 +15357,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[flag]==],
-						["ctype"] = [==[const GLboolean *]==],
+						["ctype"] = [==[const GLboolean*]==],
 					},
 				},
 				["name"] = [==[EdgeFlagv]==],
@@ -15386,7 +15386,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetHistogramEXT]==],
@@ -15422,7 +15422,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[TexCoord3bvOES]==],
@@ -15443,7 +15443,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetConvolutionParameterivEXT]==],
@@ -15531,7 +15531,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetVideoCaptureStreamdvNV]==],
@@ -15552,7 +15552,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetHistogramParameterfv]==],
@@ -15581,7 +15581,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -15701,7 +15701,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -15778,7 +15778,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[FogxvOES]==],
@@ -15819,7 +15819,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4dv]==],
@@ -15861,7 +15861,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfixed *]==],
+						["ctype"] = [==[GLfixed*]==],
 					},
 				},
 				["name"] = [==[GetTexParameterxvOES]==],
@@ -15894,7 +15894,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[table]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[ColorTableEXT]==],
@@ -15919,7 +15919,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -15946,7 +15946,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -16033,7 +16033,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[Vertex4dv]==],
@@ -16054,7 +16054,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -16073,7 +16073,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VertexStream4ivATI]==],
@@ -16165,7 +16165,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetVariantArrayObjectfvATI]==],
@@ -16222,7 +16222,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["extensions"] = {
@@ -16277,7 +16277,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetProgramivNV]==],
@@ -16294,7 +16294,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 					{
 						["name"] = [==[bufSize]==],
@@ -16302,11 +16302,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[stringlen]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 					{
 						["name"] = [==[string]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["name"] = [==[GetNamedStringARB]==],
@@ -16348,7 +16348,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexStream4svATI]==],
@@ -16419,7 +16419,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4NubvARB]==],
@@ -16440,7 +16440,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ConvolutionParameterfv]==],
@@ -16500,7 +16500,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTexImage2D]==],
@@ -16629,7 +16629,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetPathColorGenivNV]==],
@@ -16673,7 +16673,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetHistogramParameteriv]==],
@@ -16686,7 +16686,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[EvalCoord2xvOES]==],
@@ -16711,7 +16711,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -16733,7 +16733,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Vertex4iv]==],
@@ -16750,11 +16750,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[numCounters]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 					{
 						["name"] = [==[maxActiveCounters]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 					{
 						["name"] = [==[counterSize]==],
@@ -16762,7 +16762,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[counters]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetPerfMonitorCountersAMD]==],
@@ -16783,11 +16783,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramNamedParameter4fvNV]==],
@@ -16871,15 +16871,15 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[rc]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[n]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ReplacementCodeuiNormal3fVertex3fvSUN]==],
@@ -16912,7 +16912,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -16944,7 +16944,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[queryId]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetFirstPerfQueryIdINTEL]==],
@@ -16965,7 +16965,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ProgramLocalParameterI4ivNV]==],
@@ -17057,11 +17057,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[first]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 					{
 						["name"] = [==[count]==],
-						["ctype"] = [==[const GLsizei *]==],
+						["ctype"] = [==[const GLsizei*]==],
 					},
 					{
 						["name"] = [==[primcount]==],
@@ -17090,7 +17090,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[paths]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[pathBase]==],
@@ -17110,7 +17110,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[returnedSpacing]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetPathSpacingNV]==],
@@ -17130,7 +17130,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[RasterPos4dv]==],
@@ -17171,7 +17171,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[Binormal3dvEXT]==],
@@ -17196,15 +17196,15 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[row]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 					{
 						["name"] = [==[column]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 					{
 						["name"] = [==[span]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetSeparableFilterEXT]==],
@@ -17259,7 +17259,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TexCoord2fv]==],
@@ -17301,7 +17301,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord2svARB]==],
@@ -17322,7 +17322,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Uniform3fvARB]==],
@@ -17367,7 +17367,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[PixelTexGenParameterfvSGIS]==],
@@ -17388,7 +17388,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttribs4svNV]==],
@@ -17417,7 +17417,7 @@ typedef unsigned int GLhandleARB;
 					},
 				},
 				["name"] = [==[MapNamedBufferRangeEXT]==],
-				["return_ctype"] = [==[void *]==],
+				["return_ctype"] = [==[void*]==],
 			},
 			{
 				["core"] = {
@@ -17458,11 +17458,11 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[mantissa]==],
-						["ctype"] = [==[GLfixed *]==],
+						["ctype"] = [==[GLfixed*]==],
 					},
 					{
 						["name"] = [==[exponent]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[QueryMatrixxOES]==],
@@ -17480,7 +17480,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[programs]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[DeleteProgramsARB]==],
@@ -17539,7 +17539,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint64EXT *]==],
+						["ctype"] = [==[const GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform4ui64vNV]==],
@@ -17585,7 +17585,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 					{
 						["name"] = [==[stringlen]==],
@@ -17593,7 +17593,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[string]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[NamedStringARB]==],
@@ -17674,7 +17674,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["extensions"] = {
@@ -17734,7 +17734,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -17775,7 +17775,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pattern]==],
-						["ctype"] = [==[GLubyte *]==],
+						["ctype"] = [==[GLubyte*]==],
 					},
 				},
 				["name"] = [==[GetnPolygonStipple]==],
@@ -17796,7 +17796,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -17819,7 +17819,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramParameter4fvNV]==],
@@ -17840,7 +17840,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ColorTableParameterfvSGI]==],
@@ -17860,7 +17860,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[mask]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[PolygonStipple]==],
@@ -17905,7 +17905,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttribs4dvNV]==],
@@ -17922,7 +17922,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4hvNV]==],
@@ -17950,7 +17950,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[TexEnviv]==],
@@ -17971,7 +17971,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfixed *]==],
+						["ctype"] = [==[GLfixed*]==],
 					},
 				},
 				["name"] = [==[GetHistogramParameterxvOES]==],
@@ -17984,15 +17984,15 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[tc]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[c]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TexCoord2fColor4ubVertex3fvSUN]==],
@@ -18013,7 +18013,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribdvNV]==],
@@ -18154,7 +18154,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -18225,7 +18225,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord3ivARB]==],
@@ -18265,7 +18265,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TexSubImage1D]==],
@@ -18318,7 +18318,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[GetFragDataLocationEXT]==],
@@ -18342,7 +18342,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[usage]==],
@@ -18363,7 +18363,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLcharARB *]==],
+						["ctype"] = [==[const GLcharARB*]==],
 					},
 				},
 				["name"] = [==[GetAttribLocationARB]==],
@@ -18392,7 +18392,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[row]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 					{
 						["name"] = [==[columnBufSize]==],
@@ -18400,11 +18400,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[column]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 					{
 						["name"] = [==[span]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetnSeparableFilterARB]==],
@@ -18421,7 +18421,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint64EXT *]==],
+						["ctype"] = [==[const GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[VertexAttribL2ui64vNV]==],
@@ -18466,23 +18466,23 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[categories]==],
-						["ctype"] = [==[GLenum *]==],
+						["ctype"] = [==[GLenum*]==],
 					},
 					{
 						["name"] = [==[severities]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 					{
 						["name"] = [==[lengths]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[message]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["name"] = [==[GetDebugMessageLogAMD]==],
@@ -18503,7 +18503,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetTexParameterIivEXT]==],
@@ -18528,7 +18528,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -18550,7 +18550,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Color3iv]==],
@@ -18602,7 +18602,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bufs]==],
-						["ctype"] = [==[const GLenum *]==],
+						["ctype"] = [==[const GLenum*]==],
 					},
 				},
 				["name"] = [==[DrawBuffers]==],
@@ -18622,7 +18622,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[SecondaryColor3bv]==],
@@ -18667,7 +18667,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[RasterPos2iv]==],
@@ -18755,7 +18755,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -18782,7 +18782,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indices]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[primcount]==],
@@ -18807,7 +18807,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -18857,7 +18857,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[FramebufferSampleLocationsfvNV]==],
@@ -18929,7 +18929,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MapVertexAttrib1dAPPLE]==],
@@ -18993,7 +18993,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord1dvARB]==],
@@ -19013,7 +19013,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[RasterPos4iv]==],
@@ -19038,7 +19038,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ProgramLocalParametersI4ivNV]==],
@@ -19059,7 +19059,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetBufferParameterivARB]==],
@@ -19076,7 +19076,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[DeleteQueriesARB]==],
@@ -19093,7 +19093,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[CullParameterfvEXT]==],
@@ -19171,7 +19171,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[paths]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[pathBase]==],
@@ -19183,7 +19183,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[metrics]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetPathMetricsNV]==],
@@ -19237,7 +19237,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[BindAttribLocation]==],
@@ -19262,7 +19262,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetPerfMonitorCounterInfoAMD]==],
@@ -19312,7 +19312,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[string]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[ProgramStringARB]==],
@@ -19373,7 +19373,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["extensions"] = {
@@ -19388,7 +19388,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[WindowPos3svMESA]==],
@@ -19405,7 +19405,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexStream1fvATI]==],
@@ -19426,7 +19426,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void **]==],
+						["ctype"] = [==[const void**]==],
 					},
 					{
 						["name"] = [==[ptrstride]==],
@@ -19552,7 +19552,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[MultiTexImage3DEXT]==],
@@ -19569,7 +19569,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord1fvARB]==],
@@ -19590,7 +19590,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ConvolutionParameteriv]==],
@@ -19646,7 +19646,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[Color4sv]==],
@@ -19712,7 +19712,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetConvolutionParameteriv]==],
@@ -19837,7 +19837,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[Uniform2uiv]==],
@@ -19912,7 +19912,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MatrixLoaddEXT]==],
@@ -19932,7 +19932,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[TexCoord1dv]==],
@@ -19957,7 +19957,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MultiTexParameterfvEXT]==],
@@ -19978,7 +19978,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLint64 *]==],
+						["ctype"] = [==[GLint64*]==],
 					},
 				},
 				["extensions"] = {
@@ -19997,7 +19997,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TexBumpParameterfvATI]==],
@@ -20032,7 +20032,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetProgramivARB]==],
@@ -20057,7 +20057,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[addr]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[VariantPointerEXT]==],
@@ -20082,7 +20082,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -20101,7 +20101,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttribL1dvEXT]==],
@@ -20134,7 +20134,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -20157,7 +20157,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttribs3dvNV]==],
@@ -20222,7 +20222,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ExecuteProgramNV]==],
@@ -20247,7 +20247,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[ProgramEnvParametersI4uivNV]==],
@@ -20272,7 +20272,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform3uivEXT]==],
@@ -20293,7 +20293,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetConvolutionParameterfvEXT]==],
@@ -20342,7 +20342,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetColorTableParameterivEXT]==],
@@ -20506,7 +20506,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[addr]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[SetLocalConstantEXT]==],
@@ -20539,7 +20539,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetTextureImageEXT]==],
@@ -20585,7 +20585,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -20642,7 +20642,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -20669,7 +20669,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetnUniformivARB]==],
@@ -20707,7 +20707,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4fvARB]==],
@@ -20785,7 +20785,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[WindowPos3sv]==],
@@ -20822,7 +20822,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[void **]==],
+						["ctype"] = [==[void**]==],
 					},
 				},
 				["name"] = [==[GetVertexArrayPointervEXT]==],
@@ -20875,7 +20875,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetMapParameterivNV]==],
@@ -20892,7 +20892,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib2fvNV]==],
@@ -20909,7 +20909,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[GetVaryingLocationNV]==],
@@ -20934,7 +20934,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform1dvEXT]==],
@@ -20954,11 +20954,11 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v1]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 					{
 						["name"] = [==[v2]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[Rectsv]==],
@@ -20971,11 +20971,11 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[context]==],
-						["ctype"] = [==[struct _cl_context *]==],
+						["ctype"] = [==[struct _cl_context*]==],
 					},
 					{
 						["name"] = [==[event]==],
-						["ctype"] = [==[struct _cl_event *]==],
+						["ctype"] = [==[struct _cl_event*]==],
 					},
 					{
 						["name"] = [==[flags]==],
@@ -20999,7 +20999,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[Color3ubv]==],
@@ -21056,7 +21056,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexAttribs1fvNV]==],
@@ -21120,7 +21120,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[arrays]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -21147,7 +21147,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -21195,7 +21195,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[image]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetnConvolutionFilterARB]==],
@@ -21212,7 +21212,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bufs]==],
-						["ctype"] = [==[const GLenum *]==],
+						["ctype"] = [==[const GLenum*]==],
 					},
 				},
 				["name"] = [==[DrawBuffersARB]==],
@@ -21250,7 +21250,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -21316,7 +21316,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetNamedFramebufferParameterivEXT]==],
@@ -21397,11 +21397,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[infoLog]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["name"] = [==[GetProgramInfoLog]==],
@@ -21418,7 +21418,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[queryHandle]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[CreatePerfQueryINTEL]==],
@@ -21439,7 +21439,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint64 *]==],
+						["ctype"] = [==[const GLuint64*]==],
 					},
 				},
 				["name"] = [==[UniformHandleui64vARB]==],
@@ -21464,7 +21464,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[image]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetConvolutionFilter]==],
@@ -21493,7 +21493,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -21515,7 +21515,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[TexCoord3sv]==],
@@ -21547,7 +21547,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[VertexPointer]==],
@@ -21568,7 +21568,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[samplers]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -21647,7 +21647,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -21677,19 +21677,19 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[size]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 					{
 						["name"] = [==[type]==],
-						["ctype"] = [==[GLenum *]==],
+						["ctype"] = [==[GLenum*]==],
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["name"] = [==[GetActiveAttrib]==],
@@ -21709,7 +21709,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[TexCoord1iv]==],
@@ -21766,7 +21766,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[UniformMatrix2x3fv]==],
@@ -21807,7 +21807,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTexImage2DARB]==],
@@ -21836,7 +21836,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix4x2fvEXT]==],
@@ -21857,7 +21857,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Uniform4fvARB]==],
@@ -21954,7 +21954,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ConvolutionParameterfvEXT]==],
@@ -21983,7 +21983,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -22025,7 +22025,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib1svARB]==],
@@ -22046,7 +22046,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void **]==],
+						["ctype"] = [==[const void**]==],
 					},
 				},
 				["name"] = [==[ColorPointervINTEL]==],
@@ -22071,11 +22071,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[infoLog]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -22187,7 +22187,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[DeformationMap3fSGIX]==],
@@ -22207,7 +22207,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[TexCoord4iv]==],
@@ -22228,23 +22228,23 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[queryName]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 					{
 						["name"] = [==[dataSize]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 					{
 						["name"] = [==[noCounters]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 					{
 						["name"] = [==[noInstances]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 					{
 						["name"] = [==[capsMask]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetPerfQueryInfoINTEL]==],
@@ -22265,7 +22265,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -22296,7 +22296,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[commands]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 					{
 						["name"] = [==[numCoords]==],
@@ -22308,7 +22308,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[PathSubCommandsNV]==],
@@ -22328,7 +22328,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[mask]==],
-						["ctype"] = [==[GLubyte *]==],
+						["ctype"] = [==[GLubyte*]==],
 					},
 				},
 				["name"] = [==[GetPolygonStipple]==],
@@ -22390,7 +22390,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[GLushort *]==],
+						["ctype"] = [==[GLushort*]==],
 					},
 				},
 				["name"] = [==[GetnPixelMapusv]==],
@@ -22445,11 +22445,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[source]==],
-						["ctype"] = [==[GLcharARB *]==],
+						["ctype"] = [==[GLcharARB*]==],
 					},
 				},
 				["name"] = [==[GetShaderSourceARB]==],
@@ -22513,7 +22513,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[c]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[Indexsv]==],
@@ -22530,7 +22530,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[dashArray]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetPathDashArrayNV]==],
@@ -22563,7 +22563,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["extensions"] = {
@@ -22585,7 +22585,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[Color4uiv]==],
@@ -22609,7 +22609,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[TexParameterIuiv]==],
@@ -22637,7 +22637,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[IndexPointer]==],
@@ -22781,7 +22781,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MatrixLoadTranspose3x3fNV]==],
@@ -22830,7 +22830,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TexImage3DEXT]==],
@@ -22868,7 +22868,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttribs1dvNV]==],
@@ -22892,7 +22892,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord2sv]==],
@@ -23040,7 +23040,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[NormalStream3ivATI]==],
@@ -23116,7 +23116,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Tangent3fvEXT]==],
@@ -23173,7 +23173,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bits]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedMultiTexSubImage3DEXT]==],
@@ -23193,7 +23193,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLushort *]==],
+						["ctype"] = [==[const GLushort*]==],
 					},
 				},
 				["name"] = [==[Color4usv]==],
@@ -23255,7 +23255,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[surfaces]==],
-						["ctype"] = [==[const GLvdpauSurfaceNV *]==],
+						["ctype"] = [==[const GLvdpauSurfaceNV*]==],
 					},
 				},
 				["name"] = [==[VDPAUMapSurfacesNV]==],
@@ -23280,7 +23280,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[binary]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[length]==],
@@ -23314,7 +23314,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[PixelMapuiv]==],
@@ -23335,7 +23335,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[MapParameterivNV]==],
@@ -23363,7 +23363,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[buffer]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[FeedbackBuffer]==],
@@ -23376,11 +23376,11 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[mode]==],
-						["ctype"] = [==[const GLenum *]==],
+						["ctype"] = [==[const GLenum*]==],
 					},
 					{
 						["name"] = [==[count]==],
-						["ctype"] = [==[const GLsizei *]==],
+						["ctype"] = [==[const GLsizei*]==],
 					},
 					{
 						["name"] = [==[type]==],
@@ -23417,7 +23417,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[MaterialxvOES]==],
@@ -23498,7 +23498,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib3hvNV]==],
@@ -23552,7 +23552,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ListParameterivSGIX]==],
@@ -23565,7 +23565,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[SecondaryColor3ubvEXT]==],
@@ -23589,7 +23589,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[void **]==],
+						["ctype"] = [==[void**]==],
 					},
 				},
 				["name"] = [==[GetBufferPointerv]==],
@@ -23618,7 +23618,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -23652,7 +23652,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[table]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetnColorTable]==],
@@ -23784,7 +23784,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[weights]==],
-						["ctype"] = [==[const GLushort *]==],
+						["ctype"] = [==[const GLushort*]==],
 					},
 				},
 				["name"] = [==[WeightusvARB]==],
@@ -23797,7 +23797,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[WindowPos2ivMESA]==],
@@ -23857,7 +23857,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetTexParameteriv]==],
@@ -23916,7 +23916,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttribs3svNV]==],
@@ -23959,7 +23959,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint64EXT *]==],
+						["ctype"] = [==[const GLint64EXT*]==],
 					},
 				},
 				["name"] = [==[Uniform4i64vNV]==],
@@ -24032,7 +24032,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[Vertex2hvNV]==],
@@ -24045,7 +24045,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[Color4hvNV]==],
@@ -24070,7 +24070,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetnMapdvARB]==],
@@ -24127,7 +24127,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[WindowPos4svMESA]==],
@@ -24172,7 +24172,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[SecondaryColor3ubv]==],
@@ -24242,7 +24242,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pipelines]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -24288,7 +24288,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Color4fv]==],
@@ -24312,7 +24312,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetProgramiv]==],
@@ -24337,7 +24337,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -24376,7 +24376,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTexImage1DARB]==],
@@ -24396,7 +24396,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TexCoord1fv]==],
@@ -24416,7 +24416,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[Vertex2dv]==],
@@ -24436,7 +24436,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[SecondaryColor3sv]==],
@@ -24461,7 +24461,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -24498,7 +24498,7 @@ typedef unsigned int GLhandleARB;
 				["extensions"] = {
 					[==[ARB_direct_state_access]==],
 				},
-				["return_ctype"] = [==[void *]==],
+				["return_ctype"] = [==[void*]==],
 			},
 			{
 				["core"] = {
@@ -24539,7 +24539,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetUniformuivEXT]==],
@@ -24579,7 +24579,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[Map1d]==],
@@ -24596,7 +24596,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord4xvOES]==],
@@ -24637,7 +24637,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform3dvEXT]==],
@@ -24657,7 +24657,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Normal3fv]==],
@@ -24678,7 +24678,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void **]==],
+						["ctype"] = [==[const void**]==],
 					},
 					{
 						["name"] = [==[ptrstride]==],
@@ -24703,7 +24703,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[color]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -24723,7 +24723,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib3fvARB]==],
@@ -24743,7 +24743,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[TexCoord2iv]==],
@@ -24776,11 +24776,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -24803,7 +24803,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetUniformfvARB]==],
@@ -24879,7 +24879,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTexSubImage2DARB]==],
@@ -24959,7 +24959,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[PointParameterfvEXT]==],
@@ -24980,7 +24980,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -25040,7 +25040,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[NamedProgramLocalParameters4fvEXT]==],
@@ -25064,7 +25064,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Uniform1fv]==],
@@ -25105,7 +25105,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord2fvARB]==],
@@ -25313,7 +25313,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[Uniform1uivEXT]==],
@@ -25337,7 +25337,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribIuiv]==],
@@ -25357,7 +25357,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib2dv]==],
@@ -25381,11 +25381,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[textures]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[residences]==],
-						["ctype"] = [==[GLboolean *]==],
+						["ctype"] = [==[GLboolean*]==],
 					},
 				},
 				["name"] = [==[AreTexturesResident]==],
@@ -25476,7 +25476,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["extensions"] = {
@@ -25507,7 +25507,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetHistogram]==],
@@ -25605,23 +25605,23 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[rc]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[tc]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[c]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[n]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN]==],
@@ -25666,7 +25666,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[MultiTexImage1DEXT]==],
@@ -25699,7 +25699,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[ColorSubTableEXT]==],
@@ -25719,7 +25719,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[GetAttribLocation]==],
@@ -25777,7 +25777,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[Normal3bv]==],
@@ -25819,7 +25819,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[samplers]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -25834,7 +25834,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[EvalCoord1xvOES]==],
@@ -25856,7 +25856,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetProgramEnvParameterdvARB]==],
@@ -25876,7 +25876,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLushort *]==],
+						["ctype"] = [==[const GLushort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4Nusv]==],
@@ -25897,7 +25897,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetImageTransformParameterivHP]==],
@@ -25931,7 +25931,7 @@ typedef unsigned int GLhandleARB;
 					},
 				},
 				["name"] = [==[MapNamedBufferEXT]==],
-				["return_ctype"] = [==[void *]==],
+				["return_ctype"] = [==[void*]==],
 			},
 			{
 				["extensions"] = {
@@ -25968,7 +25968,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bits]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedMultiTexSubImage1DEXT]==],
@@ -25985,7 +25985,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[fontName]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[fontStyle]==],
@@ -26026,7 +26026,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetBufferSubDataARB]==],
@@ -26051,7 +26051,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indirect]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["extensions"] = {
@@ -26162,7 +26162,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[MultiTexSubImage1DEXT]==],
@@ -26221,11 +26221,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[uniformName]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -26256,7 +26256,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix4fvEXT]==],
@@ -26285,7 +26285,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -26385,7 +26385,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetTexParameterfv]==],
@@ -26433,7 +26433,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[Normal3xvOES]==],
@@ -26467,7 +26467,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[FogCoordPointerEXT]==],
@@ -26507,7 +26507,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[ReadPixels]==],
@@ -26605,7 +26605,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -26656,7 +26656,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[shaders]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[binaryformat]==],
@@ -26664,7 +26664,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[binary]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[length]==],
@@ -26711,7 +26711,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint64EXT *]==],
+						["ctype"] = [==[const GLint64EXT*]==],
 					},
 				},
 				["name"] = [==[VertexAttribL2i64vNV]==],
@@ -26773,7 +26773,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetMultiTexImageEXT]==],
@@ -26794,7 +26794,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[paths]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[pathBase]==],
@@ -26814,7 +26814,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[transformValues]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[StencilFillPathInstancedNV]==],
@@ -26840,7 +26840,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint64EXT *]==],
+						["ctype"] = [==[const GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform3ui64vNV]==],
@@ -26857,7 +26857,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MatrixMultTransposefEXT]==],
@@ -26955,7 +26955,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[usage]==],
@@ -27003,7 +27003,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[WeightPointerARB]==],
@@ -27056,7 +27056,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -27079,7 +27079,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[DetailTexFuncSGIS]==],
@@ -27120,7 +27120,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[LoadTransposeMatrixd]==],
@@ -27154,7 +27154,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[marker]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[InsertEventMarkerEXT]==],
@@ -27174,7 +27174,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib3sv]==],
@@ -27194,7 +27194,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[WindowPos3iv]==],
@@ -27214,7 +27214,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLushort *]==],
+						["ctype"] = [==[const GLushort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4usv]==],
@@ -27234,7 +27234,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI4iv]==],
@@ -27298,7 +27298,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord2iv]==],
@@ -27414,7 +27414,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[CullParameterdvEXT]==],
@@ -27434,7 +27434,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4Nuiv]==],
@@ -27498,7 +27498,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ConvolutionParameterivEXT]==],
@@ -27515,11 +27515,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[textures]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[priorities]==],
-						["ctype"] = [==[const GLclampf *]==],
+						["ctype"] = [==[const GLclampf*]==],
 					},
 				},
 				["name"] = [==[PrioritizeTexturesEXT]==],
@@ -27591,7 +27591,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib1hvNV]==],
@@ -27625,7 +27625,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[SecondaryColor3hvNV]==],
@@ -27674,7 +27674,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["extensions"] = {
@@ -27701,7 +27701,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[textures]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -27733,7 +27733,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[SpriteParameterivSGIX]==],
@@ -27774,7 +27774,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[ReadnPixelsARB]==],
@@ -27791,7 +27791,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[result]==],
-						["ctype"] = [==[GLuint64EXT *]==],
+						["ctype"] = [==[GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[GetIntegerui64vNV]==],
@@ -27815,7 +27815,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord1sv]==],
@@ -27869,19 +27869,19 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[size]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[type]==],
-						["ctype"] = [==[GLenum *]==],
+						["ctype"] = [==[GLenum*]==],
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["name"] = [==[GetActiveVaryingNV]==],
@@ -27945,7 +27945,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix3x2fvEXT]==],
@@ -28013,7 +28013,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[table]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[ColorTable]==],
@@ -28046,11 +28046,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -28077,7 +28077,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -28186,7 +28186,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[Uniform4uiv]==],
@@ -28203,7 +28203,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[IsNamedStringARB]==],
@@ -28247,7 +28247,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[MultiTexParameterIuivEXT]==],
@@ -28339,7 +28339,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexStream2dvATI]==],
@@ -28408,7 +28408,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint64 *]==],
+						["ctype"] = [==[const GLuint64*]==],
 					},
 				},
 				["name"] = [==[UniformHandleui64vNV]==],
@@ -28453,7 +28453,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[RasterPos2sv]==],
@@ -28599,7 +28599,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetArrayObjectivATI]==],
@@ -28673,7 +28673,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[MultiTexSubImage2DEXT]==],
@@ -28748,7 +28748,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLboolean *]==],
+						["ctype"] = [==[GLboolean*]==],
 					},
 				},
 				["name"] = [==[GetBooleanIndexedvEXT]==],
@@ -28777,7 +28777,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix2x4dvEXT]==],
@@ -28794,7 +28794,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[ElementPointerATI]==],
@@ -28815,7 +28815,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribArrayObjectfvATI]==],
@@ -28861,15 +28861,15 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[stride]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 					{
 						["name"] = [==[layout]==],
-						["ctype"] = [==[GLenum *]==],
+						["ctype"] = [==[GLenum*]==],
 					},
 				},
 				["name"] = [==[MapTexture2DINTEL]==],
-				["return_ctype"] = [==[void *]==],
+				["return_ctype"] = [==[void*]==],
 			},
 			{
 				["extensions"] = {
@@ -28887,7 +28887,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribdvARB]==],
@@ -28900,7 +28900,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[SecondaryColor3bvEXT]==],
@@ -28920,7 +28920,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MultTransposeMatrixd]==],
@@ -28961,7 +28961,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[RasterPos4fv]==],
@@ -29020,7 +29020,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord2hvNV]==],
@@ -29045,7 +29045,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetNamedBufferSubDataEXT]==],
@@ -29062,7 +29062,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MatrixLoad3x3fNV]==],
@@ -29124,7 +29124,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MultTransposeMatrixdARB]==],
@@ -29215,7 +29215,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexStream3dvATI]==],
@@ -29258,7 +29258,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint64EXT *]==],
+						["ctype"] = [==[const GLint64EXT*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform4i64vNV]==],
@@ -29287,7 +29287,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[string]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[NamedProgramStringEXT]==],
@@ -29307,7 +29307,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI3uiv]==],
@@ -29332,7 +29332,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetVideoCaptureStreamfvNV]==],
@@ -29349,7 +29349,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexStream2fvATI]==],
@@ -29370,7 +29370,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribArrayObjectivATI]==],
@@ -29461,7 +29461,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetQueryObjectuivARB]==],
@@ -29478,7 +29478,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[ActiveVaryingNV]==],
@@ -29502,7 +29502,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[BindFragDataLocation]==],
@@ -29583,7 +29583,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4ubvARB]==],
@@ -29604,7 +29604,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetFragmentLightivSGIX]==],
@@ -29621,7 +29621,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[NormalStream3fvATI]==],
@@ -29642,7 +29642,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ColorTableParameterfv]==],
@@ -29659,7 +29659,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI4ubvEXT]==],
@@ -29765,7 +29765,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint64EXT *]==],
+						["ctype"] = [==[const GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform2ui64vNV]==],
@@ -29786,7 +29786,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indirect]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[primcount]==],
@@ -29834,7 +29834,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[SetFragmentShaderConstantATI]==],
@@ -29859,7 +29859,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indirect]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[drawcount]==],
@@ -29943,7 +29943,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[markerp]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[FinishAsyncSGIX]==],
@@ -30005,7 +30005,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bits]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedMultiTexImage2DEXT]==],
@@ -30050,7 +30050,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coord]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[FogCoordfvEXT]==],
@@ -30071,7 +30071,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[val]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetMultisamplefvNV]==],
@@ -30092,7 +30092,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetNamedBufferParameterivEXT]==],
@@ -30116,7 +30116,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLint64 *]==],
+						["ctype"] = [==[GLint64*]==],
 					},
 				},
 				["name"] = [==[GetInteger64i_v]==],
@@ -30137,7 +30137,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -30157,7 +30157,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib2svARB]==],
@@ -30361,7 +30361,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pipelines]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -30388,7 +30388,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -30414,7 +30414,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[ClearBufferuiv]==],
@@ -30439,7 +30439,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramEnvParameters4fvEXT]==],
@@ -30463,7 +30463,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribfv]==],
@@ -30483,7 +30483,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4Niv]==],
@@ -30559,7 +30559,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coord]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[FogCoordfv]==],
@@ -30608,7 +30608,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -30627,7 +30627,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[marker]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[PushGroupMarkerEXT]==],
@@ -30647,7 +30647,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[RasterPos4sv]==],
@@ -30672,7 +30672,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[NamedProgramLocalParameterI4uivEXT]==],
@@ -30693,7 +30693,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint64EXT *]==],
+						["ctype"] = [==[GLint64EXT*]==],
 					},
 				},
 				["name"] = [==[GetVideoi64vNV]==],
@@ -30710,7 +30710,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord4dvARB]==],
@@ -30727,7 +30727,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[DeleteNamedStringARB]==],
@@ -30740,7 +30740,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[WindowPos4fvMESA]==],
@@ -30798,7 +30798,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ProgramEnvParameterI4ivNV]==],
@@ -30868,7 +30868,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -30883,7 +30883,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[Tangent3dvEXT]==],
@@ -30912,7 +30912,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[ProgramBufferParametersIuivNV]==],
@@ -31060,7 +31060,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetnMapdv]==],
@@ -31089,7 +31089,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -31112,7 +31112,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetOcclusionQueryuivNV]==],
@@ -31133,7 +31133,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfixed *]==],
+						["ctype"] = [==[GLfixed*]==],
 					},
 				},
 				["name"] = [==[GetTexEnvxvOES]==],
@@ -31224,7 +31224,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[NormalStream3dvATI]==],
@@ -31274,15 +31274,15 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[rc]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[c]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ReplacementCodeuiColor3fVertex3fvSUN]==],
@@ -31349,7 +31349,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -31397,7 +31397,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint64EXT *]==],
+						["ctype"] = [==[const GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[Uniform1ui64vNV]==],
@@ -31516,15 +31516,15 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[rc]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[c]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ReplacementCodeuiColor4ubVertex3fvSUN]==],
@@ -31578,11 +31578,11 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[rc]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ReplacementCodeuiVertex3fvSUN]==],
@@ -31663,7 +31663,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTexSubImage2D]==],
@@ -31680,7 +31680,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfixed *]==],
+						["ctype"] = [==[GLfixed*]==],
 					},
 				},
 				["name"] = [==[GetFixedvOES]==],
@@ -31774,7 +31774,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[ClearNamedBufferSubDataEXT]==],
@@ -31787,15 +31787,15 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[tc]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[n]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TexCoord2fNormal3fVertex3fvSUN]==],
@@ -31873,7 +31873,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[MultiTexParameterIivEXT]==],
@@ -31894,7 +31894,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint64EXT *]==],
+						["ctype"] = [==[GLint64EXT*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribLi64vNV]==],
@@ -31907,11 +31907,11 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[tc]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TexCoord2fVertex3fvSUN]==],
@@ -31953,7 +31953,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -32009,7 +32009,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[u]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[EvalCoord1fv]==],
@@ -32030,7 +32030,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[buffer]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[FeedbackBufferxOES]==],
@@ -32075,7 +32075,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord4iv]==],
@@ -32116,11 +32116,11 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[n]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Normal3fVertex3fvSUN]==],
@@ -32141,7 +32141,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ImageTransformParameterivHP]==],
@@ -32312,11 +32312,11 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[c]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Color4ubVertex3fvSUN]==],
@@ -32450,7 +32450,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[code]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[ReplacementCodeubvSUN]==],
@@ -32463,7 +32463,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[code]==],
-						["ctype"] = [==[const GLushort *]==],
+						["ctype"] = [==[const GLushort*]==],
 					},
 				},
 				["name"] = [==[ReplacementCodeusvSUN]==],
@@ -32583,7 +32583,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexStream3svATI]==],
@@ -32668,7 +32668,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4svARB]==],
@@ -32723,7 +32723,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[Vertex3xvOES]==],
@@ -32744,7 +32744,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetColorTableParameterfvSGI]==],
@@ -32761,7 +32761,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetPixelTexGenParameterivSGIS]==],
@@ -32778,7 +32778,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI1ivEXT]==],
@@ -32803,7 +32803,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetTrackMatrixivNV]==],
@@ -32855,7 +32855,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[u]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[EvalCoord2dv]==],
@@ -32868,7 +32868,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[WindowPos3svARB]==],
@@ -32941,7 +32941,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ColorTableParameterivSGI]==],
@@ -32990,7 +32990,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[table]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[ColorTableSGI]==],
@@ -33091,7 +33091,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Normal3iv]==],
@@ -33108,7 +33108,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[fences]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[DeleteFencesAPPLE]==],
@@ -33162,7 +33162,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[void **]==],
+						["ctype"] = [==[void**]==],
 					},
 				},
 				["name"] = [==[GetPointeri_vEXT]==],
@@ -33175,7 +33175,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[equation]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ReferencePlaneSGIX]==],
@@ -33216,7 +33216,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetTexLevelParameteriv]==],
@@ -33295,7 +33295,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[row]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 					{
 						["name"] = [==[columnBufSize]==],
@@ -33303,11 +33303,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[column]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 					{
 						["name"] = [==[span]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetnSeparableFilter]==],
@@ -33365,7 +33365,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ListParameterfvSGIX]==],
@@ -33407,7 +33407,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetListParameterfvSGIX]==],
@@ -33478,7 +33478,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -33501,7 +33501,7 @@ typedef unsigned int GLhandleARB;
 					},
 				},
 				["name"] = [==[MapBufferARB]==],
-				["return_ctype"] = [==[void *]==],
+				["return_ctype"] = [==[void*]==],
 			},
 			{
 				["extensions"] = {
@@ -33514,7 +33514,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indirect]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[primcount]==],
@@ -33589,7 +33589,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[renderbuffers]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -33608,7 +33608,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord3svARB]==],
@@ -33625,7 +33625,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[buffer]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[InstrumentsBufferSGIX]==],
@@ -33642,7 +33642,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[IglooInterfaceSGIX]==],
@@ -33732,7 +33732,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[void **]==],
+						["ctype"] = [==[void**]==],
 					},
 				},
 				["extensions"] = {
@@ -33754,7 +33754,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[c]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[Indexdv]==],
@@ -33779,7 +33779,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void **]==],
+						["ctype"] = [==[const void**]==],
 					},
 					{
 						["name"] = [==[ptrstride]==],
@@ -33804,7 +33804,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetFragmentMaterialivSGIX]==],
@@ -33830,7 +33830,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint64EXT *]==],
+						["ctype"] = [==[const GLint64EXT*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform2i64vNV]==],
@@ -33864,7 +33864,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void **]==],
+						["ctype"] = [==[const void**]==],
 					},
 					{
 						["name"] = [==[ptrstride]==],
@@ -33896,7 +33896,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetnUniformdv]==],
@@ -33940,7 +33940,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetFragmentMaterialfvSGIX]==],
@@ -33961,7 +33961,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetFragmentLightfvSGIX]==],
@@ -33990,7 +33990,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -34017,7 +34017,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VideoCaptureStreamParameterdvNV]==],
@@ -34038,7 +34038,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[FragmentMaterialfvSGIX]==],
@@ -34055,7 +34055,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[FragmentLightModelfvSGIX]==],
@@ -34079,7 +34079,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord3fv]==],
@@ -34146,7 +34146,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[FragmentLightivSGIX]==],
@@ -34187,7 +34187,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[RasterPos3dv]==],
@@ -34236,7 +34236,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["extensions"] = {
@@ -34290,7 +34290,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetTexGenfv]==],
@@ -34343,7 +34343,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["extensions"] = {
@@ -34388,7 +34388,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[addr]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[VariantubvEXT]==],
@@ -34417,7 +34417,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetTextureLevelParameterfvEXT]==],
@@ -34442,7 +34442,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetNamedProgramLocalParameterIivEXT]==],
@@ -34463,7 +34463,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetColorTableParameteriv]==],
@@ -34525,7 +34525,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetQueryObjectuiv]==],
@@ -34591,7 +34591,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[markerp]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[PollAsyncSGIX]==],
@@ -34642,7 +34642,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetSharpenTexFuncSGIS]==],
@@ -34663,7 +34663,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[SharpenTexFuncSGIS]==],
@@ -34786,7 +34786,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib1svNV]==],
@@ -34803,7 +34803,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[buffers]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[DeleteBuffersARB]==],
@@ -34871,7 +34871,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetFogFuncSGIS]==],
@@ -34888,7 +34888,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[FogFuncSGIS]==],
@@ -34906,7 +34906,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib3dvARB]==],
@@ -34956,7 +34956,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[NormalStream3bvATI]==],
@@ -34973,7 +34973,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[equation]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetClipPlanefOES]==],
@@ -35133,7 +35133,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetColorTableParameterivSGI]==],
@@ -35175,7 +35175,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfixed *]==],
+						["ctype"] = [==[GLfixed*]==],
 					},
 				},
 				["name"] = [==[GetTexLevelParameterxvOES]==],
@@ -35218,7 +35218,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[arrays]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -35297,7 +35297,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[TexCoord3xvOES]==],
@@ -35331,7 +35331,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[TexCoord2xvOES]==],
@@ -35352,7 +35352,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetRenderbufferParameterivEXT]==],
@@ -35435,11 +35435,11 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v1]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 					{
 						["name"] = [==[v2]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[RectxvOES]==],
@@ -35486,7 +35486,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[SecondaryColor3uiv]==],
@@ -35499,7 +35499,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[RasterPos4xvOES]==],
@@ -35512,7 +35512,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[RasterPos3xvOES]==],
@@ -35599,7 +35599,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[paths]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[pathBase]==],
@@ -35623,7 +35623,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[transformValues]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[StencilThenCoverStrokePathInstancedNV]==],
@@ -35648,7 +35648,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[img]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetCompressedMultiTexImageEXT]==],
@@ -35665,11 +35665,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[textures]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[priorities]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[PrioritizeTexturesxOES]==],
@@ -35690,7 +35690,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[ProgramEnvParameterI4uivNV]==],
@@ -35707,7 +35707,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI4svEXT]==],
@@ -35724,7 +35724,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint64EXT *]==],
+						["ctype"] = [==[const GLint64EXT*]==],
 					},
 				},
 				["name"] = [==[VertexAttribL4i64vNV]==],
@@ -35741,7 +35741,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord2xvOES]==],
@@ -35796,7 +35796,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord1xvOES]==],
@@ -35826,7 +35826,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[MultTransposeMatrixxOES]==],
@@ -35945,7 +35945,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[component]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[IndexxvOES]==],
@@ -35962,7 +35962,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint64EXT *]==],
+						["ctype"] = [==[const GLint64EXT*]==],
 					},
 				},
 				["name"] = [==[VertexAttribL3i64vNV]==],
@@ -35996,7 +35996,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[TexGenxvOES]==],
@@ -36017,7 +36017,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfixed *]==],
+						["ctype"] = [==[GLfixed*]==],
 					},
 				},
 				["name"] = [==[GetTexGenxvOES]==],
@@ -36038,7 +36038,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[GLfixed *]==],
+						["ctype"] = [==[GLfixed*]==],
 					},
 				},
 				["name"] = [==[GetPixelMapxv]==],
@@ -36063,7 +36063,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform2dvEXT]==],
@@ -36085,7 +36085,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint64EXT *]==],
+						["ctype"] = [==[const GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[Uniform3ui64vNV]==],
@@ -36134,7 +36134,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfixed *]==],
+						["ctype"] = [==[GLfixed*]==],
 					},
 				},
 				["name"] = [==[GetLightxOES]==],
@@ -36155,7 +36155,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfixed *]==],
+						["ctype"] = [==[GLfixed*]==],
 					},
 				},
 				["name"] = [==[GetConvolutionParameterxvOES]==],
@@ -36168,7 +36168,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[WindowPos4dvMESA]==],
@@ -36202,7 +36202,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[components]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[Color4xvOES]==],
@@ -36215,7 +36215,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[components]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[Color3xvOES]==],
@@ -36236,11 +36236,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[count]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[obj]==],
-						["ctype"] = [==[GLhandleARB *]==],
+						["ctype"] = [==[GLhandleARB*]==],
 					},
 				},
 				["name"] = [==[GetAttachedObjectsARB]==],
@@ -36257,11 +36257,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[sequence_num]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 					{
 						["name"] = [==[capture_time]==],
-						["ctype"] = [==[GLuint64EXT *]==],
+						["ctype"] = [==[GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[VideoCaptureNV]==],
@@ -36299,7 +36299,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib3fvNV]==],
@@ -36364,7 +36364,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bitmap]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[BitmapxOES]==],
@@ -36412,7 +36412,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetMapdv]==],
@@ -36433,7 +36433,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetPathParameterivNV]==],
@@ -36486,7 +36486,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indices]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[instancecount]==],
@@ -36521,7 +36521,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[TexParameterxvOES]==],
@@ -36554,7 +36554,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -36602,7 +36602,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[TexEnvxvOES]==],
@@ -36665,7 +36665,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indirect]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[drawcount]==],
@@ -36776,7 +36776,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetFloatIndexedvEXT]==],
@@ -36797,7 +36797,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetPathColorGenfvNV]==],
@@ -36817,7 +36817,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[GetFragDataLocation]==],
@@ -36934,7 +36934,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[NamedBufferSubDataEXT]==],
@@ -36995,11 +36995,11 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v1]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 					{
 						["name"] = [==[v2]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[Rectdv]==],
@@ -37020,7 +37020,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint64 *]==],
+						["ctype"] = [==[GLuint64*]==],
 					},
 				},
 				["name"] = [==[GetQueryObjectui64vEXT]==],
@@ -37045,7 +37045,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coeffs]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[PathColorGenNV]==],
@@ -37107,7 +37107,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[PointParameterxvOES]==],
@@ -37176,7 +37176,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[table]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetnColorTableARB]==],
@@ -37193,7 +37193,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GenOcclusionQueriesNV]==],
@@ -37221,7 +37221,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetMapfv]==],
@@ -37242,7 +37242,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[void **]==],
+						["ctype"] = [==[void**]==],
 					},
 				},
 				["name"] = [==[GetTexParameterPointervAPPLE]==],
@@ -37259,7 +37259,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[CoverageModulationTableNV]==],
@@ -37297,7 +37297,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[LoadMatrixxOES]==],
@@ -37327,7 +37327,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[LightxvOES]==],
@@ -37373,7 +37373,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -37426,15 +37426,15 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[rc]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[tc]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ReplacementCodeuiTexCoord2fVertex3fvSUN]==],
@@ -37476,7 +37476,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[equation]==],
-						["ctype"] = [==[GLfixed *]==],
+						["ctype"] = [==[GLfixed*]==],
 					},
 				},
 				["name"] = [==[GetClipPlanexOES]==],
@@ -37526,7 +37526,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord2ivARB]==],
@@ -37547,7 +37547,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint64EXT *]==],
+						["ctype"] = [==[GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[GetVideoui64vNV]==],
@@ -37661,7 +37661,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetBufferSubData]==],
@@ -37720,7 +37720,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[equation]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[ClipPlanexOES]==],
@@ -37803,7 +37803,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TexSubImage3DEXT]==],
@@ -37833,7 +37833,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[Vertex4bvOES]==],
@@ -37862,7 +37862,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix4dvEXT]==],
@@ -37875,7 +37875,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[Vertex3bvOES]==],
@@ -37942,7 +37942,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint64 *]==],
+						["ctype"] = [==[GLint64*]==],
 					},
 				},
 				["name"] = [==[GetQueryObjecti64vEXT]==],
@@ -37955,7 +37955,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[TexCoord4bvOES]==],
@@ -38003,7 +38003,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[LoadMatrixf]==],
@@ -38057,7 +38057,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[image]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[ConvolutionFilter2D]==],
@@ -38082,7 +38082,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -38097,7 +38097,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[TexCoord1bvOES]==],
@@ -38143,7 +38143,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -38198,7 +38198,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TextureImage3DEXT]==],
@@ -38215,7 +38215,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord4bvOES]==],
@@ -38236,7 +38236,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetVariantFloatvEXT]==],
@@ -38261,7 +38261,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[table]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetColorTable]==],
@@ -38278,7 +38278,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord2bvOES]==],
@@ -38310,7 +38310,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[ColorPointer]==],
@@ -38328,7 +38328,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4ivARB]==],
@@ -38387,7 +38387,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord1bvOES]==],
@@ -38450,7 +38450,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[FragmentMaterialivSGIX]==],
@@ -38475,7 +38475,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VideoCaptureStreamParameterfvNV]==],
@@ -38500,7 +38500,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VideoCaptureStreamParameterivNV]==],
@@ -38546,7 +38546,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[TexBumpParameterivATI]==],
@@ -38585,7 +38585,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -38612,7 +38612,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetVideoCaptureStreamivNV]==],
@@ -38726,7 +38726,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[equation]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ClipPlane]==],
@@ -38743,7 +38743,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[DeleteOcclusionQueriesNV]==],
@@ -38767,7 +38767,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord4dv]==],
@@ -38788,7 +38788,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribIuivEXT]==],
@@ -38850,7 +38850,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLushort *]==],
+						["ctype"] = [==[const GLushort*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI4usvEXT]==],
@@ -38867,7 +38867,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord3xvOES]==],
@@ -38884,7 +38884,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI4bvEXT]==],
@@ -38909,7 +38909,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform4uivEXT]==],
@@ -38938,7 +38938,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[VertexAttribLPointerEXT]==],
@@ -38955,7 +38955,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI3uivEXT]==],
@@ -38972,7 +38972,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI1uivEXT]==],
@@ -38985,7 +38985,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Tangent3ivEXT]==],
@@ -39015,7 +39015,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI3ivEXT]==],
@@ -39032,7 +39032,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI2ivEXT]==],
@@ -39074,7 +39074,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[void **]==],
+						["ctype"] = [==[void**]==],
 					},
 				},
 				["name"] = [==[GetNamedBufferPointervEXT]==],
@@ -39260,7 +39260,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[enabled]==],
@@ -39287,7 +39287,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexAttribs4fvNV]==],
@@ -39329,7 +39329,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexAttribs3fvNV]==],
@@ -39350,7 +39350,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexAttribs2fvNV]==],
@@ -39372,7 +39372,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint64EXT *]==],
+						["ctype"] = [==[GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[GetUniformui64vNV]==],
@@ -39393,7 +39393,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttribs1svNV]==],
@@ -39431,7 +39431,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[addr]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[VariantuivEXT]==],
@@ -39448,7 +39448,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void **]==],
+						["ctype"] = [==[const void**]==],
 					},
 				},
 				["name"] = [==[NormalPointervINTEL]==],
@@ -39490,7 +39490,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[CombinerStageParameterfvNV]==],
@@ -39549,7 +39549,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLcharARB *]==],
+						["ctype"] = [==[const GLcharARB*]==],
 					},
 				},
 				["name"] = [==[BindAttribLocationARB]==],
@@ -39570,7 +39570,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetObjectParameterivARB]==],
@@ -39587,7 +39587,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4dvNV]==],
@@ -39604,7 +39604,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib3svNV]==],
@@ -39621,7 +39621,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib2svNV]==],
@@ -39663,7 +39663,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -39718,11 +39718,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -39821,7 +39821,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[VertexAttribPointerNV]==],
@@ -39894,7 +39894,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[void **]==],
+						["ctype"] = [==[void**]==],
 					},
 				},
 				["name"] = [==[GetVariantPointervEXT]==],
@@ -39936,7 +39936,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const GLboolean **]==],
+						["ctype"] = [==[const GLboolean**]==],
 					},
 					{
 						["name"] = [==[ptrstride]==],
@@ -39965,7 +39965,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramParameters4dvNV]==],
@@ -40003,7 +40003,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -40063,7 +40063,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramParameter4dvNV]==],
@@ -40111,7 +40111,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TexSubImage2D]==],
@@ -40190,7 +40190,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[program]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[LoadProgramNV]==],
@@ -40207,7 +40207,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[programs]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GenProgramsNV]==],
@@ -40228,7 +40228,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[void **]==],
+						["ctype"] = [==[void**]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribPointervNV]==],
@@ -40249,7 +40249,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribivNV]==],
@@ -40270,7 +40270,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribfvNV]==],
@@ -40295,7 +40295,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[table]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetColorTableSGI]==],
@@ -40316,7 +40316,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[program]==],
-						["ctype"] = [==[GLubyte *]==],
+						["ctype"] = [==[GLubyte*]==],
 					},
 				},
 				["name"] = [==[GetProgramStringNV]==],
@@ -40341,7 +40341,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetProgramParameterdvNV]==],
@@ -40369,7 +40369,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Materialiv]==],
@@ -40394,7 +40394,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetMultiTexEnvivEXT]==],
@@ -40425,7 +40425,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4bvARB]==],
@@ -40442,7 +40442,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[programs]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[DeleteProgramsNV]==],
@@ -40467,7 +40467,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetFramebufferAttachmentParameterivEXT]==],
@@ -40504,11 +40504,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[programs]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[residences]==],
-						["ctype"] = [==[GLboolean *]==],
+						["ctype"] = [==[GLboolean*]==],
 					},
 				},
 				["name"] = [==[AreProgramsResidentNV]==],
@@ -40596,19 +40596,19 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[rc]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[c]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[n]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ReplacementCodeuiColor4fNormal3fVertex3fvSUN]==],
@@ -40728,7 +40728,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint64EXT *]==],
+						["ctype"] = [==[const GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[VertexAttribL4ui64vNV]==],
@@ -40749,7 +40749,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -40776,7 +40776,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -40845,11 +40845,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[label]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -40936,7 +40936,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint64EXT *]==],
+						["ctype"] = [==[const GLint64EXT*]==],
 					},
 				},
 				["name"] = [==[VertexAttribL1i64vNV]==],
@@ -41012,11 +41012,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[textures]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[priorities]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[PrioritizeTextures]==],
@@ -41130,7 +41130,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[SecondaryColor3uivEXT]==],
@@ -41159,7 +41159,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[GLint64 *]==],
+						["ctype"] = [==[GLint64*]==],
 					},
 				},
 				["extensions"] = {
@@ -41191,7 +41191,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[VertexArrayRangeNV]==],
@@ -41225,11 +41225,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[VDPAUGetSurfaceivNV]==],
@@ -41242,7 +41242,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[vdpSurface]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[target]==],
@@ -41254,7 +41254,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[textureNames]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[VDPAURegisterOutputSurfaceNV]==],
@@ -41278,7 +41278,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[GLushort *]==],
+						["ctype"] = [==[GLushort*]==],
 					},
 				},
 				["name"] = [==[GetPixelMapusv]==],
@@ -41303,7 +41303,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[SecondaryColorPointerEXT]==],
@@ -41316,7 +41316,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[vdpSurface]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[target]==],
@@ -41328,7 +41328,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[textureNames]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[VDPAURegisterVideoSurfaceNV]==],
@@ -41357,7 +41357,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[buffers]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -41392,7 +41392,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[buf]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[DebugMessageInsertARB]==],
@@ -41458,15 +41458,15 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[binaryFormat]==],
-						["ctype"] = [==[GLenum *]==],
+						["ctype"] = [==[GLenum*]==],
 					},
 					{
 						["name"] = [==[binary]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["extensions"] = {
@@ -41521,7 +41521,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -41540,7 +41540,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GenTransformFeedbacksNV]==],
@@ -41561,7 +41561,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLboolean *]==],
+						["ctype"] = [==[GLboolean*]==],
 					},
 				},
 				["name"] = [==[GetInvariantBooleanvEXT]==],
@@ -41582,7 +41582,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[location]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetTransformFeedbackVaryingNV]==],
@@ -41603,7 +41603,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[locations]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 					{
 						["name"] = [==[bufferMode]==],
@@ -41653,7 +41653,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indices]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[DrawRangeElementsEXT]==],
@@ -41678,7 +41678,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[flags]==],
@@ -41730,7 +41730,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[attribs]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 					{
 						["name"] = [==[bufferMode]==],
@@ -41830,7 +41830,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[CombinerParameterivNV]==],
@@ -41987,7 +41987,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetTexBumpParameterivATI]==],
@@ -42094,7 +42094,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -42142,7 +42142,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[renderbuffers]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GenRenderbuffersEXT]==],
@@ -42244,7 +42244,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TextureParameterfvEXT]==],
@@ -42269,15 +42269,15 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[buffers]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[offsets]==],
-						["ctype"] = [==[const GLintptr *]==],
+						["ctype"] = [==[const GLintptr*]==],
 					},
 					{
 						["name"] = [==[strides]==],
-						["ctype"] = [==[const GLsizei *]==],
+						["ctype"] = [==[const GLsizei*]==],
 					},
 				},
 				["extensions"] = {
@@ -42300,7 +42300,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint64EXT *]==],
+						["ctype"] = [==[const GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[Uniformui64vNV]==],
@@ -42321,7 +42321,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint64EXT *]==],
+						["ctype"] = [==[GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[GetNamedBufferParameterui64vNV]==],
@@ -42358,7 +42358,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint64EXT *]==],
+						["ctype"] = [==[GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[GetBufferParameterui64vNV]==],
@@ -42456,7 +42456,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MapVertexAttrib2dAPPLE]==],
@@ -42526,7 +42526,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coeffs]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramPathFragmentInputGenNV]==],
@@ -42567,7 +42567,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[TexParameterIiv]==],
@@ -42722,7 +42722,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4svNV]==],
@@ -42760,7 +42760,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetFinalCombinerInputParameterivNV]==],
@@ -42781,7 +42781,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetFinalCombinerInputParameterfvNV]==],
@@ -42806,7 +42806,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetCombinerOutputParameterivNV]==],
@@ -42819,7 +42819,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[numGroups]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 					{
 						["name"] = [==[groupsSize]==],
@@ -42827,7 +42827,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[groups]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetPerfMonitorGroupsAMD]==],
@@ -42856,7 +42856,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetCombinerInputParameterivNV]==],
@@ -42876,7 +42876,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[Color4dv]==],
@@ -42905,7 +42905,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetCombinerInputParameterfvNV]==],
@@ -43009,7 +43009,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetVideouivNV]==],
@@ -43104,7 +43104,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib2hvNV]==],
@@ -43174,7 +43174,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[PointParameterivNV]==],
@@ -43194,7 +43194,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLushort *]==],
+						["ctype"] = [==[const GLushort*]==],
 					},
 				},
 				["name"] = [==[Color3usv]==],
@@ -43212,7 +43212,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4dvARB]==],
@@ -43233,7 +43233,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[color]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -43264,7 +43264,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix2x3fvEXT]==],
@@ -43284,7 +43284,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MultMatrixf]==],
@@ -43330,7 +43330,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ProgramEnvParametersI4ivNV]==],
@@ -43347,7 +43347,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttribL4dvEXT]==],
@@ -43393,7 +43393,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[usage]==],
@@ -43474,7 +43474,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[img]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetCompressedTexImageARB]==],
@@ -43499,7 +43499,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[textures]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -43522,7 +43522,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetPathTexGenivNV]==],
@@ -43655,7 +43655,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[props]==],
-						["ctype"] = [==[const GLenum *]==],
+						["ctype"] = [==[const GLenum*]==],
 					},
 					{
 						["name"] = [==[bufSize]==],
@@ -43663,11 +43663,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetProgramResourcefvNV]==],
@@ -43688,7 +43688,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[fontName]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[fontStyle]==],
@@ -43754,7 +43754,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bufs]==],
-						["ctype"] = [==[const GLenum *]==],
+						["ctype"] = [==[const GLenum*]==],
 					},
 				},
 				["name"] = [==[FramebufferDrawBuffersEXT]==],
@@ -43806,7 +43806,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[paths]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[pathBase]==],
@@ -43830,7 +43830,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[transformValues]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[StencilThenCoverFillPathInstancedNV]==],
@@ -43872,7 +43872,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[NormalStream3svATI]==],
@@ -43889,7 +43889,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MatrixMultTranspose3x3fNV]==],
@@ -43906,7 +43906,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MatrixMult3x2fNV]==],
@@ -44015,7 +44015,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetPathCoordsNV]==],
@@ -44032,7 +44032,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[commands]==],
-						["ctype"] = [==[GLubyte *]==],
+						["ctype"] = [==[GLubyte*]==],
 					},
 				},
 				["name"] = [==[GetPathCommandsNV]==],
@@ -44065,7 +44065,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -44088,7 +44088,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[paths]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[pathBase]==],
@@ -44108,7 +44108,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[transformValues]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[StencilStrokePathInstancedNV]==],
@@ -44129,7 +44129,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[dashArray]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[PathDashArrayNV]==],
@@ -44158,7 +44158,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -44198,7 +44198,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexStream1dvATI]==],
@@ -44219,7 +44219,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[PathParameterivNV]==],
@@ -44277,7 +44277,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[transformValues]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TransformPathNV]==],
@@ -44294,7 +44294,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[userParam]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[DebugMessageCallbackAMD]==],
@@ -44369,11 +44369,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[paths]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[weights]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[WeightPathsNV]==],
@@ -44394,7 +44394,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[fontName]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[fontStyle]==],
@@ -44439,7 +44439,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[fontName]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[fontStyle]==],
@@ -44455,7 +44455,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[charcodes]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[handleMissingGlyphs]==],
@@ -44513,7 +44513,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pathString]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[PathStringNV]==],
@@ -44558,7 +44558,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint64 *]==],
+						["ctype"] = [==[GLuint64*]==],
 					},
 				},
 				["extensions"] = {
@@ -44589,7 +44589,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[PathSubCoordsNV]==],
@@ -44614,7 +44614,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[MultiTexParameterivEXT]==],
@@ -44711,7 +44711,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[PathCoordsNV]==],
@@ -44732,7 +44732,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[commands]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 					{
 						["name"] = [==[numCoords]==],
@@ -44744,7 +44744,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[PathCommandsNV]==],
@@ -44829,7 +44829,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[VertexAttribIPointer]==],
@@ -44866,11 +44866,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[row]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[column]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[SeparableFilter2D]==],
@@ -44887,7 +44887,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MatrixMultfEXT]==],
@@ -44911,7 +44911,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord1fv]==],
@@ -44940,7 +44940,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ProgramBufferParametersIivNV]==],
@@ -44969,7 +44969,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramBufferParametersfvNV]==],
@@ -45018,7 +45018,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint64EXT *]==],
+						["ctype"] = [==[const GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[Uniform4ui64vNV]==],
@@ -45047,7 +45047,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[VertexAttribIPointerEXT]==],
@@ -45172,7 +45172,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indirect]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["extensions"] = {
@@ -45195,7 +45195,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[VertexAttribs2hvNV]==],
@@ -45237,7 +45237,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[NamedProgramLocalParametersI4ivEXT]==],
@@ -45291,11 +45291,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[uniformBlockName]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -45478,7 +45478,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["extensions"] = {
@@ -45538,7 +45538,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[weight]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[VertexWeighthvNV]==],
@@ -45555,7 +45555,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord4ivARB]==],
@@ -45596,7 +45596,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[fog]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[FogCoordhvNV]==],
@@ -45624,7 +45624,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Lightiv]==],
@@ -45637,7 +45637,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[Vertex3hvNV]==],
@@ -45683,7 +45683,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[TextureParameterIivEXT]==],
@@ -45696,7 +45696,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[TexCoord4hvNV]==],
@@ -45763,7 +45763,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTexSubImage3DARB]==],
@@ -45801,7 +45801,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[TexCoord3hvNV]==],
@@ -45846,7 +45846,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[UniformMatrix3fv]==],
@@ -45859,7 +45859,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[TexCoord2hvNV]==],
@@ -45934,7 +45934,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -45993,7 +45993,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["extensions"] = {
@@ -46041,7 +46041,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[Color3hvNV]==],
@@ -46075,7 +46075,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[Normal3hvNV]==],
@@ -46100,7 +46100,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -46167,7 +46167,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetUniformuiv]==],
@@ -46233,7 +46233,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[SecondaryColorPointer]==],
@@ -46254,7 +46254,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetProgramSubroutineParameteruivNV]==],
@@ -46275,7 +46275,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Uniform2fvARB]==],
@@ -46296,7 +46296,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[ProgramSubroutineParametersuivNV]==],
@@ -46317,7 +46317,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetProgramEnvParameterIuivNV]==],
@@ -46334,7 +46334,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indices]==],
-						["ctype"] = [==[const GLushort *]==],
+						["ctype"] = [==[const GLushort*]==],
 					},
 				},
 				["name"] = [==[MatrixIndexusvARB]==],
@@ -46398,7 +46398,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetProgramEnvParameterIivNV]==],
@@ -46419,7 +46419,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetProgramLocalParameterIuivNV]==],
@@ -46481,7 +46481,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -46504,7 +46504,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetProgramLocalParameterIivNV]==],
@@ -46569,7 +46569,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[ColorSubTable]==],
@@ -46582,15 +46582,15 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[mode]==],
-						["ctype"] = [==[const GLenum *]==],
+						["ctype"] = [==[const GLenum*]==],
 					},
 					{
 						["name"] = [==[first]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 					{
 						["name"] = [==[count]==],
-						["ctype"] = [==[const GLsizei *]==],
+						["ctype"] = [==[const GLsizei*]==],
 					},
 					{
 						["name"] = [==[primcount]==],
@@ -46626,7 +46626,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetTexLevelParameterfv]==],
@@ -46726,7 +46726,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[MultiTexGenivEXT]==],
@@ -46764,11 +46764,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramNamedParameter4dvNV]==],
@@ -46789,7 +46789,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 					{
 						["name"] = [==[x]==],
@@ -46860,7 +46860,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GenQueriesARB]==],
@@ -46881,7 +46881,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetFenceivNV]==],
@@ -46987,7 +46987,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -47002,7 +47002,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[weight]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexWeightfvEXT]==],
@@ -47072,7 +47072,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[Color3uiv]==],
@@ -47093,7 +47093,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -47125,7 +47125,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[userParam]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[DebugMessageCallbackARB]==],
@@ -47142,7 +47142,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pattern]==],
-						["ctype"] = [==[GLubyte *]==],
+						["ctype"] = [==[GLubyte*]==],
 					},
 				},
 				["name"] = [==[GetnPolygonStippleARB]==],
@@ -47167,7 +47167,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetMapAttribParameterivNV]==],
@@ -47191,7 +47191,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[Uniform1uiv]==],
@@ -47212,7 +47212,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MapParameterfvNV]==],
@@ -47250,7 +47250,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -47273,7 +47273,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[PixelDataRangeNV]==],
@@ -47299,7 +47299,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint64EXT *]==],
+						["ctype"] = [==[const GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform1ui64vNV]==],
@@ -47340,7 +47340,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bits]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTextureSubImage1DEXT]==],
@@ -47369,15 +47369,15 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[buffers]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[offsets]==],
-						["ctype"] = [==[const GLintptr *]==],
+						["ctype"] = [==[const GLintptr*]==],
 					},
 					{
 						["name"] = [==[strides]==],
-						["ctype"] = [==[const GLsizei *]==],
+						["ctype"] = [==[const GLsizei*]==],
 					},
 				},
 				["extensions"] = {
@@ -47429,7 +47429,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[TexCoord2dv]==],
@@ -47450,7 +47450,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[samplers]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -47506,7 +47506,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[buf]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -47571,7 +47571,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indirect]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[drawCount]==],
@@ -47608,7 +47608,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indirect]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[drawCount]==],
@@ -47665,7 +47665,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[LoadTransposeMatrixf]==],
@@ -47741,7 +47741,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bits]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTextureSubImage2DEXT]==],
@@ -47790,7 +47790,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Vertex4fv]==],
@@ -47836,7 +47836,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[ConvolutionParameterxvOES]==],
@@ -47861,7 +47861,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetMultiTexParameterIivEXT]==],
@@ -47899,7 +47899,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[WindowPos3ivMESA]==],
@@ -47936,7 +47936,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetUniformfv]==],
@@ -47949,7 +47949,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[WindowPos3dvMESA]==],
@@ -47962,7 +47962,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[WindowPos2svMESA]==],
@@ -47982,7 +47982,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[Normal3dv]==],
@@ -48011,7 +48011,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetMultiTexLevelParameterivEXT]==],
@@ -48107,7 +48107,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[WindowPos2fvMESA]==],
@@ -48124,7 +48124,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord1svARB]==],
@@ -48195,7 +48195,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[WindowPos2dvMESA]==],
@@ -48269,7 +48269,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[UniformMatrix3fvARB]==],
@@ -48294,7 +48294,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramLocalParameters4fvEXT]==],
@@ -48352,7 +48352,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coeffs]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[PathTexGenNV]==],
@@ -48376,7 +48376,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Uniform1iv]==],
@@ -48426,7 +48426,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void **]==],
+						["ctype"] = [==[const void**]==],
 					},
 				},
 				["name"] = [==[VertexPointervINTEL]==],
@@ -48472,7 +48472,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[addr]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VariantfvEXT]==],
@@ -48510,7 +48510,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[MultiTexEnvivEXT]==],
@@ -48535,7 +48535,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform1uivEXT]==],
@@ -48565,7 +48565,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[programs]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[RequestResidentProgramsNV]==],
@@ -48590,7 +48590,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void **]==],
+						["ctype"] = [==[const void**]==],
 					},
 					{
 						["name"] = [==[ptrstride]==],
@@ -48619,7 +48619,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void **]==],
+						["ctype"] = [==[const void**]==],
 					},
 					{
 						["name"] = [==[ptrstride]==],
@@ -48644,7 +48644,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[ProgramLocalParameterI4uivNV]==],
@@ -48665,7 +48665,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetImageTransformParameterfvHP]==],
@@ -48685,7 +48685,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[Vertex3sv]==],
@@ -48702,7 +48702,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[count]==],
-						["ctype"] = [==[const GLsizei *]==],
+						["ctype"] = [==[const GLsizei*]==],
 					},
 					{
 						["name"] = [==[type]==],
@@ -48768,7 +48768,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[weights]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetTexFilterFuncSGIS]==],
@@ -48785,7 +48785,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[string]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[StringMarkerGREMEDY]==],
@@ -48826,7 +48826,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Fogiv]==],
@@ -48846,7 +48846,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[Vertex4sv]==],
@@ -48918,7 +48918,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetMultiTexEnvfvEXT]==],
@@ -48942,7 +48942,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetnPixelMapfv]==],
@@ -48962,7 +48962,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[TexCoord1sv]==],
@@ -48979,7 +48979,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[PixelTexGenParameterivSGIS]==],
@@ -49008,7 +49008,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["extensions"] = {
@@ -49135,7 +49135,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetLocalConstantIntegervEXT]==],
@@ -49163,7 +49163,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[TexGendv]==],
@@ -49184,7 +49184,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetLocalConstantFloatvEXT]==],
@@ -49221,7 +49221,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["extensions"] = {
@@ -49248,7 +49248,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[flags]==],
@@ -49310,7 +49310,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TangentPointerEXT]==],
@@ -49360,7 +49360,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -49382,7 +49382,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[RasterPos2dv]==],
@@ -49415,7 +49415,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[Color3dv]==],
@@ -49436,7 +49436,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetInvariantFloatvEXT]==],
@@ -49607,7 +49607,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[MapControlPointsNV]==],
@@ -49620,7 +49620,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[Binormal3svEXT]==],
@@ -49645,7 +49645,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -49664,7 +49664,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib1fvNV]==],
@@ -49681,7 +49681,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord3bvOES]==],
@@ -49702,7 +49702,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[renderbuffers]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -49757,7 +49757,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -49780,7 +49780,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetVariantIntegervEXT]==],
@@ -49805,7 +49805,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetTextureParameterfvEXT]==],
@@ -49826,7 +49826,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -49898,7 +49898,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetnHistogram]==],
@@ -49915,7 +49915,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetDetailTexFuncSGIS]==],
@@ -49932,7 +49932,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[monitors]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GenPerfMonitorsAMD]==],
@@ -50016,7 +50016,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[RasterPos2xvOES]==],
@@ -50063,7 +50063,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4ubvNV]==],
@@ -50084,7 +50084,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[VertexAttribs4hvNV]==],
@@ -50112,7 +50112,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetTexGeniv]==],
@@ -50133,7 +50133,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Uniform4ivARB]==],
@@ -50267,7 +50267,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -50290,7 +50290,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetPathParameterfvNV]==],
@@ -50307,7 +50307,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[addr]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VariantdvEXT]==],
@@ -50327,7 +50327,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI4ubv]==],
@@ -50345,7 +50345,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib3svARB]==],
@@ -50421,7 +50421,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[addr]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VariantsvEXT]==],
@@ -50466,7 +50466,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[addr]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[VariantbvEXT]==],
@@ -50526,7 +50526,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[ColorPointerEXT]==],
@@ -50562,7 +50562,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MultTransposeMatrixf]==],
@@ -50579,7 +50579,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MatrixLoadfEXT]==],
@@ -50601,7 +50601,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint64EXT *]==],
+						["ctype"] = [==[const GLint64EXT*]==],
 					},
 				},
 				["name"] = [==[Uniform1i64vNV]==],
@@ -50681,7 +50681,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[addr]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[SetInvariantEXT]==],
@@ -50702,7 +50702,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -50761,7 +50761,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[addr]==],
-						["ctype"] = [==[const GLushort *]==],
+						["ctype"] = [==[const GLushort*]==],
 					},
 				},
 				["name"] = [==[VariantusvEXT]==],
@@ -50807,7 +50807,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetInvariantIntegervEXT]==],
@@ -50869,7 +50869,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetnCompressedTexImage]==],
@@ -50935,7 +50935,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Vertex3fv]==],
@@ -51113,7 +51113,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -51212,7 +51212,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetMaterialiv]==],
@@ -51237,7 +51237,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetnUniformfvARB]==],
@@ -51281,7 +51281,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bufs]==],
-						["ctype"] = [==[const GLenum *]==],
+						["ctype"] = [==[const GLenum*]==],
 					},
 				},
 				["name"] = [==[DrawBuffersATI]==],
@@ -51326,7 +51326,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[fences]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[DeleteFencesNV]==],
@@ -51343,7 +51343,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexStream2svATI]==],
@@ -51376,7 +51376,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[image]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[ConvolutionFilter1DEXT]==],
@@ -51414,7 +51414,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[code]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[ReplacementCodeuivSUN]==],
@@ -51494,7 +51494,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[u]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[EvalCoord2fv]==],
@@ -51519,7 +51519,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetCombinerOutputParameterfvNV]==],
@@ -51539,7 +51539,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[WindowPos2sv]==],
@@ -51584,7 +51584,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[WindowPos3fv]==],
@@ -51630,7 +51630,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -51652,7 +51652,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Vertex2iv]==],
@@ -51681,7 +51681,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -51700,7 +51700,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttribL3dvEXT]==],
@@ -51728,7 +51728,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indices]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[DrawElements]==],
@@ -51762,7 +51762,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[VertexAttribPointerARB]==],
@@ -51775,7 +51775,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[WindowPos4ivMESA]==],
@@ -51792,7 +51792,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttribL2dvEXT]==],
@@ -51875,11 +51875,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[groupString]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["name"] = [==[GetPerfMonitorGroupStringAMD]==],
@@ -51892,7 +51892,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[TexCoord4xvOES]==],
@@ -51946,7 +51946,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -51972,7 +51972,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord2fv]==],
@@ -51994,7 +51994,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramEnvParameter4fvARB]==],
@@ -52022,7 +52022,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[UniformMatrix4x2fv]==],
@@ -52047,7 +52047,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform2uivEXT]==],
@@ -52088,7 +52088,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Uniform2iv]==],
@@ -52134,7 +52134,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[VertexPointerEXT]==],
@@ -52151,7 +52151,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[framebuffers]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GenFramebuffersEXT]==],
@@ -52180,7 +52180,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TexCoordPointerEXT]==],
@@ -52200,7 +52200,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib1sv]==],
@@ -52281,7 +52281,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[IndexPointerEXT]==],
@@ -52302,7 +52302,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const GLboolean *]==],
+						["ctype"] = [==[const GLboolean*]==],
 					},
 				},
 				["name"] = [==[EdgeFlagPointerEXT]==],
@@ -52327,19 +52327,19 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[size]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 					{
 						["name"] = [==[type]==],
-						["ctype"] = [==[GLenum *]==],
+						["ctype"] = [==[GLenum*]==],
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[GLcharARB *]==],
+						["ctype"] = [==[GLcharARB*]==],
 					},
 				},
 				["name"] = [==[GetActiveUniformARB]==],
@@ -52377,19 +52377,19 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[size]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[type]==],
-						["ctype"] = [==[GLenum *]==],
+						["ctype"] = [==[GLenum*]==],
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["name"] = [==[GetTransformFeedbackVaryingEXT]==],
@@ -52471,7 +52471,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform4fvEXT]==],
@@ -52504,7 +52504,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -52543,7 +52543,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[LightModeliv]==],
@@ -52568,19 +52568,19 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[size]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 					{
 						["name"] = [==[type]==],
-						["ctype"] = [==[GLenum *]==],
+						["ctype"] = [==[GLenum*]==],
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[GLcharARB *]==],
+						["ctype"] = [==[GLcharARB*]==],
 					},
 				},
 				["name"] = [==[GetActiveAttribARB]==],
@@ -52622,7 +52622,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -52695,7 +52695,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetVertexArrayIntegervEXT]==],
@@ -52712,7 +52712,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[textures]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GenTexturesEXT]==],
@@ -52756,7 +52756,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Uniform3fv]==],
@@ -52777,7 +52777,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetColorTableParameterfvEXT]==],
@@ -52854,7 +52854,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[ClearNamedBufferDataEXT]==],
@@ -52878,7 +52878,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[EdgeFlagPointer]==],
@@ -52895,7 +52895,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[textures]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[DeleteTexturesEXT]==],
@@ -52986,7 +52986,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[WindowPos2dvARB]==],
@@ -53032,7 +53032,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetTexParameterIuivEXT]==],
@@ -53053,7 +53053,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[TexParameterIuivEXT]==],
@@ -53121,7 +53121,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord1hvNV]==],
@@ -53239,7 +53239,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[Color3sv]==],
@@ -53284,7 +53284,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TexSubImage2DEXT]==],
@@ -53306,7 +53306,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[string]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetProgramStringARB]==],
@@ -53416,7 +53416,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[string]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[CreateShaderProgramEXT]==],
@@ -53539,7 +53539,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TexImage2D]==],
@@ -53573,7 +53573,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLushort *]==],
+						["ctype"] = [==[const GLushort*]==],
 					},
 				},
 				["name"] = [==[SecondaryColor3usvEXT]==],
@@ -53629,7 +53629,7 @@ typedef unsigned int GLhandleARB;
 				["extensions"] = {
 					[==[ARB_map_buffer_range]==],
 				},
-				["return_ctype"] = [==[void *]==],
+				["return_ctype"] = [==[void*]==],
 			},
 			{
 				["core"] = {
@@ -53734,7 +53734,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bits]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTextureImage2DEXT]==],
@@ -53763,7 +53763,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -53842,7 +53842,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -53865,7 +53865,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[VertexAttribs1hvNV]==],
@@ -53878,7 +53878,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[SecondaryColor3ivEXT]==],
@@ -53936,7 +53936,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -54028,7 +54028,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[image]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[ConvolutionFilter2DEXT]==],
@@ -54049,7 +54049,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLhalfNV *]==],
+						["ctype"] = [==[const GLhalfNV*]==],
 					},
 				},
 				["name"] = [==[VertexAttribs3hvNV]==],
@@ -54102,7 +54102,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MapVertexAttrib2fAPPLE]==],
@@ -54115,7 +54115,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[SecondaryColor3dvEXT]==],
@@ -54132,7 +54132,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[renderbuffers]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[DeleteRenderbuffersEXT]==],
@@ -54156,7 +54156,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetIntegeri_v]==],
@@ -54177,7 +54177,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetMinmaxParameterfv]==],
@@ -54242,7 +54242,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTexImage3DARB]==],
@@ -54455,7 +54455,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TexSubImage1DEXT]==],
@@ -54519,7 +54519,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetnMinmax]==],
@@ -54572,7 +54572,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[WindowPos2iv]==],
@@ -54778,7 +54778,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetTexEnvfv]==],
@@ -54873,7 +54873,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[Tangent3bvEXT]==],
@@ -54898,7 +54898,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -54920,7 +54920,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLushort *]==],
+						["ctype"] = [==[const GLushort*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI4usv]==],
@@ -54949,7 +54949,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetMinmaxEXT]==],
@@ -54974,7 +54974,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[enabled]==],
@@ -54999,7 +54999,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetHistogramParameterfvEXT]==],
@@ -55020,7 +55020,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[Uniform4uivEXT]==],
@@ -55041,7 +55041,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[Uniform2uivEXT]==],
@@ -55066,7 +55066,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetObjectParameterivAPPLE]==],
@@ -55104,7 +55104,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[names]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[DeleteNamesAMD]==],
@@ -55128,7 +55128,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetQueryObjectiv]==],
@@ -55149,7 +55149,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[BindFragDataLocationEXT]==],
@@ -55170,7 +55170,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetHistogramParameterivEXT]==],
@@ -55188,7 +55188,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4NuivARB]==],
@@ -55353,7 +55353,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[NamedFramebufferSampleLocationsfvNV]==],
@@ -55383,7 +55383,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[VertexAttribs4ubvNV]==],
@@ -55408,7 +55408,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -55504,27 +55504,27 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[sources]==],
-						["ctype"] = [==[GLenum *]==],
+						["ctype"] = [==[GLenum*]==],
 					},
 					{
 						["name"] = [==[types]==],
-						["ctype"] = [==[GLenum *]==],
+						["ctype"] = [==[GLenum*]==],
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 					{
 						["name"] = [==[severities]==],
-						["ctype"] = [==[GLenum *]==],
+						["ctype"] = [==[GLenum*]==],
 					},
 					{
 						["name"] = [==[lengths]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[messageLog]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["name"] = [==[GetDebugMessageLogARB]==],
@@ -55544,7 +55544,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetIntegerv]==],
@@ -55564,7 +55564,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[u]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[EvalCoord1dv]==],
@@ -55660,11 +55660,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[infoLog]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["name"] = [==[GetShaderInfoLog]==],
@@ -55689,7 +55689,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -55740,15 +55740,15 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[tc]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[c]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TexCoord2fColor3fVertex3fvSUN]==],
@@ -55770,7 +55770,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribfvARB]==],
@@ -55820,7 +55820,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[UniformMatrix3x4fv]==],
@@ -55879,7 +55879,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribiv]==],
@@ -55904,7 +55904,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[image]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetConvolutionFilterEXT]==],
@@ -55925,7 +55925,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[void **]==],
+						["ctype"] = [==[void**]==],
 					},
 				},
 				["name"] = [==[GetPointerIndexedvEXT]==],
@@ -55991,7 +55991,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -56026,7 +56026,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Color3fv]==],
@@ -56098,7 +56098,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -56117,7 +56117,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexStream4dvATI]==],
@@ -56130,7 +56130,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[LoadTransposeMatrixxOES]==],
@@ -56244,7 +56244,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bits]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedMultiTexImage3DEXT]==],
@@ -56261,7 +56261,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexStream3fvATI]==],
@@ -56301,7 +56301,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Uniform2fv]==],
@@ -56322,7 +56322,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[uniformBlockName]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -56400,7 +56400,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Materialfv]==],
@@ -56425,7 +56425,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indices]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[primcount]==],
@@ -56450,7 +56450,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetCombinerStageParameterfvNV]==],
@@ -56476,7 +56476,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint64EXT *]==],
+						["ctype"] = [==[const GLint64EXT*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform1i64vNV]==],
@@ -56525,7 +56525,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[bits]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTextureImage3DEXT]==],
@@ -56542,7 +56542,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[framebuffers]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[DeleteFramebuffersEXT]==],
@@ -56555,7 +56555,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[WindowPos3dvARB]==],
@@ -56657,7 +56657,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TextureSubImage3DEXT]==],
@@ -56719,7 +56719,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Vertex2fv]==],
@@ -56744,7 +56744,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[attachments]==],
-						["ctype"] = [==[const GLenum *]==],
+						["ctype"] = [==[const GLenum*]==],
 					},
 				},
 				["extensions"] = {
@@ -56828,7 +56828,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ImageTransformParameterfvHP]==],
@@ -56846,7 +56846,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[programs]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GenProgramsARB]==],
@@ -56939,7 +56939,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Uniform1ivARB]==],
@@ -57013,7 +57013,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetnHistogramARB]==],
@@ -57151,7 +57151,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4Nubv]==],
@@ -57180,7 +57180,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix4x2dvEXT]==],
@@ -57209,7 +57209,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix3x2dvEXT]==],
@@ -57259,7 +57259,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix2x3dvEXT]==],
@@ -57288,19 +57288,19 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[x]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 					{
 						["name"] = [==[y]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 					{
 						["name"] = [==[tangentX]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 					{
 						["name"] = [==[tangentY]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[PointAlongPathNV]==],
@@ -57337,7 +57337,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Fogfv]==],
@@ -57362,7 +57362,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[counterName]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 					{
 						["name"] = [==[counterDescLength]==],
@@ -57370,27 +57370,27 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[counterDesc]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 					{
 						["name"] = [==[counterOffset]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 					{
 						["name"] = [==[counterDataSize]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 					{
 						["name"] = [==[counterTypeEnum]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 					{
 						["name"] = [==[counterDataTypeEnum]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 					{
 						["name"] = [==[rawCounterMaxValue]==],
-						["ctype"] = [==[GLuint64 *]==],
+						["ctype"] = [==[GLuint64*]==],
 					},
 				},
 				["name"] = [==[GetPerfCounterInfoINTEL]==],
@@ -57440,7 +57440,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[PointParameterfvSGIS]==],
@@ -57465,7 +57465,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform1fvEXT]==],
@@ -57490,7 +57490,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -57512,7 +57512,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[c]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Indexiv]==],
@@ -57601,7 +57601,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TexCoord3fv]==],
@@ -57626,7 +57626,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetColorTableEXT]==],
@@ -57647,7 +57647,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[flags]==],
@@ -57679,7 +57679,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[TexGeniv]==],
@@ -57696,7 +57696,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord1ivARB]==],
@@ -57752,7 +57752,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[NormalPointerEXT]==],
@@ -57786,7 +57786,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetVertexArrayIntegeri_vEXT]==],
@@ -57799,11 +57799,11 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[vdpDevice]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[getProcAddress]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[VDPAUInitNV]==],
@@ -57820,7 +57820,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 					{
 						["name"] = [==[pname]==],
@@ -57828,7 +57828,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetNamedStringivARB]==],
@@ -57852,7 +57852,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Uniform4iv]==],
@@ -57908,7 +57908,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -57967,7 +57967,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -58159,7 +58159,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[LightModelfv]==],
@@ -58207,7 +58207,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[Vertex2sv]==],
@@ -58220,15 +58220,15 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[c]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[n]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Color4fNormal3fVertex3fvSUN]==],
@@ -58241,7 +58241,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[SecondaryColor3svEXT]==],
@@ -58274,7 +58274,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[image]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[ConvolutionFilter1D]==],
@@ -58303,7 +58303,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -58325,7 +58325,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib1dv]==],
@@ -58342,11 +58342,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[textures]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 					{
 						["name"] = [==[residences]==],
-						["ctype"] = [==[GLboolean *]==],
+						["ctype"] = [==[GLboolean*]==],
 					},
 				},
 				["name"] = [==[AreTexturesResidentEXT]==],
@@ -58483,7 +58483,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetFramebufferParameterivEXT]==],
@@ -58655,7 +58655,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -58710,7 +58710,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[NamedProgramLocalParameter4dvEXT]==],
@@ -58730,7 +58730,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[TexCoord2sv]==],
@@ -58770,7 +58770,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4iv]==],
@@ -58820,7 +58820,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetNamedRenderbufferParameterivEXT]==],
@@ -58858,7 +58858,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetNamedProgramivEXT]==],
@@ -58907,7 +58907,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetNamedProgramLocalParameterdvEXT]==],
@@ -58932,7 +58932,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[NamedProgramLocalParameter4fvEXT]==],
@@ -58986,7 +58986,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VertexStream1ivATI]==],
@@ -59006,7 +59006,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[WindowPos2dv]==],
@@ -59028,7 +59028,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetProgramLocalParameterdvARB]==],
@@ -59053,11 +59053,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[counterString]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["name"] = [==[GetPerfMonitorCounterStringAMD]==],
@@ -59125,7 +59125,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indices]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[DrawRangeElements]==],
@@ -59153,7 +59153,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[UniformMatrix2fv]==],
@@ -59182,7 +59182,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[NamedProgramLocalParametersI4uivEXT]==],
@@ -59207,7 +59207,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[NamedProgramLocalParameterI4ivEXT]==],
@@ -59224,7 +59224,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI4uivEXT]==],
@@ -59250,7 +59250,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint64EXT *]==],
+						["ctype"] = [==[const GLint64EXT*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform3i64vNV]==],
@@ -59279,7 +59279,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[counterList]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[SelectPerfMonitorCountersAMD]==],
@@ -59324,7 +59324,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform4dvEXT]==],
@@ -59501,7 +59501,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[VertexAttribPointer]==],
@@ -59542,7 +59542,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[RasterPos3sv]==],
@@ -59559,7 +59559,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MatrixLoadTransposefEXT]==],
@@ -59592,7 +59592,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -59644,7 +59644,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetVertexAttribLdvEXT]==],
@@ -59664,7 +59664,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[c]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 				},
 				["name"] = [==[Indexubv]==],
@@ -59684,7 +59684,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[buffers]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GenBuffers]==],
@@ -59709,7 +59709,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetTextureParameterIuivEXT]==],
@@ -59733,7 +59733,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord4fv]==],
@@ -59790,7 +59790,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix4x3fvEXT]==],
@@ -59815,7 +59815,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetTextureParameterIivEXT]==],
@@ -59844,7 +59844,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix2fvEXT]==],
@@ -59868,7 +59868,7 @@ typedef unsigned int GLhandleARB;
 					},
 				},
 				["name"] = [==[MapBuffer]==],
-				["return_ctype"] = [==[void *]==],
+				["return_ctype"] = [==[void*]==],
 			},
 			{
 				["extensions"] = {
@@ -59893,7 +59893,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix3x4fvEXT]==],
@@ -59922,7 +59922,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix2x4fvEXT]==],
@@ -59951,7 +59951,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix3fvEXT]==],
@@ -59976,7 +59976,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform3ivEXT]==],
@@ -60044,7 +60044,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform1ivEXT]==],
@@ -60099,7 +60099,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetFloatv]==],
@@ -60132,7 +60132,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4Nbv]==],
@@ -60192,7 +60192,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetnMapfv]==],
@@ -60214,7 +60214,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramLocalParameter4dvARB]==],
@@ -60243,7 +60243,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[GLint64 *]==],
+						["ctype"] = [==[GLint64*]==],
 					},
 				},
 				["extensions"] = {
@@ -60266,7 +60266,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[names]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GenNamesAMD]==],
@@ -60284,7 +60284,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib2dvARB]==],
@@ -60297,7 +60297,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[WindowPos2ivARB]==],
@@ -60454,7 +60454,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -60525,7 +60525,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetPixelTransformParameterfvEXT]==],
@@ -60554,7 +60554,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoordPointerEXT]==],
@@ -60640,7 +60640,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetMultiTexLevelParameterfvEXT]==],
@@ -60686,7 +60686,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["extensions"] = {
@@ -60737,7 +60737,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[MultiTexImage2DEXT]==],
@@ -60757,11 +60757,11 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v1]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[v2]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Rectfv]==],
@@ -60815,7 +60815,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[const GLuint64 *]==],
+						["ctype"] = [==[const GLuint64*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformHandleui64vNV]==],
@@ -60844,7 +60844,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[label]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -60907,7 +60907,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MultTransposeMatrixfARB]==],
@@ -60932,7 +60932,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetMultiTexGenfvEXT]==],
@@ -60949,7 +60949,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexStream1svATI]==],
@@ -61005,7 +61005,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[PointParameterfvARB]==],
@@ -61030,7 +61030,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetMultiTexGendvEXT]==],
@@ -61115,7 +61115,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[UniformMatrix3x2fv]==],
@@ -61140,7 +61140,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MultiTexGenfvEXT]==],
@@ -61164,7 +61164,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetPixelMapuiv]==],
@@ -61289,7 +61289,7 @@ typedef unsigned int GLhandleARB;
 					},
 				},
 				["name"] = [==[GetString]==],
-				["return_ctype"] = [==[const GLubyte *]==],
+				["return_ctype"] = [==[const GLubyte*]==],
 			},
 			{
 				["extensions"] = {
@@ -61362,7 +61362,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLchar *]==],
+						["ctype"] = [==[const GLchar*]==],
 					},
 				},
 				["name"] = [==[GetUniformLocation]==],
@@ -61375,7 +61375,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[WindowPos2svARB]==],
@@ -61413,7 +61413,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[TextureParameterivEXT]==],
@@ -61438,7 +61438,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint64EXT *]==],
+						["ctype"] = [==[const GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformui64vNV]==],
@@ -61600,7 +61600,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indices]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[basevertex]==],
@@ -61630,7 +61630,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Uniform3iv]==],
@@ -61668,7 +61668,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -61698,7 +61698,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[PixelMapfv]==],
@@ -61739,7 +61739,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TexGenfv]==],
@@ -61817,7 +61817,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[MultiTexSubImage3DEXT]==],
@@ -61897,7 +61897,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[usage]==],
@@ -61935,7 +61935,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetOcclusionQueryivNV]==],
@@ -61955,7 +61955,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4bv]==],
@@ -62009,7 +62009,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[FragmentLightfvSGIX]==],
@@ -62043,7 +62043,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[TexCoord2bvOES]==],
@@ -62180,7 +62180,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[uniformIndices]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -62199,7 +62199,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[weights]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[WeightsvARB]==],
@@ -62227,7 +62227,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetnMapiv]==],
@@ -62240,7 +62240,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[Vertex2bvOES]==],
@@ -62269,7 +62269,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -62404,7 +62404,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI3iv]==],
@@ -62448,7 +62448,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TexImage1D]==],
@@ -62465,7 +62465,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[weights]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[WeightdvARB]==],
@@ -62494,7 +62494,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -62509,7 +62509,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Binormal3ivEXT]==],
@@ -62522,7 +62522,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Binormal3fvEXT]==],
@@ -62556,7 +62556,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[Tangent3svEXT]==],
@@ -62598,7 +62598,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pipelines]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -62638,7 +62638,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -62680,7 +62680,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[RasterPos3iv]==],
@@ -62726,7 +62726,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetPixelTexGenParameterfvSGIS]==],
@@ -62768,7 +62768,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[WindowPos2fvARB]==],
@@ -62789,7 +62789,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Uniform2ivARB]==],
@@ -62819,7 +62819,7 @@ typedef unsigned int GLhandleARB;
 					},
 				},
 				["name"] = [==[MapObjectBufferATI]==],
-				["return_ctype"] = [==[void *]==],
+				["return_ctype"] = [==[void*]==],
 			},
 			{
 				["extensions"] = {
@@ -62868,7 +62868,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ClearBufferiv]==],
@@ -62958,7 +62958,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[monitors]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[DeletePerfMonitorsAMD]==],
@@ -62971,7 +62971,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[Vertex2xvOES]==],
@@ -63021,7 +63021,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetMultiTexGenivEXT]==],
@@ -63062,7 +63062,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[image]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetnConvolutionFilter]==],
@@ -63112,7 +63112,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[textures]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -63183,7 +63183,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[points]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Map1f]==],
@@ -63204,7 +63204,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetMinmaxParameterfvEXT]==],
@@ -63328,7 +63328,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -63347,7 +63347,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord3fvARB]==],
@@ -63368,7 +63368,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetObjectParameterfvARB]==],
@@ -63429,11 +63429,11 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[c]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Color3fVertex3fvSUN]==],
@@ -63478,11 +63478,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[const GLubyte *]==],
+						["ctype"] = [==[const GLubyte*]==],
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetProgramNamedParameterfvNV]==],
@@ -63502,7 +63502,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[DeleteQueries]==],
@@ -63552,7 +63552,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[attachments]==],
-						["ctype"] = [==[const GLenum *]==],
+						["ctype"] = [==[const GLenum*]==],
 					},
 					{
 						["name"] = [==[x]==],
@@ -63587,7 +63587,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VertexAttribI4ivEXT]==],
@@ -63604,7 +63604,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[ptr]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[bufSize]==],
@@ -63612,11 +63612,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[label]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -63669,7 +63669,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4NbvARB]==],
@@ -63693,7 +63693,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[equation]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetClipPlane]==],
@@ -63745,7 +63745,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TexParameterfv]==],
@@ -63794,7 +63794,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramUniformMatrix2dvEXT]==],
@@ -63814,7 +63814,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib3dv]==],
@@ -63831,7 +63831,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4fvNV]==],
@@ -63855,7 +63855,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord4sv]==],
@@ -63883,7 +63883,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[const GLushort *]==],
+						["ctype"] = [==[const GLushort*]==],
 					},
 				},
 				["name"] = [==[PixelMapusv]==],
@@ -63900,7 +63900,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetTexBumpParameterfvATI]==],
@@ -63925,7 +63925,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetNamedProgramLocalParameterIuivEXT]==],
@@ -63947,7 +63947,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetProgramEnvParameterfvARB]==],
@@ -63976,7 +63976,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -64026,7 +64026,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[param]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[LightModelxvOES]==],
@@ -64059,11 +64059,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[name]==],
-						["ctype"] = [==[GLchar *]==],
+						["ctype"] = [==[GLchar*]==],
 					},
 				},
 				["extensions"] = {
@@ -64128,7 +64128,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetTexParameterIiv]==],
@@ -64149,7 +64149,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[color]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -64164,7 +64164,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[marker_p]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[PollInstrumentsSGIX]==],
@@ -64184,7 +64184,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[SecondaryColor3dv]==],
@@ -64217,7 +64217,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -64239,7 +64239,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[PointParameteriv]==],
@@ -64264,7 +64264,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[preserve]==],
@@ -64296,7 +64296,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetMapiv]==],
@@ -64316,7 +64316,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib2fv]==],
@@ -64329,7 +64329,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[LoadTransposeMatrixdARB]==],
@@ -64379,7 +64379,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[arrays]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -64454,7 +64454,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib4NivARB]==],
@@ -64486,7 +64486,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TexCoordPointer]==],
@@ -64526,7 +64526,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTexImage1D]==],
@@ -64578,7 +64578,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TexImage3D]==],
@@ -64624,7 +64624,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib1dvARB]==],
@@ -64652,7 +64652,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ShaderSource]==],
@@ -64753,7 +64753,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[BufferSubDataARB]==],
@@ -64770,7 +64770,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[buffers]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GenBuffersARB]==],
@@ -64787,7 +64787,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[weights]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[WeightbvARB]==],
@@ -64833,7 +64833,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[buffers]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -64856,11 +64856,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[string]==],
-						["ctype"] = [==[const GLcharARB **]==],
+						["ctype"] = [==[const GLcharARB**]==],
 					},
 					{
 						["name"] = [==[length]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[ShaderSourceARB]==],
@@ -64877,7 +64877,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[weights]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[WeightivARB]==],
@@ -64898,7 +64898,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[ids]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -64962,7 +64962,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -65014,7 +65014,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint64 *]==],
+						["ctype"] = [==[GLint64*]==],
 					},
 				},
 				["extensions"] = {
@@ -65037,7 +65037,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetUniformivARB]==],
@@ -65077,7 +65077,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[textures]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[DeleteTextures]==],
@@ -65134,7 +65134,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[val]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["extensions"] = {
@@ -65160,7 +65160,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetTexParameterIuiv]==],
@@ -65215,7 +65215,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib2fvARB]==],
@@ -65235,7 +65235,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[VertexAttrib2sv]==],
@@ -65307,7 +65307,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[TexCoord4sv]==],
@@ -65337,7 +65337,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfixed *]==],
+						["ctype"] = [==[const GLfixed*]==],
 					},
 				},
 				["name"] = [==[MultMatrixxOES]==],
@@ -65390,7 +65390,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[img]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetnTexImageARB]==],
@@ -65420,7 +65420,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLshort *]==],
+						["ctype"] = [==[const GLshort*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord4svARB]==],
@@ -65442,7 +65442,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[ProgramEnvParameter4dvARB]==],
@@ -65512,7 +65512,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[img]==],
-						["ctype"] = [==[void *]==],
+						["ctype"] = [==[void*]==],
 					},
 				},
 				["name"] = [==[GetCompressedTexImage]==],
@@ -65541,7 +65541,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["extensions"] = {
@@ -65581,7 +65581,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indices]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["name"] = [==[MatrixIndexuivARB]==],
@@ -65601,7 +65601,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[GLdouble *]==],
+						["ctype"] = [==[GLdouble*]==],
 					},
 				},
 				["name"] = [==[GetDoublev]==],
@@ -65696,7 +65696,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indices]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[basevertex]==],
@@ -65828,7 +65828,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pixels]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TextureSubImage1DEXT]==],
@@ -65870,7 +65870,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[framebuffers]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -66033,7 +66033,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetQueryObjectivARB]==],
@@ -66081,7 +66081,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLfloat *]==],
+						["ctype"] = [==[GLfloat*]==],
 					},
 				},
 				["name"] = [==[GetMapAttribParameterfvNV]==],
@@ -66109,7 +66109,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indices]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[instancecount]==],
@@ -66130,7 +66130,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLuint64EXT *]==],
+						["ctype"] = [==[const GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[VertexAttribL1ui64vARB]==],
@@ -66143,7 +66143,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[m]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[LoadTransposeMatrixfARB]==],
@@ -66180,7 +66180,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[coords]==],
-						["ctype"] = [==[const GLuint *]==],
+						["ctype"] = [==[const GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -66220,7 +66220,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[TextureRangeAPPLE]==],
@@ -66245,7 +66245,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetMultiTexParameterivEXT]==],
@@ -66290,7 +66290,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[TexCoord4fv]==],
@@ -66346,7 +66346,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[CompressedTexSubImage3D]==],
@@ -66375,7 +66375,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["extensions"] = {
@@ -66438,7 +66438,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLuint64EXT *]==],
+						["ctype"] = [==[const GLuint64EXT*]==],
 					},
 				},
 				["name"] = [==[Uniform2ui64vNV]==],
@@ -66488,7 +66488,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[MultiTexCoord2dv]==],
@@ -66508,7 +66508,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLbyte *]==],
+						["ctype"] = [==[const GLbyte*]==],
 					},
 				},
 				["name"] = [==[Color4bv]==],
@@ -66532,11 +66532,11 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[count]==],
-						["ctype"] = [==[GLsizei *]==],
+						["ctype"] = [==[GLsizei*]==],
 					},
 					{
 						["name"] = [==[shaders]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetAttachedShaders]==],
@@ -66560,7 +66560,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ClearBufferfv]==],
@@ -66606,7 +66606,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[values]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[GetnPixelMapuivARB]==],
@@ -66630,7 +66630,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[buffer]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["name"] = [==[SelectBuffer]==],
@@ -66765,7 +66765,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[pointer]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["name"] = [==[NormalPointer]==],
@@ -66790,7 +66790,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[attachments]==],
-						["ctype"] = [==[const GLenum *]==],
+						["ctype"] = [==[const GLenum*]==],
 					},
 				},
 				["extensions"] = {
@@ -66874,7 +66874,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetBufferParameteriv]==],
@@ -66910,7 +66910,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[c]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[Indexfv]==],
@@ -66934,7 +66934,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLint *]==],
+						["ctype"] = [==[GLint*]==],
 					},
 				},
 				["name"] = [==[GetQueryiv]==],
@@ -67002,7 +67002,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[indices]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 					{
 						["name"] = [==[instancecount]==],
@@ -67101,7 +67101,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[params]==],
-						["ctype"] = [==[GLuint *]==],
+						["ctype"] = [==[GLuint*]==],
 					},
 				},
 				["extensions"] = {
@@ -67146,11 +67146,11 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v1]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 					{
 						["name"] = [==[v2]==],
-						["ctype"] = [==[const GLint *]==],
+						["ctype"] = [==[const GLint*]==],
 					},
 				},
 				["name"] = [==[Rectiv]==],
@@ -67191,7 +67191,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[data]==],
-						["ctype"] = [==[const void *]==],
+						["ctype"] = [==[const void*]==],
 					},
 				},
 				["extensions"] = {
@@ -67218,7 +67218,7 @@ typedef unsigned int GLhandleARB;
 					},
 					{
 						["name"] = [==[value]==],
-						["ctype"] = [==[const GLfloat *]==],
+						["ctype"] = [==[const GLfloat*]==],
 					},
 				},
 				["name"] = [==[ProgramUniform2fvEXT]==],
@@ -67238,7 +67238,7 @@ typedef unsigned int GLhandleARB;
 				["parameters"] = {
 					{
 						["name"] = [==[v]==],
-						["ctype"] = [==[const GLdouble *]==],
+						["ctype"] = [==[const GLdouble*]==],
 					},
 				},
 				["name"] = [==[TexCoord4dv]==],
@@ -67561,6 +67561,7 @@ typedef unsigned int GLhandleARB;
 		[==[EXT_texture_compression_rgtc]==],
 		[==[EXT_texture_compression_s3tc]==],
 		[==[EXT_texture_cube_map]==],
+		[==[EXT_texture_edge_clamp]==],
 		[==[EXT_texture_env_add]==],
 		[==[EXT_texture_env_combine]==],
 		[==[EXT_texture_env_dot3]==],
@@ -92960,6 +92961,13 @@ typedef unsigned int GLhandleARB;
 			["name"] = [==[CLAMP_TO_EDGE_SGIS]==],
 			["extensions"] = {
 				[==[SGIS_texture_edge_clamp]==],
+			},
+		},
+		{
+			["value"] = [==[0x812F]==],
+			["name"] = [==[CLAMP_TO_EDGE_EXT]==],
+			["extensions"] = {
+				[==[EXT_texture_edge_clamp]==],
 			},
 		},
 		{

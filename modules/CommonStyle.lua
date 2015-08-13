@@ -19,30 +19,30 @@ end
 function common.WritePassthruData(hFile, strArray)
 	for _, str in ipairs(strArray) do
 		--unindent after #endif
-		if(str:match("^#endif") or str:match("^#elif")) then
-			hFile:dec()
-		end
+		--if(str:match("^#endif") or str:match("^#elif")) then
+		--	hFile:dec()
+		--end
 	
 		hFile:write(str, "\n")
 		
 		--Indent after #if.
-		if(str:match("^#if") or str:match("^#elif")) then
-			hFile:inc()
-		end
+		--if(str:match("^#if") or str:match("^#elif")) then
+		--	hFile:inc()
+		--end
 	end
 end
 
 function common.WriteExternCStart(hFile)
 	hFile:write("#ifdef __cplusplus\n")
 	hFile:write('extern "C" {\n')
-	hFile:write("#endif /*__cplusplus*/\n")
+	hFile:write("#endif // __cplusplus\n")
 	hFile:write("\n")
 end
 
 function common.WriteExternCEnd(hFile)
 	hFile:write("#ifdef __cplusplus\n")
 	hFile:write('}\n')
-	hFile:write("#endif /*__cplusplus*/\n")
+	hFile:write("#endif // __cplusplus\n")
 	hFile:write("\n")
 end
 
@@ -127,7 +127,7 @@ function common.GetFuncParamList(func, bWriteVarNames)
 	
 	if(#paramList == 0) then
 		--C makes () different from (void). So use (void).
-		return "void"
+		return ""
 	else
 		return table.concat(paramList, ", ")
 	end
@@ -296,12 +296,12 @@ end
 function common.WriteCMappingTable(hFile, specData, spec,
 							options, structName, varName, GetExtVariableName, GetExtLoaderFuncName)
 	--Write the struct for the mapping table.
-	hFile:write("typedef int (*PFN_LOADFUNCPOINTERS)(void);\n")
+	hFile:write("typedef int (*PFN_LOADFUNCPOINTERS)();\n")
 	hFile:fmt("typedef struct %s%sStrToExtMap_s\n",
 		options.prefix, spec.DeclPrefix())
 	hFile:write("{\n")
 	hFile:inc()
-	hFile:write("char *extensionName;\n")
+	hFile:write("const char *extensionName;\n")
 	hFile:write("int *extensionVariable;\n")
 	hFile:write("PFN_LOADFUNCPOINTERS LoadExtension;\n")
 	hFile:dec()
@@ -316,24 +316,33 @@ function common.WriteCMappingTable(hFile, specData, spec,
 		varName,
 		arrayLength)
 	hFile:inc()
+	local first = true;
 	for _, extName in ipairs(options.extensions) do
+		if(first) then
+			first = false;
+		else
+			hFile:dec()
+			hFile:write(",\n")
+			hFile:inc()
+		end
 		if(#specData.extdefs[extName].funcs > 0) then
-			hFile:fmt('{"%s", &%s, %s},\n',
+			hFile:fmt('{"%s", &%s, %s}',
 				spec.ExtNamePrefix() .. extName,
 				GetExtVariableName(extName, spec, options),
 				GetExtLoaderFuncName(extName, spec, options))
 		else
-			hFile:fmt('{"%s", &%s, NULL},\n',
+			hFile:fmt('{"%s", &%s, NULL}',
 				spec.ExtNamePrefix() .. extName,
 				GetExtVariableName(extName, spec, options))
 		end
 	end
 	--Because C is stupid, write bogus entry.
 	if(#options.extensions == 0) then
-		hFile:fmt('{"", NULL, NULL},\n')
+		hFile:fmt('{"", NULL, NULL}')
 	end
+	
 	hFile:dec()
-	hFile:write("};\n")
+	hFile:write("\n};\n")
 
 	hFile:write "\n"
 	hFile:fmt("static int g_extensionMapSize = %i;\n", #options.extensions);
@@ -364,7 +373,7 @@ end
 
 function common.WriteCClearExtensionVarsFunc(hFile, specData, spec,
 							options, GetExtVariableName, clearValue)
-	hFile:fmt("static void ClearExtensionVars(void)\n")
+	hFile:fmt("static void ClearExtensionVars()\n")
 	hFile:write("{\n")
 	hFile:inc()
 	for _, extName in ipairs(options.extensions) do
@@ -382,37 +391,21 @@ end
 function common.WriteCLoadExtByNameFunc(hFile, specData, spec,
 							options, structName, successValue)
 	hFile:writeblock([[
-static void LoadExtByName(const char *extensionName)
+static void LoadExtension(sfogl_StrToExtMap& extension)
 {
-	]] .. structName .. [[ *entry = NULL;
-	entry = FindExtEntry(extensionName);
-	if(entry)
-	{
-		if(entry->LoadExtension)
-		{
-			int numFailed = entry->LoadExtension();
-			if(numFailed == 0)
-			{
-				*(entry->extensionVariable) = ]] ..
-				successValue ..
-				[[;
-			}
-			else
-			{
-				*(entry->extensionVariable) = ]] ..
-				successValue ..
-				[[ + numFailed;
-			}
-		}
-		else
-		{
-			*(entry->extensionVariable) = ]] ..
-			successValue ..
-			[[;
-		}
-	}
-}
 ]])
+	hFile:inc()
+	hFile:writeblock([[
+if(extension.LoadExtension)
+{
+    *(extension.extensionVariable) = sfogl_LOAD_SUCCEEDED + extension.LoadExtension();
+}
+else
+{
+    *(extension.extensionVariable) = sfogl_LOAD_SUCCEEDED;
+}]])
+	hFile:dec()
+	hFile:write("\n}\n")
 end
 
 --The info data contains:
@@ -501,8 +494,8 @@ local my_struct =
 			{ type="blank"},
 			{ type="write", name="Init(hFile, spec, options)", },
 			{ type="blank"},
-			{ type="write", name="StdTypedefs(hFile, specData, options)",},
-			{ type="blank"},
+			--{ type="write", name="StdTypedefs(hFile, specData, options)",},
+			--{ type="blank"},
 			{ type="write", name="SpecTypedefs(hFile, specData, options)",},
 			{ type="blank"},
 			{ type="block", name="Decl(hFile, spec, options)",
@@ -540,7 +533,7 @@ local my_struct =
 						},
 						{ type="version-iter",
 							{type="func-iter",
-								{ type="write", name="FuncDecl(hFile, func, spec, options, funcSeen)", },
+								{ type="write", name="CoreFuncDecl(hFile, func, spec, options, funcSeen)", },
 								{ type="blank", last=true },
 							},
 						},
@@ -551,8 +544,8 @@ local my_struct =
 					{ type="blank" },
 					{ type="write", name="MainLoaderFuncDecl(hFile, spec, options)",},
 					{ type="blank" },
-					{ type="write", name="VersioningFuncDecls(hFile, spec, options)",},
-					{ type="blank" },
+					--{ type="write", name="VersioningFuncDecls(hFile, spec, options)",},
+					--{ type="blank" },
 				},
 			},
 		},
@@ -585,32 +578,32 @@ local my_struct =
 						{ type="blank"},
 					},
 				},
-				{ type="block", name="CoreFuncDef(hFile, spec, options)",
-					cond="core-funcs",
-					{ type="version-iter",
-						{type="func-iter",
-							{ type="write", name="FuncDef(hFile, func, spec, options, funcSeen)", },
-							{ type="blank", last=true },
-						},
-					},
-					{ type="block", name="CoreLoader(hFile, spec, options)",
-						{ type="version-iter",
-							{type="func-iter",
-								{ type="write", name="CoreFuncLoader(hFile, func, spec, options)", },
-							},
-						},
-					},
-					{ type="blank"},
-				},
-				{ type="write", name="ExtStringFuncDef(hFile, specData, spec, options, funcSeen)"},
+				--{ type="block", name="CoreFuncDef(hFile, spec, options)",
+				--	cond="core-funcs",
+				--	{ type="version-iter",
+				--		{type="func-iter",
+				--			{ type="write", name="FuncDef(hFile, func, spec, options, funcSeen)", },
+				--			{ type="blank", last=true },
+				--		},
+				--	},
+				--	{ type="block", name="CoreLoader(hFile, spec, options)",
+				--		{ type="version-iter",
+				--			{type="func-iter",
+				--				{ type="write", name="CoreFuncLoader(hFile, func, spec, options)", },
+				--			},
+				--		},
+				--	},
+				--	{ type="blank"},
+				--},
+				--{ type="write", name="ExtStringFuncDef(hFile, specData, spec, options, funcSeen)"},
 			},
 			{ type="block", name="SysDef(hFile, spec, options)",
 				{ type="write", name="UtilityDefs(hFile, specData, spec, options)",},
 				{ type="blank" },
 				{ type="write", name="MainLoaderFunc(hFile, specData, spec, options)",},
 				{ type="blank" },
-				{ type="write", name="VersioningFuncs(hFile, specData, spec, options)", cond="version-iter"},
-				{ type="blank", cond="version-iter" },
+				--{ type="write", name="VersioningFuncs(hFile, specData, spec, options)", cond="version-iter"},
+				--{ type="blank", cond="version-iter" },
 			},
 		},
 	},

@@ -88,14 +88,14 @@ function wgl_spec.GetLoaderParams() return "HDC hdc" end
 function glx_spec.GetLoaderParams() return "Display *display, int screen" end
 
 --CodeGen function pointer type. For APIFUNC and so forth.
-function gl_spec.GetCodegenPtrType() return "CODEGEN_FUNCPTR" end
-function wgl_spec.GetCodegenPtrType() return "CODEGEN_FUNCPTR" end
-function glx_spec.GetCodegenPtrType() return "CODEGEN_FUNCPTR" end
+function gl_spec.GetCodegenPtrType() return "GL_FUNCPTR" end
+function wgl_spec.GetCodegenPtrType() return "GL_FUNCPTR" end
+function glx_spec.GetCodegenPtrType() return "GL_FUNCPTR" end
 
 --Name of the function that loads pointers
-function gl_spec.GetPtrLoaderFuncName() return "IntGetProcAddress" end
-function wgl_spec.GetPtrLoaderFuncName() return "IntGetProcAddress" end
-function glx_spec.GetPtrLoaderFuncName() return "IntGetProcAddress" end
+function gl_spec.GetPtrLoaderFuncName() return "glLoaderGetProcAddress" end
+function wgl_spec.GetPtrLoaderFuncName() return "glLoaderGetProcAddress" end
+function glx_spec.GetPtrLoaderFuncName() return "glLoaderGetProcAddress" end
 
 --Name of extension string function. Also returns true if this function needs to be loaded. If false is returned, then use the string name *exactly as is*.
 function gl_spec.GetExtStringFuncName() return "GetString", true end
