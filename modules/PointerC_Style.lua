@@ -356,7 +356,7 @@ function my_style.source.WriteExtFuncLoader(hFile, func, spec, options)
 		GetFuncPtrType(hFile, func, spec, options),
 		common.GetProcAddressName(spec),
 		spec.FuncNamePrefix(), func.name)
-	hFile:fmt('if(!%s)\n', GetFuncPtrName(func, spec, options))
+	hFile:fmt('if (!%s)\n', GetFuncPtrName(func, spec, options))
 	hFile:inc()
 	hFile:write('numFailed++;\n')
 	hFile:dec()
@@ -398,7 +398,7 @@ function my_style.source.WriteCoreFuncLoader(hFile, func, spec, options)
 	if(func.name:match("EXT$")) then
 		hFile:write("/*An EXT_direct_state_access-based function. Don't count it.*/")
 	else
-		hFile:fmt('if(!%s) numFailed++;\n', GetFuncPtrName(func, spec, options))
+		hFile:fmt('if (!%s) numFailed++;\n', GetFuncPtrName(func, spec, options))
 	end
 end
 
@@ -616,7 +616,7 @@ static void GetGLVersion(void)
 	hFile:fmt("int %s(void)\n", DecorateFuncName("GetMinorVersion", spec, options))
 	hFile:writeblock([[
 {
-	if(g_major_version == 0) /*Yes, check the major version to get the minor one.*/
+	if (g_major_version == 0) /*Yes, check the major version to get the minor one.*/
 		GetGLVersion();
 	return g_minor_version;
 }

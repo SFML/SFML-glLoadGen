@@ -54,7 +54,7 @@ static int Load_EXT_blend_minmax()
     int numFailed = 0;
 
     sf_ptrc_glBlendEquationEXT = reinterpret_cast<void (GL_FUNCPTR *)(GLenum)>(glLoaderGetProcAddress("glBlendEquationEXT"));
-    if(!sf_ptrc_glBlendEquationEXT)
+    if (!sf_ptrc_glBlendEquationEXT)
         numFailed++;
 
     return numFailed;
@@ -100,139 +100,139 @@ static int Load_ARB_multitexture()
     int numFailed = 0;
 
     sf_ptrc_glActiveTextureARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum)>(glLoaderGetProcAddress("glActiveTextureARB"));
-    if(!sf_ptrc_glActiveTextureARB)
+    if (!sf_ptrc_glActiveTextureARB)
         numFailed++;
 
     sf_ptrc_glClientActiveTextureARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum)>(glLoaderGetProcAddress("glClientActiveTextureARB"));
-    if(!sf_ptrc_glClientActiveTextureARB)
+    if (!sf_ptrc_glClientActiveTextureARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord1dARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLdouble)>(glLoaderGetProcAddress("glMultiTexCoord1dARB"));
-    if(!sf_ptrc_glMultiTexCoord1dARB)
+    if (!sf_ptrc_glMultiTexCoord1dARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord1dvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, const GLdouble*)>(glLoaderGetProcAddress("glMultiTexCoord1dvARB"));
-    if(!sf_ptrc_glMultiTexCoord1dvARB)
+    if (!sf_ptrc_glMultiTexCoord1dvARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord1fARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLfloat)>(glLoaderGetProcAddress("glMultiTexCoord1fARB"));
-    if(!sf_ptrc_glMultiTexCoord1fARB)
+    if (!sf_ptrc_glMultiTexCoord1fARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord1fvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, const GLfloat*)>(glLoaderGetProcAddress("glMultiTexCoord1fvARB"));
-    if(!sf_ptrc_glMultiTexCoord1fvARB)
+    if (!sf_ptrc_glMultiTexCoord1fvARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord1iARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLint)>(glLoaderGetProcAddress("glMultiTexCoord1iARB"));
-    if(!sf_ptrc_glMultiTexCoord1iARB)
+    if (!sf_ptrc_glMultiTexCoord1iARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord1ivARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, const GLint*)>(glLoaderGetProcAddress("glMultiTexCoord1ivARB"));
-    if(!sf_ptrc_glMultiTexCoord1ivARB)
+    if (!sf_ptrc_glMultiTexCoord1ivARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord1sARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLshort)>(glLoaderGetProcAddress("glMultiTexCoord1sARB"));
-    if(!sf_ptrc_glMultiTexCoord1sARB)
+    if (!sf_ptrc_glMultiTexCoord1sARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord1svARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, const GLshort*)>(glLoaderGetProcAddress("glMultiTexCoord1svARB"));
-    if(!sf_ptrc_glMultiTexCoord1svARB)
+    if (!sf_ptrc_glMultiTexCoord1svARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord2dARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLdouble, GLdouble)>(glLoaderGetProcAddress("glMultiTexCoord2dARB"));
-    if(!sf_ptrc_glMultiTexCoord2dARB)
+    if (!sf_ptrc_glMultiTexCoord2dARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord2dvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, const GLdouble*)>(glLoaderGetProcAddress("glMultiTexCoord2dvARB"));
-    if(!sf_ptrc_glMultiTexCoord2dvARB)
+    if (!sf_ptrc_glMultiTexCoord2dvARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord2fARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLfloat, GLfloat)>(glLoaderGetProcAddress("glMultiTexCoord2fARB"));
-    if(!sf_ptrc_glMultiTexCoord2fARB)
+    if (!sf_ptrc_glMultiTexCoord2fARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord2fvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, const GLfloat*)>(glLoaderGetProcAddress("glMultiTexCoord2fvARB"));
-    if(!sf_ptrc_glMultiTexCoord2fvARB)
+    if (!sf_ptrc_glMultiTexCoord2fvARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord2iARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLint, GLint)>(glLoaderGetProcAddress("glMultiTexCoord2iARB"));
-    if(!sf_ptrc_glMultiTexCoord2iARB)
+    if (!sf_ptrc_glMultiTexCoord2iARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord2ivARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, const GLint*)>(glLoaderGetProcAddress("glMultiTexCoord2ivARB"));
-    if(!sf_ptrc_glMultiTexCoord2ivARB)
+    if (!sf_ptrc_glMultiTexCoord2ivARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord2sARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLshort, GLshort)>(glLoaderGetProcAddress("glMultiTexCoord2sARB"));
-    if(!sf_ptrc_glMultiTexCoord2sARB)
+    if (!sf_ptrc_glMultiTexCoord2sARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord2svARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, const GLshort*)>(glLoaderGetProcAddress("glMultiTexCoord2svARB"));
-    if(!sf_ptrc_glMultiTexCoord2svARB)
+    if (!sf_ptrc_glMultiTexCoord2svARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord3dARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLdouble, GLdouble, GLdouble)>(glLoaderGetProcAddress("glMultiTexCoord3dARB"));
-    if(!sf_ptrc_glMultiTexCoord3dARB)
+    if (!sf_ptrc_glMultiTexCoord3dARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord3dvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, const GLdouble*)>(glLoaderGetProcAddress("glMultiTexCoord3dvARB"));
-    if(!sf_ptrc_glMultiTexCoord3dvARB)
+    if (!sf_ptrc_glMultiTexCoord3dvARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord3fARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLfloat, GLfloat, GLfloat)>(glLoaderGetProcAddress("glMultiTexCoord3fARB"));
-    if(!sf_ptrc_glMultiTexCoord3fARB)
+    if (!sf_ptrc_glMultiTexCoord3fARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord3fvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, const GLfloat*)>(glLoaderGetProcAddress("glMultiTexCoord3fvARB"));
-    if(!sf_ptrc_glMultiTexCoord3fvARB)
+    if (!sf_ptrc_glMultiTexCoord3fvARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord3iARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLint, GLint, GLint)>(glLoaderGetProcAddress("glMultiTexCoord3iARB"));
-    if(!sf_ptrc_glMultiTexCoord3iARB)
+    if (!sf_ptrc_glMultiTexCoord3iARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord3ivARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, const GLint*)>(glLoaderGetProcAddress("glMultiTexCoord3ivARB"));
-    if(!sf_ptrc_glMultiTexCoord3ivARB)
+    if (!sf_ptrc_glMultiTexCoord3ivARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord3sARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLshort, GLshort, GLshort)>(glLoaderGetProcAddress("glMultiTexCoord3sARB"));
-    if(!sf_ptrc_glMultiTexCoord3sARB)
+    if (!sf_ptrc_glMultiTexCoord3sARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord3svARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, const GLshort*)>(glLoaderGetProcAddress("glMultiTexCoord3svARB"));
-    if(!sf_ptrc_glMultiTexCoord3svARB)
+    if (!sf_ptrc_glMultiTexCoord3svARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord4dARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLdouble, GLdouble, GLdouble, GLdouble)>(glLoaderGetProcAddress("glMultiTexCoord4dARB"));
-    if(!sf_ptrc_glMultiTexCoord4dARB)
+    if (!sf_ptrc_glMultiTexCoord4dARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord4dvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, const GLdouble*)>(glLoaderGetProcAddress("glMultiTexCoord4dvARB"));
-    if(!sf_ptrc_glMultiTexCoord4dvARB)
+    if (!sf_ptrc_glMultiTexCoord4dvARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord4fARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLfloat, GLfloat, GLfloat, GLfloat)>(glLoaderGetProcAddress("glMultiTexCoord4fARB"));
-    if(!sf_ptrc_glMultiTexCoord4fARB)
+    if (!sf_ptrc_glMultiTexCoord4fARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord4fvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, const GLfloat*)>(glLoaderGetProcAddress("glMultiTexCoord4fvARB"));
-    if(!sf_ptrc_glMultiTexCoord4fvARB)
+    if (!sf_ptrc_glMultiTexCoord4fvARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord4iARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLint, GLint, GLint, GLint)>(glLoaderGetProcAddress("glMultiTexCoord4iARB"));
-    if(!sf_ptrc_glMultiTexCoord4iARB)
+    if (!sf_ptrc_glMultiTexCoord4iARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord4ivARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, const GLint*)>(glLoaderGetProcAddress("glMultiTexCoord4ivARB"));
-    if(!sf_ptrc_glMultiTexCoord4ivARB)
+    if (!sf_ptrc_glMultiTexCoord4ivARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord4sARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLshort, GLshort, GLshort, GLshort)>(glLoaderGetProcAddress("glMultiTexCoord4sARB"));
-    if(!sf_ptrc_glMultiTexCoord4sARB)
+    if (!sf_ptrc_glMultiTexCoord4sARB)
         numFailed++;
 
     sf_ptrc_glMultiTexCoord4svARB = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, const GLshort*)>(glLoaderGetProcAddress("glMultiTexCoord4svARB"));
-    if(!sf_ptrc_glMultiTexCoord4svARB)
+    if (!sf_ptrc_glMultiTexCoord4svARB)
         numFailed++;
 
     return numFailed;
@@ -245,7 +245,7 @@ static int Load_EXT_blend_func_separate()
     int numFailed = 0;
 
     sf_ptrc_glBlendFuncSeparateEXT = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLenum, GLenum, GLenum)>(glLoaderGetProcAddress("glBlendFuncSeparateEXT"));
-    if(!sf_ptrc_glBlendFuncSeparateEXT)
+    if (!sf_ptrc_glBlendFuncSeparateEXT)
         numFailed++;
 
     return numFailed;
@@ -296,159 +296,159 @@ static int Load_ARB_shader_objects()
     int numFailed = 0;
 
     sf_ptrc_glAttachObjectARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB, GLhandleARB)>(glLoaderGetProcAddress("glAttachObjectARB"));
-    if(!sf_ptrc_glAttachObjectARB)
+    if (!sf_ptrc_glAttachObjectARB)
         numFailed++;
 
     sf_ptrc_glCompileShaderARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB)>(glLoaderGetProcAddress("glCompileShaderARB"));
-    if(!sf_ptrc_glCompileShaderARB)
+    if (!sf_ptrc_glCompileShaderARB)
         numFailed++;
 
     sf_ptrc_glCreateProgramObjectARB = reinterpret_cast<GLhandleARB (GL_FUNCPTR *)()>(glLoaderGetProcAddress("glCreateProgramObjectARB"));
-    if(!sf_ptrc_glCreateProgramObjectARB)
+    if (!sf_ptrc_glCreateProgramObjectARB)
         numFailed++;
 
     sf_ptrc_glCreateShaderObjectARB = reinterpret_cast<GLhandleARB (GL_FUNCPTR *)(GLenum)>(glLoaderGetProcAddress("glCreateShaderObjectARB"));
-    if(!sf_ptrc_glCreateShaderObjectARB)
+    if (!sf_ptrc_glCreateShaderObjectARB)
         numFailed++;
 
     sf_ptrc_glDeleteObjectARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB)>(glLoaderGetProcAddress("glDeleteObjectARB"));
-    if(!sf_ptrc_glDeleteObjectARB)
+    if (!sf_ptrc_glDeleteObjectARB)
         numFailed++;
 
     sf_ptrc_glDetachObjectARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB, GLhandleARB)>(glLoaderGetProcAddress("glDetachObjectARB"));
-    if(!sf_ptrc_glDetachObjectARB)
+    if (!sf_ptrc_glDetachObjectARB)
         numFailed++;
 
     sf_ptrc_glGetActiveUniformARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB, GLuint, GLsizei, GLsizei*, GLint*, GLenum*, GLcharARB*)>(glLoaderGetProcAddress("glGetActiveUniformARB"));
-    if(!sf_ptrc_glGetActiveUniformARB)
+    if (!sf_ptrc_glGetActiveUniformARB)
         numFailed++;
 
     sf_ptrc_glGetAttachedObjectsARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB, GLsizei, GLsizei*, GLhandleARB*)>(glLoaderGetProcAddress("glGetAttachedObjectsARB"));
-    if(!sf_ptrc_glGetAttachedObjectsARB)
+    if (!sf_ptrc_glGetAttachedObjectsARB)
         numFailed++;
 
     sf_ptrc_glGetHandleARB = reinterpret_cast<GLhandleARB (GL_FUNCPTR *)(GLenum)>(glLoaderGetProcAddress("glGetHandleARB"));
-    if(!sf_ptrc_glGetHandleARB)
+    if (!sf_ptrc_glGetHandleARB)
         numFailed++;
 
     sf_ptrc_glGetInfoLogARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB, GLsizei, GLsizei*, GLcharARB*)>(glLoaderGetProcAddress("glGetInfoLogARB"));
-    if(!sf_ptrc_glGetInfoLogARB)
+    if (!sf_ptrc_glGetInfoLogARB)
         numFailed++;
 
     sf_ptrc_glGetObjectParameterfvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB, GLenum, GLfloat*)>(glLoaderGetProcAddress("glGetObjectParameterfvARB"));
-    if(!sf_ptrc_glGetObjectParameterfvARB)
+    if (!sf_ptrc_glGetObjectParameterfvARB)
         numFailed++;
 
     sf_ptrc_glGetObjectParameterivARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB, GLenum, GLint*)>(glLoaderGetProcAddress("glGetObjectParameterivARB"));
-    if(!sf_ptrc_glGetObjectParameterivARB)
+    if (!sf_ptrc_glGetObjectParameterivARB)
         numFailed++;
 
     sf_ptrc_glGetShaderSourceARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB, GLsizei, GLsizei*, GLcharARB*)>(glLoaderGetProcAddress("glGetShaderSourceARB"));
-    if(!sf_ptrc_glGetShaderSourceARB)
+    if (!sf_ptrc_glGetShaderSourceARB)
         numFailed++;
 
     sf_ptrc_glGetUniformLocationARB = reinterpret_cast<GLint (GL_FUNCPTR *)(GLhandleARB, const GLcharARB*)>(glLoaderGetProcAddress("glGetUniformLocationARB"));
-    if(!sf_ptrc_glGetUniformLocationARB)
+    if (!sf_ptrc_glGetUniformLocationARB)
         numFailed++;
 
     sf_ptrc_glGetUniformfvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB, GLint, GLfloat*)>(glLoaderGetProcAddress("glGetUniformfvARB"));
-    if(!sf_ptrc_glGetUniformfvARB)
+    if (!sf_ptrc_glGetUniformfvARB)
         numFailed++;
 
     sf_ptrc_glGetUniformivARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB, GLint, GLint*)>(glLoaderGetProcAddress("glGetUniformivARB"));
-    if(!sf_ptrc_glGetUniformivARB)
+    if (!sf_ptrc_glGetUniformivARB)
         numFailed++;
 
     sf_ptrc_glLinkProgramARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB)>(glLoaderGetProcAddress("glLinkProgramARB"));
-    if(!sf_ptrc_glLinkProgramARB)
+    if (!sf_ptrc_glLinkProgramARB)
         numFailed++;
 
     sf_ptrc_glShaderSourceARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB, GLsizei, const GLcharARB**, const GLint*)>(glLoaderGetProcAddress("glShaderSourceARB"));
-    if(!sf_ptrc_glShaderSourceARB)
+    if (!sf_ptrc_glShaderSourceARB)
         numFailed++;
 
     sf_ptrc_glUniform1fARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLfloat)>(glLoaderGetProcAddress("glUniform1fARB"));
-    if(!sf_ptrc_glUniform1fARB)
+    if (!sf_ptrc_glUniform1fARB)
         numFailed++;
 
     sf_ptrc_glUniform1fvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLsizei, const GLfloat*)>(glLoaderGetProcAddress("glUniform1fvARB"));
-    if(!sf_ptrc_glUniform1fvARB)
+    if (!sf_ptrc_glUniform1fvARB)
         numFailed++;
 
     sf_ptrc_glUniform1iARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLint)>(glLoaderGetProcAddress("glUniform1iARB"));
-    if(!sf_ptrc_glUniform1iARB)
+    if (!sf_ptrc_glUniform1iARB)
         numFailed++;
 
     sf_ptrc_glUniform1ivARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLsizei, const GLint*)>(glLoaderGetProcAddress("glUniform1ivARB"));
-    if(!sf_ptrc_glUniform1ivARB)
+    if (!sf_ptrc_glUniform1ivARB)
         numFailed++;
 
     sf_ptrc_glUniform2fARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLfloat, GLfloat)>(glLoaderGetProcAddress("glUniform2fARB"));
-    if(!sf_ptrc_glUniform2fARB)
+    if (!sf_ptrc_glUniform2fARB)
         numFailed++;
 
     sf_ptrc_glUniform2fvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLsizei, const GLfloat*)>(glLoaderGetProcAddress("glUniform2fvARB"));
-    if(!sf_ptrc_glUniform2fvARB)
+    if (!sf_ptrc_glUniform2fvARB)
         numFailed++;
 
     sf_ptrc_glUniform2iARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLint, GLint)>(glLoaderGetProcAddress("glUniform2iARB"));
-    if(!sf_ptrc_glUniform2iARB)
+    if (!sf_ptrc_glUniform2iARB)
         numFailed++;
 
     sf_ptrc_glUniform2ivARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLsizei, const GLint*)>(glLoaderGetProcAddress("glUniform2ivARB"));
-    if(!sf_ptrc_glUniform2ivARB)
+    if (!sf_ptrc_glUniform2ivARB)
         numFailed++;
 
     sf_ptrc_glUniform3fARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLfloat, GLfloat, GLfloat)>(glLoaderGetProcAddress("glUniform3fARB"));
-    if(!sf_ptrc_glUniform3fARB)
+    if (!sf_ptrc_glUniform3fARB)
         numFailed++;
 
     sf_ptrc_glUniform3fvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLsizei, const GLfloat*)>(glLoaderGetProcAddress("glUniform3fvARB"));
-    if(!sf_ptrc_glUniform3fvARB)
+    if (!sf_ptrc_glUniform3fvARB)
         numFailed++;
 
     sf_ptrc_glUniform3iARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLint, GLint, GLint)>(glLoaderGetProcAddress("glUniform3iARB"));
-    if(!sf_ptrc_glUniform3iARB)
+    if (!sf_ptrc_glUniform3iARB)
         numFailed++;
 
     sf_ptrc_glUniform3ivARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLsizei, const GLint*)>(glLoaderGetProcAddress("glUniform3ivARB"));
-    if(!sf_ptrc_glUniform3ivARB)
+    if (!sf_ptrc_glUniform3ivARB)
         numFailed++;
 
     sf_ptrc_glUniform4fARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLfloat, GLfloat, GLfloat, GLfloat)>(glLoaderGetProcAddress("glUniform4fARB"));
-    if(!sf_ptrc_glUniform4fARB)
+    if (!sf_ptrc_glUniform4fARB)
         numFailed++;
 
     sf_ptrc_glUniform4fvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLsizei, const GLfloat*)>(glLoaderGetProcAddress("glUniform4fvARB"));
-    if(!sf_ptrc_glUniform4fvARB)
+    if (!sf_ptrc_glUniform4fvARB)
         numFailed++;
 
     sf_ptrc_glUniform4iARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLint, GLint, GLint, GLint)>(glLoaderGetProcAddress("glUniform4iARB"));
-    if(!sf_ptrc_glUniform4iARB)
+    if (!sf_ptrc_glUniform4iARB)
         numFailed++;
 
     sf_ptrc_glUniform4ivARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLsizei, const GLint*)>(glLoaderGetProcAddress("glUniform4ivARB"));
-    if(!sf_ptrc_glUniform4ivARB)
+    if (!sf_ptrc_glUniform4ivARB)
         numFailed++;
 
     sf_ptrc_glUniformMatrix2fvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLsizei, GLboolean, const GLfloat*)>(glLoaderGetProcAddress("glUniformMatrix2fvARB"));
-    if(!sf_ptrc_glUniformMatrix2fvARB)
+    if (!sf_ptrc_glUniformMatrix2fvARB)
         numFailed++;
 
     sf_ptrc_glUniformMatrix3fvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLsizei, GLboolean, const GLfloat*)>(glLoaderGetProcAddress("glUniformMatrix3fvARB"));
-    if(!sf_ptrc_glUniformMatrix3fvARB)
+    if (!sf_ptrc_glUniformMatrix3fvARB)
         numFailed++;
 
     sf_ptrc_glUniformMatrix4fvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLint, GLsizei, GLboolean, const GLfloat*)>(glLoaderGetProcAddress("glUniformMatrix4fvARB"));
-    if(!sf_ptrc_glUniformMatrix4fvARB)
+    if (!sf_ptrc_glUniformMatrix4fvARB)
         numFailed++;
 
     sf_ptrc_glUseProgramObjectARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB)>(glLoaderGetProcAddress("glUseProgramObjectARB"));
-    if(!sf_ptrc_glUseProgramObjectARB)
+    if (!sf_ptrc_glUseProgramObjectARB)
         numFailed++;
 
     sf_ptrc_glValidateProgramARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB)>(glLoaderGetProcAddress("glValidateProgramARB"));
-    if(!sf_ptrc_glValidateProgramARB)
+    if (!sf_ptrc_glValidateProgramARB)
         numFailed++;
 
     return numFailed;
@@ -506,187 +506,187 @@ static int Load_ARB_vertex_shader()
     int numFailed = 0;
 
     sf_ptrc_glBindAttribLocationARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB, GLuint, const GLcharARB*)>(glLoaderGetProcAddress("glBindAttribLocationARB"));
-    if(!sf_ptrc_glBindAttribLocationARB)
+    if (!sf_ptrc_glBindAttribLocationARB)
         numFailed++;
 
     sf_ptrc_glDisableVertexAttribArrayARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint)>(glLoaderGetProcAddress("glDisableVertexAttribArrayARB"));
-    if(!sf_ptrc_glDisableVertexAttribArrayARB)
+    if (!sf_ptrc_glDisableVertexAttribArrayARB)
         numFailed++;
 
     sf_ptrc_glEnableVertexAttribArrayARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint)>(glLoaderGetProcAddress("glEnableVertexAttribArrayARB"));
-    if(!sf_ptrc_glEnableVertexAttribArrayARB)
+    if (!sf_ptrc_glEnableVertexAttribArrayARB)
         numFailed++;
 
     sf_ptrc_glGetActiveAttribARB = reinterpret_cast<void (GL_FUNCPTR *)(GLhandleARB, GLuint, GLsizei, GLsizei*, GLint*, GLenum*, GLcharARB*)>(glLoaderGetProcAddress("glGetActiveAttribARB"));
-    if(!sf_ptrc_glGetActiveAttribARB)
+    if (!sf_ptrc_glGetActiveAttribARB)
         numFailed++;
 
     sf_ptrc_glGetAttribLocationARB = reinterpret_cast<GLint (GL_FUNCPTR *)(GLhandleARB, const GLcharARB*)>(glLoaderGetProcAddress("glGetAttribLocationARB"));
-    if(!sf_ptrc_glGetAttribLocationARB)
+    if (!sf_ptrc_glGetAttribLocationARB)
         numFailed++;
 
     sf_ptrc_glGetVertexAttribPointervARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLenum, void**)>(glLoaderGetProcAddress("glGetVertexAttribPointervARB"));
-    if(!sf_ptrc_glGetVertexAttribPointervARB)
+    if (!sf_ptrc_glGetVertexAttribPointervARB)
         numFailed++;
 
     sf_ptrc_glGetVertexAttribdvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLenum, GLdouble*)>(glLoaderGetProcAddress("glGetVertexAttribdvARB"));
-    if(!sf_ptrc_glGetVertexAttribdvARB)
+    if (!sf_ptrc_glGetVertexAttribdvARB)
         numFailed++;
 
     sf_ptrc_glGetVertexAttribfvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLenum, GLfloat*)>(glLoaderGetProcAddress("glGetVertexAttribfvARB"));
-    if(!sf_ptrc_glGetVertexAttribfvARB)
+    if (!sf_ptrc_glGetVertexAttribfvARB)
         numFailed++;
 
     sf_ptrc_glGetVertexAttribivARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLenum, GLint*)>(glLoaderGetProcAddress("glGetVertexAttribivARB"));
-    if(!sf_ptrc_glGetVertexAttribivARB)
+    if (!sf_ptrc_glGetVertexAttribivARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib1dARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLdouble)>(glLoaderGetProcAddress("glVertexAttrib1dARB"));
-    if(!sf_ptrc_glVertexAttrib1dARB)
+    if (!sf_ptrc_glVertexAttrib1dARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib1dvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLdouble*)>(glLoaderGetProcAddress("glVertexAttrib1dvARB"));
-    if(!sf_ptrc_glVertexAttrib1dvARB)
+    if (!sf_ptrc_glVertexAttrib1dvARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib1fARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLfloat)>(glLoaderGetProcAddress("glVertexAttrib1fARB"));
-    if(!sf_ptrc_glVertexAttrib1fARB)
+    if (!sf_ptrc_glVertexAttrib1fARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib1fvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLfloat*)>(glLoaderGetProcAddress("glVertexAttrib1fvARB"));
-    if(!sf_ptrc_glVertexAttrib1fvARB)
+    if (!sf_ptrc_glVertexAttrib1fvARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib1sARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLshort)>(glLoaderGetProcAddress("glVertexAttrib1sARB"));
-    if(!sf_ptrc_glVertexAttrib1sARB)
+    if (!sf_ptrc_glVertexAttrib1sARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib1svARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLshort*)>(glLoaderGetProcAddress("glVertexAttrib1svARB"));
-    if(!sf_ptrc_glVertexAttrib1svARB)
+    if (!sf_ptrc_glVertexAttrib1svARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib2dARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLdouble, GLdouble)>(glLoaderGetProcAddress("glVertexAttrib2dARB"));
-    if(!sf_ptrc_glVertexAttrib2dARB)
+    if (!sf_ptrc_glVertexAttrib2dARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib2dvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLdouble*)>(glLoaderGetProcAddress("glVertexAttrib2dvARB"));
-    if(!sf_ptrc_glVertexAttrib2dvARB)
+    if (!sf_ptrc_glVertexAttrib2dvARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib2fARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLfloat, GLfloat)>(glLoaderGetProcAddress("glVertexAttrib2fARB"));
-    if(!sf_ptrc_glVertexAttrib2fARB)
+    if (!sf_ptrc_glVertexAttrib2fARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib2fvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLfloat*)>(glLoaderGetProcAddress("glVertexAttrib2fvARB"));
-    if(!sf_ptrc_glVertexAttrib2fvARB)
+    if (!sf_ptrc_glVertexAttrib2fvARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib2sARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLshort, GLshort)>(glLoaderGetProcAddress("glVertexAttrib2sARB"));
-    if(!sf_ptrc_glVertexAttrib2sARB)
+    if (!sf_ptrc_glVertexAttrib2sARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib2svARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLshort*)>(glLoaderGetProcAddress("glVertexAttrib2svARB"));
-    if(!sf_ptrc_glVertexAttrib2svARB)
+    if (!sf_ptrc_glVertexAttrib2svARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib3dARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLdouble, GLdouble, GLdouble)>(glLoaderGetProcAddress("glVertexAttrib3dARB"));
-    if(!sf_ptrc_glVertexAttrib3dARB)
+    if (!sf_ptrc_glVertexAttrib3dARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib3dvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLdouble*)>(glLoaderGetProcAddress("glVertexAttrib3dvARB"));
-    if(!sf_ptrc_glVertexAttrib3dvARB)
+    if (!sf_ptrc_glVertexAttrib3dvARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib3fARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLfloat, GLfloat, GLfloat)>(glLoaderGetProcAddress("glVertexAttrib3fARB"));
-    if(!sf_ptrc_glVertexAttrib3fARB)
+    if (!sf_ptrc_glVertexAttrib3fARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib3fvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLfloat*)>(glLoaderGetProcAddress("glVertexAttrib3fvARB"));
-    if(!sf_ptrc_glVertexAttrib3fvARB)
+    if (!sf_ptrc_glVertexAttrib3fvARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib3sARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLshort, GLshort, GLshort)>(glLoaderGetProcAddress("glVertexAttrib3sARB"));
-    if(!sf_ptrc_glVertexAttrib3sARB)
+    if (!sf_ptrc_glVertexAttrib3sARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib3svARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLshort*)>(glLoaderGetProcAddress("glVertexAttrib3svARB"));
-    if(!sf_ptrc_glVertexAttrib3svARB)
+    if (!sf_ptrc_glVertexAttrib3svARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4NbvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLbyte*)>(glLoaderGetProcAddress("glVertexAttrib4NbvARB"));
-    if(!sf_ptrc_glVertexAttrib4NbvARB)
+    if (!sf_ptrc_glVertexAttrib4NbvARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4NivARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLint*)>(glLoaderGetProcAddress("glVertexAttrib4NivARB"));
-    if(!sf_ptrc_glVertexAttrib4NivARB)
+    if (!sf_ptrc_glVertexAttrib4NivARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4NsvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLshort*)>(glLoaderGetProcAddress("glVertexAttrib4NsvARB"));
-    if(!sf_ptrc_glVertexAttrib4NsvARB)
+    if (!sf_ptrc_glVertexAttrib4NsvARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4NubARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLubyte, GLubyte, GLubyte, GLubyte)>(glLoaderGetProcAddress("glVertexAttrib4NubARB"));
-    if(!sf_ptrc_glVertexAttrib4NubARB)
+    if (!sf_ptrc_glVertexAttrib4NubARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4NubvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLubyte*)>(glLoaderGetProcAddress("glVertexAttrib4NubvARB"));
-    if(!sf_ptrc_glVertexAttrib4NubvARB)
+    if (!sf_ptrc_glVertexAttrib4NubvARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4NuivARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLuint*)>(glLoaderGetProcAddress("glVertexAttrib4NuivARB"));
-    if(!sf_ptrc_glVertexAttrib4NuivARB)
+    if (!sf_ptrc_glVertexAttrib4NuivARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4NusvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLushort*)>(glLoaderGetProcAddress("glVertexAttrib4NusvARB"));
-    if(!sf_ptrc_glVertexAttrib4NusvARB)
+    if (!sf_ptrc_glVertexAttrib4NusvARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4bvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLbyte*)>(glLoaderGetProcAddress("glVertexAttrib4bvARB"));
-    if(!sf_ptrc_glVertexAttrib4bvARB)
+    if (!sf_ptrc_glVertexAttrib4bvARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4dARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLdouble, GLdouble, GLdouble, GLdouble)>(glLoaderGetProcAddress("glVertexAttrib4dARB"));
-    if(!sf_ptrc_glVertexAttrib4dARB)
+    if (!sf_ptrc_glVertexAttrib4dARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4dvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLdouble*)>(glLoaderGetProcAddress("glVertexAttrib4dvARB"));
-    if(!sf_ptrc_glVertexAttrib4dvARB)
+    if (!sf_ptrc_glVertexAttrib4dvARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4fARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLfloat, GLfloat, GLfloat, GLfloat)>(glLoaderGetProcAddress("glVertexAttrib4fARB"));
-    if(!sf_ptrc_glVertexAttrib4fARB)
+    if (!sf_ptrc_glVertexAttrib4fARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4fvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLfloat*)>(glLoaderGetProcAddress("glVertexAttrib4fvARB"));
-    if(!sf_ptrc_glVertexAttrib4fvARB)
+    if (!sf_ptrc_glVertexAttrib4fvARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4ivARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLint*)>(glLoaderGetProcAddress("glVertexAttrib4ivARB"));
-    if(!sf_ptrc_glVertexAttrib4ivARB)
+    if (!sf_ptrc_glVertexAttrib4ivARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4sARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLshort, GLshort, GLshort, GLshort)>(glLoaderGetProcAddress("glVertexAttrib4sARB"));
-    if(!sf_ptrc_glVertexAttrib4sARB)
+    if (!sf_ptrc_glVertexAttrib4sARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4svARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLshort*)>(glLoaderGetProcAddress("glVertexAttrib4svARB"));
-    if(!sf_ptrc_glVertexAttrib4svARB)
+    if (!sf_ptrc_glVertexAttrib4svARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4ubvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLubyte*)>(glLoaderGetProcAddress("glVertexAttrib4ubvARB"));
-    if(!sf_ptrc_glVertexAttrib4ubvARB)
+    if (!sf_ptrc_glVertexAttrib4ubvARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4uivARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLuint*)>(glLoaderGetProcAddress("glVertexAttrib4uivARB"));
-    if(!sf_ptrc_glVertexAttrib4uivARB)
+    if (!sf_ptrc_glVertexAttrib4uivARB)
         numFailed++;
 
     sf_ptrc_glVertexAttrib4usvARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, const GLushort*)>(glLoaderGetProcAddress("glVertexAttrib4usvARB"));
-    if(!sf_ptrc_glVertexAttrib4usvARB)
+    if (!sf_ptrc_glVertexAttrib4usvARB)
         numFailed++;
 
     sf_ptrc_glVertexAttribPointerARB = reinterpret_cast<void (GL_FUNCPTR *)(GLuint, GLint, GLenum, GLboolean, GLsizei, const void*)>(glLoaderGetProcAddress("glVertexAttribPointerARB"));
-    if(!sf_ptrc_glVertexAttribPointerARB)
+    if (!sf_ptrc_glVertexAttribPointerARB)
         numFailed++;
 
     return numFailed;
@@ -699,7 +699,7 @@ static int Load_EXT_blend_equation_separate()
     int numFailed = 0;
 
     sf_ptrc_glBlendEquationSeparateEXT = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLenum)>(glLoaderGetProcAddress("glBlendEquationSeparateEXT"));
-    if(!sf_ptrc_glBlendEquationSeparateEXT)
+    if (!sf_ptrc_glBlendEquationSeparateEXT)
         numFailed++;
 
     return numFailed;
@@ -728,71 +728,71 @@ static int Load_EXT_framebuffer_object()
     int numFailed = 0;
 
     sf_ptrc_glBindFramebufferEXT = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLuint)>(glLoaderGetProcAddress("glBindFramebufferEXT"));
-    if(!sf_ptrc_glBindFramebufferEXT)
+    if (!sf_ptrc_glBindFramebufferEXT)
         numFailed++;
 
     sf_ptrc_glBindRenderbufferEXT = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLuint)>(glLoaderGetProcAddress("glBindRenderbufferEXT"));
-    if(!sf_ptrc_glBindRenderbufferEXT)
+    if (!sf_ptrc_glBindRenderbufferEXT)
         numFailed++;
 
     sf_ptrc_glCheckFramebufferStatusEXT = reinterpret_cast<GLenum (GL_FUNCPTR *)(GLenum)>(glLoaderGetProcAddress("glCheckFramebufferStatusEXT"));
-    if(!sf_ptrc_glCheckFramebufferStatusEXT)
+    if (!sf_ptrc_glCheckFramebufferStatusEXT)
         numFailed++;
 
     sf_ptrc_glDeleteFramebuffersEXT = reinterpret_cast<void (GL_FUNCPTR *)(GLsizei, const GLuint*)>(glLoaderGetProcAddress("glDeleteFramebuffersEXT"));
-    if(!sf_ptrc_glDeleteFramebuffersEXT)
+    if (!sf_ptrc_glDeleteFramebuffersEXT)
         numFailed++;
 
     sf_ptrc_glDeleteRenderbuffersEXT = reinterpret_cast<void (GL_FUNCPTR *)(GLsizei, const GLuint*)>(glLoaderGetProcAddress("glDeleteRenderbuffersEXT"));
-    if(!sf_ptrc_glDeleteRenderbuffersEXT)
+    if (!sf_ptrc_glDeleteRenderbuffersEXT)
         numFailed++;
 
     sf_ptrc_glFramebufferRenderbufferEXT = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLenum, GLenum, GLuint)>(glLoaderGetProcAddress("glFramebufferRenderbufferEXT"));
-    if(!sf_ptrc_glFramebufferRenderbufferEXT)
+    if (!sf_ptrc_glFramebufferRenderbufferEXT)
         numFailed++;
 
     sf_ptrc_glFramebufferTexture1DEXT = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLenum, GLenum, GLuint, GLint)>(glLoaderGetProcAddress("glFramebufferTexture1DEXT"));
-    if(!sf_ptrc_glFramebufferTexture1DEXT)
+    if (!sf_ptrc_glFramebufferTexture1DEXT)
         numFailed++;
 
     sf_ptrc_glFramebufferTexture2DEXT = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLenum, GLenum, GLuint, GLint)>(glLoaderGetProcAddress("glFramebufferTexture2DEXT"));
-    if(!sf_ptrc_glFramebufferTexture2DEXT)
+    if (!sf_ptrc_glFramebufferTexture2DEXT)
         numFailed++;
 
     sf_ptrc_glFramebufferTexture3DEXT = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLenum, GLenum, GLuint, GLint, GLint)>(glLoaderGetProcAddress("glFramebufferTexture3DEXT"));
-    if(!sf_ptrc_glFramebufferTexture3DEXT)
+    if (!sf_ptrc_glFramebufferTexture3DEXT)
         numFailed++;
 
     sf_ptrc_glGenFramebuffersEXT = reinterpret_cast<void (GL_FUNCPTR *)(GLsizei, GLuint*)>(glLoaderGetProcAddress("glGenFramebuffersEXT"));
-    if(!sf_ptrc_glGenFramebuffersEXT)
+    if (!sf_ptrc_glGenFramebuffersEXT)
         numFailed++;
 
     sf_ptrc_glGenRenderbuffersEXT = reinterpret_cast<void (GL_FUNCPTR *)(GLsizei, GLuint*)>(glLoaderGetProcAddress("glGenRenderbuffersEXT"));
-    if(!sf_ptrc_glGenRenderbuffersEXT)
+    if (!sf_ptrc_glGenRenderbuffersEXT)
         numFailed++;
 
     sf_ptrc_glGenerateMipmapEXT = reinterpret_cast<void (GL_FUNCPTR *)(GLenum)>(glLoaderGetProcAddress("glGenerateMipmapEXT"));
-    if(!sf_ptrc_glGenerateMipmapEXT)
+    if (!sf_ptrc_glGenerateMipmapEXT)
         numFailed++;
 
     sf_ptrc_glGetFramebufferAttachmentParameterivEXT = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLenum, GLenum, GLint*)>(glLoaderGetProcAddress("glGetFramebufferAttachmentParameterivEXT"));
-    if(!sf_ptrc_glGetFramebufferAttachmentParameterivEXT)
+    if (!sf_ptrc_glGetFramebufferAttachmentParameterivEXT)
         numFailed++;
 
     sf_ptrc_glGetRenderbufferParameterivEXT = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLenum, GLint*)>(glLoaderGetProcAddress("glGetRenderbufferParameterivEXT"));
-    if(!sf_ptrc_glGetRenderbufferParameterivEXT)
+    if (!sf_ptrc_glGetRenderbufferParameterivEXT)
         numFailed++;
 
     sf_ptrc_glIsFramebufferEXT = reinterpret_cast<GLboolean (GL_FUNCPTR *)(GLuint)>(glLoaderGetProcAddress("glIsFramebufferEXT"));
-    if(!sf_ptrc_glIsFramebufferEXT)
+    if (!sf_ptrc_glIsFramebufferEXT)
         numFailed++;
 
     sf_ptrc_glIsRenderbufferEXT = reinterpret_cast<GLboolean (GL_FUNCPTR *)(GLuint)>(glLoaderGetProcAddress("glIsRenderbufferEXT"));
-    if(!sf_ptrc_glIsRenderbufferEXT)
+    if (!sf_ptrc_glIsRenderbufferEXT)
         numFailed++;
 
     sf_ptrc_glRenderbufferStorageEXT = reinterpret_cast<void (GL_FUNCPTR *)(GLenum, GLenum, GLsizei, GLsizei)>(glLoaderGetProcAddress("glRenderbufferStorageEXT"));
-    if(!sf_ptrc_glRenderbufferStorageEXT)
+    if (!sf_ptrc_glRenderbufferStorageEXT)
         numFailed++;
 
     return numFailed;
@@ -801,8 +801,8 @@ static int Load_EXT_framebuffer_object()
 typedef int (*PFN_LOADFUNCPOINTERS)();
 typedef struct sfogl_StrToExtMap_s
 {
-    const char *extensionName;
-    int *extensionVariable;
+    const char* extensionName;
+    int* extensionVariable;
     PFN_LOADFUNCPOINTERS LoadExtension;
 } sfogl_StrToExtMap;
 
@@ -845,7 +845,7 @@ static void ClearExtensionVars()
 
 static void LoadExtension(sfogl_StrToExtMap& extension)
 {
-    if(extension.LoadExtension)
+    if (extension.LoadExtension)
     {
         *(extension.extensionVariable) = sfogl_LOAD_SUCCEEDED + extension.LoadExtension();
     }

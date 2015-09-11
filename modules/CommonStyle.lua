@@ -301,8 +301,8 @@ function common.WriteCMappingTable(hFile, specData, spec,
 		options.prefix, spec.DeclPrefix())
 	hFile:write("{\n")
 	hFile:inc()
-	hFile:write("const char *extensionName;\n")
-	hFile:write("int *extensionVariable;\n")
+	hFile:write("const char* extensionName;\n")
+	hFile:write("int* extensionVariable;\n")
 	hFile:write("PFN_LOADFUNCPOINTERS LoadExtension;\n")
 	hFile:dec()
 	hFile:fmt("} %s;\n", structName)
@@ -396,7 +396,7 @@ static void LoadExtension(sfogl_StrToExtMap& extension)
 ]])
 	hFile:inc()
 	hFile:writeblock([[
-if(extension.LoadExtension)
+if (extension.LoadExtension)
 {
     *(extension.extensionVariable) = sfogl_LOAD_SUCCEEDED + extension.LoadExtension();
 }
